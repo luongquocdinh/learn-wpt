@@ -119,9 +119,9 @@
           'post_type' => 'milbon-links',
           'tax_query' => array(
               array(
-                  'taxonomy' => 'link_category',
-                  'field' => 'slug',
-                  'terms' => 'hairdesign-slug'
+                'taxonomy' => 'link_category',
+                'field' => 'slug',
+                'terms' => 'hairdesign-slug'
               )
            ),
           'showposts' => 4,
@@ -160,9 +160,9 @@
           'post_type' => 'milbon-links',
           'tax_query' => array(
               array(
-                  'taxonomy' => 'link_category',
-                  'field' => 'slug',
-                  'terms' => 'brand-slug'
+                'taxonomy' => 'link_category',
+                'field' => 'slug',
+                'terms' => 'brand-slug'
               )
            ),
           'showposts' => 4,
@@ -215,7 +215,7 @@
       <?php if ( $shortcode_blog_query->have_posts() ) {
       while($shortcode_blog_query->have_posts()) : $shortcode_blog_query->the_post(); ?>
       <div class="column">
-        <a href="<?php the_permalink(); ?>" class="pageLink" target="_self">
+        <a href="<?php echo get_post_meta($post->ID, "_location", true); ?>" class="pageLink" target="_self">
           <div class="visual"><img src="
             <?php
               if ( has_post_thumbnail($post->ID) ) :

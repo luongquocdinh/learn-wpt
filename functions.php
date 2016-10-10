@@ -394,6 +394,25 @@ function create_milbon_brand_taxonomies(){
 	);
 }
 
+add_action( 'add_meta_boxes', 'add_events_metaboxes_brands' );
+
+// Add the Events Meta Boxes
+function add_events_metaboxes_brands() {
+	add_meta_box('wpt_events_location_brands', 'Links', 'wpt_events_location_brands', 'milbon-brands', 'side', 'default');
+}
+
+// The Event Location Metabox
+function wpt_events_location_brands() {
+	global $post;
+
+	echo '<input type="hidden" name="eventmeta_noncename" id="eventmeta_noncename" value="' .
+	wp_create_nonce( plugin_basename(__FILE__) ) . '" />';
+
+	$location = get_post_meta($post->ID, '_location', true);
+
+	echo '<input type="text" name="_location" value="' . $location  . '" class="widefat" />';
+
+}
 
 /**
  * CREATE NEWS POST TYPE
@@ -461,6 +480,26 @@ function create_milbon_news_taxonomies(){
 			'hierarchical' => true
 		)
 	);
+}
+
+add_action( 'add_meta_boxes', 'add_events_metaboxes_news' );
+
+// Add the Events Meta Boxes
+function add_events_metaboxes_news() {
+	add_meta_box('wpt_events_location_news', 'Links', 'wpt_events_location_news', 'milbon-news', 'side', 'default');
+}
+
+// The Event Location Metabox
+function wpt_events_location_news() {
+	global $post;
+
+	echo '<input type="hidden" name="eventmeta_noncename" id="eventmeta_noncename" value="' .
+	wp_create_nonce( plugin_basename(__FILE__) ) . '" />';
+
+	$location = get_post_meta($post->ID, '_location', true);
+
+	echo '<input type="text" name="_location" value="' . $location  . '" class="widefat" />';
+
 }
 
 
