@@ -268,6 +268,16 @@ if (file_exists (ABSPATH.'/wp-admin/includes/taxonomy.php')) {
 	);
 
 	$brand_id = wp_insert_category($brand);
+
+	$group = array (
+		'cat_name' => 'Group',
+		'category_description' => 'Group',
+	  'category_nicename' => 'group-slug',
+	  'category_parent' => '',
+	  'taxonomy' => 'link_category'
+	);
+
+	$group_id = wp_insert_category($group);
 }
 /**
  * CREATE META BOX LINKS POST TYPE
