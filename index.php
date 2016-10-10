@@ -25,7 +25,7 @@
   //////////////////////////////////////////////////////////////////////////////-->
   <section id="topBrand">
     <h2>BRAND</h2>
-    <a href="./brand/" class="pageLink view"><span class="text">VIEW ALL BRANDS</span><span class="arrow"><span class="arrow_img">→</span></span><span class="line"></span></a>
+    <a href="<?php echo get_post_type_archive_link( 'milbon-brands' ); ?>" class="pageLink view"><span class="text">VIEW ALL BRANDS</span><span class="arrow"><span class="arrow_img">→</span></span><span class="line"></span></a>
     <div class="slide-area">
       <div class="slide-inner">
         <div class="slide">
@@ -57,7 +57,6 @@
                         <?php 
                           $cat = array();
                           foreach (get_the_category($post_id) as $c) {
-                            # code...
                             $cat = get_category($c);
                             array_push($cats, $cat->name);
                           }
@@ -138,7 +137,7 @@
            ?>
            " height="126" width="224" alt="<?php the_title(); ?>"></div>
           <div class="defalt"><span><?php the_title(); ?></span></div>
-          <div class="over"><div class="bg"></div><span><?php the_title(); ?></span><p class="icon">VISIT SITE</p></div>
+          <div class="over"><div class="bg"></div><span><?php the_title(); ?><p><?php the_content(); ?></p></span><p class="icon">VISIT SITE</p></div>
         </a>
       </div>
       <?php
@@ -237,7 +236,7 @@
   <section id="topNews">
     <h2>NEWS</h2>
     <ul class="view">
-      <li><a href="./news/" class="pageLink"><span class="text">VIEW ALL NEWS</span><span class="arrow"><span class="arrow_img">→</span></span><span class="line"></span></a></li>
+      <li><a href="<?php echo get_post_type_archive_link( 'milbon-news' ); ?>" class="pageLink"><span class="text">VIEW ALL NEWS</span><span class="arrow"><span class="arrow_img">→</span></span><span class="line"></span></a></li>
     </ul>
     <!-- NEWS LIST -->
     <?php
