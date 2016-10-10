@@ -29,59 +29,54 @@
     <div class="slide-area">
       <div class="slide-inner">
         <div class="slide">
+          <?php
+            // GET BLOG POSTS
+            $shortcode_blog_query = new WP_Query(array(
+              'post_type' => 'milbon-brands',
+              'order' => 'ASC'
+            ));
+          ?>
 
-          <!-- slide -->
-          <div class="column">
-            <a href="./brand/detail/50/index.html" class="pageLink">
-              <div class="visual"><img src="<?php echo get_template_directory_uri(); ?>/images/top/02banner_milbon.jpg" height="450" width="800" alt="MILBON"></div>
-              <div class="date"><span class="category">HAIR CARE</span> ｜ <span class="day">2016.04.13 UPDATE</span></div>
-              <div class="over">
-                <div class="over-inner">
-                  <p class="brandName"><img src="<?php echo get_template_directory_uri(); ?>/images/top/top_brand_hoverlogo_milbbon.png" height="35" width="200" alt="MILBON"></p>
-                  <p class="category">HAIR CARE</p>
-                  <p class="ja">［ ミルボン ］</p>
-                    <span class="detail">VIEW DETAIL →<span></span></span>
-                </div>
+           <?php
+           if ( $shortcode_blog_query->have_posts()) {
+            while($shortcode_blog_query->have_posts()) : $shortcode_blog_query->the_post(); ?>
+              <div class="column">
+                <a href="<?php echo get_post_meta($post->ID, '_location', true); ?>" class="pageLink">
+                  <div class="visual"><img src="
+                    <?php 
+                      if ( has_post_thumbnail($post->ID) ) :
+                          get_featured_url($post->ID);
+                      endif;
+                    ?>" height="450" width="800" alt="Villa Lodola">
+                  </div>
+                  <div class="date"><span class="category"><?php the_title(); ?></span> ｜ <span class="day"><?php the_date('Y-m-d'); ?> UPDATE</span></div>
+                  <div class="over">
+                    <div class="over-inner">
+                      <p class="brandName"><img src=""></p>
+                      <?php 
+                        $cat = array();
+                        foreach (get_the_category($post_id) as $c) {
+                          # code...
+                          $cat = get_category($c);
+                          array_push($cats, $cat->name);
+                        }
+                        if (sizeOf($cats) > 0) {
+                          $post_categories = implode(', ', $cats);
+                        }
+
+                      ?>
+                      <p class="category"><?php echo $post_categories; ?></p>
+                      <p class="ja">［ ヴィラロドラ ］</p>
+                        <span class="detail">VIEW DETAIL →<span></span></span>
+                    </div>
+                  </div>
+                </a>
+                <div class="site"><a href="http://www.villalodola.jp/" target="_blank"><span>BRAND SITE</span></a></div>
               </div>
-            </a>
-            <div class="site"><a href="http://global.milbon.com/" target="_blank"><span>BRAND SITE</span></a></div>
-          </div>
-
-
-          <!-- slide -->
-          <div class="column">
-            <a href="./brand/detail/50/index.html" class="pageLink">
-              <div class="visual"><img src="<?php echo get_template_directory_uri(); ?>/images/top/01banner_aujua.jpg" height="450" width="800" alt="Aujua"></div>
-              <div class="date"><span class="category">HAIR CARE</span> ｜ <span class="day">2016.04.13 UPDATE</span></div>
-              <div class="over">
-                <div class="over-inner">
-                  <p class="brandName"><img src="<?php echo get_template_directory_uri(); ?>/images/top/top_brand_hoverlogo_aujua.png" height="35" width="200" alt="Aujua"></p>
-                  <p class="category">HAIR CARE</p>
-                  <p class="ja">［ オージュア ］</p>
-                  <span class="detail">VIEW DETAIL →<span></span></span>
-                </div>
-              </div>
-            </a>
-            <div class="site"><a href="http://www.aujua.com/product/" target="_blank"><span>BRAND SITE</span></a></div>
-          </div>
-
-          <!-- slide -->
-          <div class="column">
-            <a href="./brand/detail/50/index.html" class="pageLink">
-              <div class="visual"><img src="<?php echo get_template_directory_uri(); ?>/images/top/03banner_villa.jpg" height="450" width="800" alt="Villa Lodola"></div>
-              <div class="date"><span class="category">HAIR CARE</span> ｜ <span class="day">2016.04.13 UPDATE</span></div>
-              <div class="over">
-                <div class="over-inner">
-                  <p class="brandName"><img src="<?php echo get_template_directory_uri(); ?>/images/top/top_brand_hoverlogo_villa.png" height="35" width="200" alt="Villa Lodola"></p>
-                  <p class="category">HAIR CARE,HAIR COLOR</p>
-                  <p class="ja">［ ヴィラロドラ ］</p>
-                    <span class="detail">VIEW DETAIL →<span></span></span>
-                </div>
-              </div>
-            </a>
-            <div class="site"><a href="http://www.villalodola.jp/" target="_blank"><span>BRAND SITE</span></a></div>
-          </div>
-
+            <?php 
+              endwhile;
+            }
+            ?>
         </div>
       </div>
       <a href="#" class="prev"><div class="bg"></div><div class="arrow"><span></span></div></a>

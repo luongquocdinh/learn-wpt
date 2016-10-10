@@ -399,6 +399,7 @@ add_action( 'add_meta_boxes', 'add_events_metaboxes_brands' );
 // Add the Events Meta Boxes
 function add_events_metaboxes_brands() {
 	add_meta_box('wpt_events_location_brands', 'Links', 'wpt_events_location_brands', 'milbon-brands', 'side', 'default');
+	add_meta_box('wpt_events_checkbox_brands', 'Checked', 'wpt_events_checkbox_brands', 'milbon-brands', 'normal', 'high');
 }
 
 // The Event Location Metabox
@@ -414,6 +415,31 @@ function wpt_events_location_brands() {
 
 }
 
+function wpt_events_checkbox_brands () {
+	global $post;
+
+	$custom = get_post_custom($post->ID);
+  $field_id = $custom["field_id"][0];
+  ?>
+  <label>Check for yes</label>
+  <?php $field_id_value = get_post_meta($post->ID, 'field_id', true);
+  if($field_id_value == "yes") $field_id_checked = 'checked="checked"'; ?>
+    <input type="checkbox" name="field_id" value="yes" <?php echo $field_id_checked; ?> />
+  <?php
+}
+
+// Save Meta Details
+add_action('save_post', 'save_details');
+
+function save_details(){
+  global $post;
+
+if (defined('DOING_AUTOSAVE') && DOING_AUTOSAVE) {
+  return $post->ID;
+}
+
+  update_post_meta($post->ID, "field_id", $_POST["field_id"]);
+}
 /**
  * CREATE NEWS POST TYPE
  */
