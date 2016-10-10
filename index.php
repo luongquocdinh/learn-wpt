@@ -40,39 +40,41 @@
            <?php
            if ( $shortcode_blog_query->have_posts()) {
             while($shortcode_blog_query->have_posts()) : $shortcode_blog_query->the_post(); ?>
-              <div class="column">
-                <a href="<?php echo get_post_meta($post->ID, '_location', true); ?>" class="pageLink">
-                  <div class="visual"><img src="
-                    <?php 
-                      if ( has_post_thumbnail($post->ID) ) :
-                          get_featured_url($post->ID);
-                      endif;
-                    ?>" height="450" width="800" alt="Villa Lodola">
-                  </div>
-                  <div class="date"><span class="category"><?php the_title(); ?></span> ｜ <span class="day"><?php the_date('Y-m-d'); ?> UPDATE</span></div>
-                  <div class="over">
-                    <div class="over-inner">
-                      <p class="brandName"><img src=""></p>
+              <?php if (get_post_meta( $post->ID, 'field_id', TRUE ) ==  "yes") { ?>
+                <div class="column">
+                  <a href="<?php echo get_post_meta($post->ID, '_location', true); ?>" class="pageLink">
+                    <div class="visual"><img src="
                       <?php 
-                        $cat = array();
-                        foreach (get_the_category($post_id) as $c) {
-                          # code...
-                          $cat = get_category($c);
-                          array_push($cats, $cat->name);
-                        }
-                        if (sizeOf($cats) > 0) {
-                          $post_categories = implode(', ', $cats);
-                        }
-
-                      ?>
-                      <p class="category"><?php echo $post_categories; ?></p>
-                      <p class="ja">［ ヴィラロドラ ］</p>
-                        <span class="detail">VIEW DETAIL →<span></span></span>
+                        if ( has_post_thumbnail($post->ID) ) :
+                            get_featured_url($post->ID);
+                        endif;
+                      ?>" height="450" width="800" alt="Villa Lodola">
                     </div>
-                  </div>
-                </a>
-                <div class="site"><a href="http://www.villalodola.jp/" target="_blank"><span>BRAND SITE</span></a></div>
-              </div>
+                    <div class="date"><span class="category"><?php the_title(); ?></span> ｜ <span class="day"><?php the_date('Y-m-d'); ?> UPDATE</span></div>
+                    <div class="over">
+                      <div class="over-inner">
+                        <p class="brandName"><img src=""></p>
+                        <?php 
+                          $cat = array();
+                          foreach (get_the_category($post_id) as $c) {
+                            # code...
+                            $cat = get_category($c);
+                            array_push($cats, $cat->name);
+                          }
+                          if (sizeOf($cats) > 0) {
+                            $post_categories = implode(', ', $cats);
+                          }
+
+                        ?>
+                        <p class="category"><?php echo $post_categories; ?></p>
+                        <p class="ja">［ ヴィラロドラ ］</p>
+                          <span class="detail">VIEW DETAIL →<span></span></span>
+                      </div>
+                    </div>
+                  </a>
+                  <div class="site"><a href="http://www.villalodola.jp/" target="_blank"><span>BRAND SITE</span></a></div>
+                </div>
+                <?php } ?>
             <?php 
               endwhile;
             }
