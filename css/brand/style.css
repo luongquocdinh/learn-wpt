@@ -1,0 +1,1192 @@
+
+
+/*----------------------------------------------------
+  #products
+--------------------------------------------------- */
+#products{
+	position: relative;
+	width: 100%;
+	overflow: hidden;
+}
+
+#products a.btn_about_product{
+	position: absolute;
+	top: 20px;
+	right: 20px;
+	width: 158px;
+	height: 32px;
+	display: block;
+	background: #FFF;
+	border: 1px #e5e5e5 solid;
+	text-align: center;
+	line-height: 32px;
+	font-size: 12px;
+    -webkit-transition: all 0.3s ease;
+       -moz-transition: all 0.3s ease;
+        -ms-transition: all 0.3s ease;
+         -o-transition: all 0.3s ease;
+            transition: all 0.3s ease;
+            z-index: 1;
+}
+#products a.btn_about_product:hover{
+	background: #3a1e87;
+	border: 1px #3a1e87 solid;
+	color: #FFF;
+}
+
+
+#products a.btn_faq{
+    position: fixed;
+    top: 102px;
+	right: 20px;
+	width: 158px;
+	height: 32px;
+	display: block;
+	background: #FFF;
+	border: 1px #e5e5e5 solid;
+	text-align: center;
+	line-height: 32px;
+	font-size: 12px;
+    -webkit-transition: all 0.3s ease;
+       -moz-transition: all 0.3s ease;
+        -ms-transition: all 0.3s ease;
+         -o-transition: all 0.3s ease;
+            transition: all 0.3s ease;
+            z-index: 1;
+}
+#products a.btn_faq:hover{
+	background: #3a1e87;
+	border: 1px #3a1e87 solid;
+	color: #FFF;
+}
+
+/*一覧ヘッダー*/
+#products .header{
+	padding-top: 85px;
+	text-align: center;
+	height: 124px;
+	position: relative;
+}
+#products .header h1{
+	font-family: 'function_probook';
+	font-size: 40px;
+	margin-bottom:21px;
+	line-height: 1;
+}
+#products .header p{
+	font-size: 14px;
+}
+#products .header .category{
+	position: absolute;
+	left: 50%;
+	margin-left: 320px;
+	top: 144px;
+	width: 170px;
+	z-index: 1;
+}
+#products .header .category .btn{
+	padding-left: 27px;
+}
+#products .header .category .btn a{
+	font-family: 'function_probook';
+	font-size: 14px;
+	height: 20px;
+	width: 141px;
+	text-align: left;
+	display: block;
+	line-height: 1;
+	background: url(../../images/arrow_down.png) no-repeat right 4px;
+	border-bottom: 1px #FFF solid;
+	position: relative;
+	letter-spacing: 0.05em;
+    -webkit-transition: all 0.3s ease;
+       -moz-transition: all 0.3s ease;
+        -ms-transition: all 0.3s ease;
+         -o-transition: all 0.3s ease;
+            transition: all 0.3s ease;
+}
+#products .header .category:hover .btn a{
+	color: #3a1e87;
+	background: url(../../images/arrow_up.png) no-repeat right 4px;
+
+}
+#products .header .category .btn a span{
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  width: 0%;
+  height: 1px;
+  background: #3a1e87;
+    -webkit-transition: all 0.3s ease;
+       -moz-transition: all 0.3s ease;
+        -ms-transition: all 0.3s ease;
+         -o-transition: all 0.3s ease;
+            transition: all 0.3s ease;
+            opacity: 0;
+
+}
+#products .header .category:hover .btn a span{
+  width: 100%;
+  opacity: 1;
+
+}
+#products .header .category .pullDown{
+	width: 170px;
+	padding: 20px 0;
+	background: #FFF;
+	overflow: hidden;
+	display: none;
+	opacity: 0;
+}
+#products .header .category .pullDown.view{
+}
+#products .header .category .pullDown ul{
+	padding-left: 27px;
+	text-align: left;
+}
+#products .header .category .pullDown ul li{
+    -webkit-transition: all 0.3s ease;
+       -moz-transition: all 0.3s ease;
+        -ms-transition: all 0.3s ease;
+         -o-transition: all 0.3s ease;
+            transition: all 0.3s ease;
+}
+#products .header .category ul li.non{
+  opacity: 0.5;
+}
+#products .header .category ul li.active{
+  opacity: 1;
+}
+#products .header .category .pullDown ul li a{
+	font-family: 'function_probook';
+	font-size: 14px;
+	text-align: left;
+	display: block;
+	padding-bottom: 14px;
+}
+#products .header .category .pullDown ul li a:hover{
+	color: #3a1e87;
+}
+
+/*list*/
+#products .list{
+	width: 980px;
+	margin: 0 auto;
+	letter-spacing: -0.4em;
+	padding-bottom: 60px;
+}
+
+#products .list .column{
+	display: inline-block;
+	letter-spacing: normal;
+	width: 300px;
+	height: 360px;
+	border-bottom: 1px #eeeeee solid;
+	position: relative;
+	margin-bottom: 40px;
+	vertical-align: top;
+	margin-right: 40px;
+	opacity: 0;
+  -webkit-transform: scale3d(1,1,1) translate3d(0px,20px,0px);
+     -moz-transform: scale3d(1,1,1) translate3d(0px,20px,0px);
+      -ms-transform: scale3d(1,1,1) translate3d(0px,20px,0px);
+       -o-transform: scale3d(1,1,1) translate3d(0px,20px,0px);
+          transform: scale3d(1,1,1) translate3d(0px,20px,0px);
+}
+#products .list .column:nth-child(3n+1).show{
+	opacity: 1;
+    -webkit-transition: all 0.8s ease;
+       -moz-transition: all 0.8s ease;
+        -ms-transition: all 0.8s ease;
+         -o-transition: all 0.8s ease;
+            transition: all 0.8s ease;
+  -webkit-transform: scale3d(1,1,1) translate3d(0px,0%,0px);
+     -moz-transform: scale3d(1,1,1) translate3d(0px,0%,0px);
+      -ms-transform: scale3d(1,1,1) translate3d(0px,0%,0px);
+       -o-transform: scale3d(1,1,1) translate3d(0px,0%,0px);
+          transform: scale3d(1,1,1) translate3d(0px,0%,0px);
+
+}
+#products .list .column:nth-child(3n+2).show{
+	opacity: 1;
+    -webkit-transition: all 0.8s 0.1s ease;
+       -moz-transition: all 0.8s 0.1s ease;
+        -ms-transition: all 0.8s 0.1s ease;
+         -o-transition: all 0.8s 0.1s ease;
+            transition: all 0.8s 0.1s ease;
+  -webkit-transform: scale3d(1,1,1) translate3d(0px,0%,0px);
+     -moz-transform: scale3d(1,1,1) translate3d(0px,0%,0px);
+      -ms-transform: scale3d(1,1,1) translate3d(0px,0%,0px);
+       -o-transform: scale3d(1,1,1) translate3d(0px,0%,0px);
+          transform: scale3d(1,1,1) translate3d(0px,0%,0px);
+
+}
+#products .list .column:nth-child(3n+3).show{
+	opacity: 1;
+    -webkit-transition: all 0.8s 0.2s ease;
+       -moz-transition: all 0.8s 0.2s ease;
+        -ms-transition: all 0.8s 0.2s ease;
+         -o-transition: all 0.8s 0.2s ease;
+            transition: all 0.8s 0.2s ease;
+  -webkit-transform: scale3d(1,1,1) translate3d(0px,0%,0px);
+     -moz-transform: scale3d(1,1,1) translate3d(0px,0%,0px);
+      -ms-transform: scale3d(1,1,1) translate3d(0px,0%,0px);
+       -o-transform: scale3d(1,1,1) translate3d(0px,0%,0px);
+          transform: scale3d(1,1,1) translate3d(0px,0%,0px);
+
+}
+#products .list .column:nth-child(3n){
+	margin-right: 0;
+}
+
+#products .list .column .visual{
+	width: 300px;
+	height: 169px;
+	overflow: hidden;
+	margin-bottom: 6px;
+	background:#a584ff;
+}
+#products .list .column a .visual img{
+	width:100%;
+	height:auto;
+    -webkit-transition: all 0.5s ease;
+       -moz-transition: all 0.5s ease;
+        -ms-transition: all 0.5s ease;
+         -o-transition: all 0.5s ease;
+            transition: all 0.5s ease;
+}
+#products .list .column a:hover .visual img{
+	opacity: 0.8;
+}
+
+
+#products .list .column .date{
+	font-family: 'function_probook';
+	line-height: 1;
+	font-size: 10px;
+	color: #b3b3b3;
+	margin-bottom: 20px;
+}
+#products .list .column .date .category{
+	color: #313131;
+}
+#products .list .column .date .day{
+	color: #898989;
+}
+#products .list .column .brandName{
+	font-family: 'function_probook';
+	text-align: center;
+	font-size: 20px;
+	margin-bottom: 9px;
+	line-height: 1;
+}
+#products .list .column a:hover .brandName{
+	color: #3a1e87;
+}
+#products .list .column .ja{
+	text-align: center;
+	font-size: 12px;
+	margin-bottom: 15px;
+	line-height: 1;
+}
+#products .list .column a:hover .ja{
+	color: #3a1e87;
+}
+#products .list .column a p{
+	font-size: 14px;
+	line-height: 150%;
+}
+#products .list .column a:hover p{
+	color: #3a1e87;
+}
+#products .list .column .more{
+
+}
+
+#products .list .column a .more{
+	position: absolute;
+	bottom: -1px;
+	left:0;
+	width: 100%;
+	text-align: right;
+	color: #3a1e87;
+}
+
+#products .list .column a .more span.t{
+	text-align: right;
+	font-family: 'function_probook';
+	font-size: 12px;
+	display: block;
+	margin-bottom: 8px;
+	line-height: 1;
+	opacity: 0;
+    -webkit-transition: all 0.5s ease;
+       -moz-transition: all 0.5s ease;
+        -ms-transition: all 0.5s ease;
+         -o-transition: all 0.5s ease;
+            transition: all 0.5s ease;
+  -webkit-transform: translate3d(-10px,0%,0px);
+     -moz-transform: translate3d(-10px,0%,0px);
+      -ms-transform: translate3d(-10px,0%,0px);
+       -o-transform: translate3d(-10px,0%,0px);
+          transform: translate3d(-10px,0%,0px);
+}
+#products .list .column a:hover .more span.t{
+	opacity: 1;
+  -webkit-transform: translate3d(0px,0%,0px);
+     -moz-transform: translate3d(0px,0%,0px);
+      -ms-transform: translate3d(0px,0%,0px);
+       -o-transform: translate3d(0px,0%,0px);
+          transform: translate3d(0px,0%,0px);
+}
+#products .list .column a .more span.line{
+	width: 0%;
+	height: 1px;
+	background: #3a1e87;
+	display: block;
+    -webkit-transition: all 0.3s ease;
+       -moz-transition: all 0.3s ease;
+        -ms-transition: all 0.3s ease;
+         -o-transition: all 0.3s ease;
+            transition: all 0.3s ease;
+  opacity: 0;
+}
+#products .list .column a:hover .more span.line{
+	width: 100%;
+  opacity: 1;
+
+}
+
+
+
+#products .list .column .site{
+	position: absolute;
+	top: 152px;
+	right: -10px;
+}
+#products .list .column .site a{
+	display: block;
+	width: 120px;
+	height: 32px;
+	background: #3a1e87;
+	border: 1px #3a1e87 solid;
+	color: #FFF;
+
+	text-align: center;
+	line-height: 32px;
+    -webkit-transition: all 0.3s ease;
+       -moz-transition: all 0.3s ease;
+        -ms-transition: all 0.3s ease;
+         -o-transition: all 0.3s ease;
+            transition: all 0.3s ease;
+}
+#products .list .column .site a:hover{
+	color: #313131;
+	border: 1px #e5e5e5 solid;
+	background: #FFF;
+}
+#products .list .column .site a span{
+	font-family: 'function_probook';
+	font-size: 12px;
+	padding-right: 20px;
+	background:url(../../images/icon_blank1.png) no-repeat right center;
+}
+
+#products .list .readmore{
+	letter-spacing: normal;
+	text-align: center;
+	display: block;
+	height: 21px;
+	margin-bottom: 30px;
+}
+#products .list .readmore a{
+	position: relative;
+	height: 21px;
+	font-size: 14px;
+	line-height: 1px;
+	font-family: 'function_probook';
+}
+#products .list .readmore a:hover{
+	color: #3a1e87;
+}
+#products .list .readmore a span{
+  position: absolute;
+  bottom: -6px;
+  left: 0px;
+  width: 0%;
+  height: 1px;
+  background: #3a1e87;
+    -webkit-transition: all 0.3s ease;
+       -moz-transition: all 0.3s ease;
+        -ms-transition: all 0.3s ease;
+         -o-transition: all 0.3s ease;
+            transition: all 0.3s ease;
+            opacity: 0;
+}
+#products .list .readmore a:hover span{
+	width: 100%;
+        opacity: 1;
+}
+
+
+/*----------------------------------------------------
+  詳細
+--------------------------------------------------- */
+#contents.product_detail{
+
+}
+#contents.product_detail #breadcrumb{
+	position: fixed;
+}
+#contents.product_detail a.btn_about_product{
+	position: fixed;
+	top: 60px;
+}
+
+
+/*詳細メインビジュアル*/
+#products .mainvisual{
+	position: fixed;
+	top: 40px;
+	left: 0;
+	width: 100%;
+}
+#products .mainvisual .visual{
+	width: 100%;
+	height: 100px;
+	opacity: 0;
+}
+#products .mainvisual .visual.view{
+	opacity: 1;
+    -webkit-transition: all 1s linear;
+       -moz-transition: all 1s linear;
+        -ms-transition: all 1s linear;
+         -o-transition: all 1s linear;
+            transition: all 1s linear;
+}
+#products .btn_return{
+	position: fixed;
+	top: 105px;
+	left: 40px;
+	z-index: 2;
+}
+#products .btn_return a span.line{
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  width: 0%;
+  height: 1px;
+  background: #3a1e87;
+    -webkit-transition: all 0.3s ease;
+       -moz-transition: all 0.3s ease;
+        -ms-transition: all 0.3s ease;
+         -o-transition: all 0.3s ease;
+            transition: all 0.3s ease;
+  opacity: 0;
+}
+#products .btn_return a:hover{
+  color: #3a1e87;
+}
+#products .btn_return a:hover span.line{
+  width: 100%;
+  opacity: 1;
+}
+
+#products .btn_return a span{
+	height: 21px;
+	vertical-align: top;
+}
+#products .btn_return a span.text{
+	font-family: 'function_probook';
+	display: inline-block;
+	margin-left: 4px;
+	font-size: 14px;
+}
+#products .btn_return a span.arrow{
+	width: 12px;
+	height: 21px;
+	overflow: hidden;
+	position: relative;
+	display: inline-block;
+}
+#products .btn_return a span.arrow span.arrow_img{
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+/*詳細*/
+#products .detail{
+	position: relative;
+	background: #FFF;
+	padding-bottom: 40px;
+	background: #FFF;
+}
+#products .detail .detail_header{
+	height: 130px;
+	position: relative;
+}
+#products .detail .detail_header h1{
+	font-family: 'function_probook';
+	text-align: center;
+	font-size: 35px;
+	line-height: 1;
+	padding-top: 32px;
+}
+#products .detail .detail_header h1 img{
+	width: 400px;
+	display: block;
+	margin: 0 auto;
+
+}
+
+#products .detail .detail_header .scrolldown{
+	position: absolute;
+	bottom: 10px;
+	left: 50%;
+	margin-left: -55px;
+	z-index: 10;
+}
+#products .detail .detail_header .scrolldown a{
+  position: relative;
+  display: block;
+  width: 110px;
+  height: 14px;
+  overflow: hidden;
+  color: #959595;
+  font-size: 12px;
+  font-family: 'function_probook';
+}
+
+#products .detail .detail_header .scrolldown a span{
+    -webkit-transition: all 0.3s ease;
+       -moz-transition: all 0.3s ease;
+        -ms-transition: all 0.3s ease;
+         -o-transition: all 0.3s ease;
+            transition: all 0.3s ease;
+  padding-right: 20px;
+  padding-left: 10px;
+  background: url(../../images/top/scrolldown.png) no-repeat right center;
+}
+#products .detail .detail_header .scrolldown a:hover span{
+  color: #3a1e87;
+  background: url(../../images/arrow_down_on.png) no-repeat right center;
+}
+/*メイン*/
+#products .detail .detail_main{
+	width: 700px;
+	margin: 0 auto;
+	position: relative;
+	background: #FFF;
+	margin-top: -38px;
+	opacity: 0;
+    -webkit-transition: all 0.5s ease;
+       -moz-transition: all 0.5s ease;
+        -ms-transition: all 0.5s ease;
+         -o-transition: all 0.5s ease;
+            transition: all 0.5s ease;
+}
+#products .detail .detail_main.view{
+	opacity: 1;
+
+}
+#products .detail .detail_main .category{
+	padding-top: 13px;
+	text-align: center;
+	font-size: 12px;
+	line-height: 1;
+	margin-bottom: 23px;
+	font-family: 'function_probook';
+}
+#products .detail .detail_main .ja{
+	text-align: center;
+	font-size: 18px;
+	line-height: 1;
+	margin-bottom: 40px;
+}
+#products .detail .detail_main h2{
+	text-align: left;
+	font-size: 22px;
+	margin-bottom: 20px;
+	line-height: 177%;
+}
+#products .detail .detail_main .entry{
+	margin-bottom: 40px;
+}
+#products .detail .detail_main .entry p{
+	text-align: left;
+	font-size: 15px;
+	line-height: 185%;
+	margin-bottom: 20px;
+}
+
+#products .detail .detail_main .btn_site a{
+	width: 400px;
+	height: 60px;
+	display: block;
+	background: #3a1e87;
+	border: 1px #3a1e87 solid;
+	color: #FFF;
+	line-height: 60px;
+	margin: 0 auto;
+	text-align: center;
+	margin-bottom: 40px;
+    -webkit-transition: all 0.3s ease;
+       -moz-transition: all 0.3s ease;
+        -ms-transition: all 0.3s ease;
+         -o-transition: all 0.3s ease;
+            transition: all 0.3s ease;
+}
+#products .detail .detail_main .btn_site a:hover{
+	border: 1px #e5e5e5 solid;
+	background: #FFF;
+	color: #313131;
+}
+
+#products .detail .detail_main .btn_site a span{
+	background: url(../../images/icon_blank1.png) no-repeat right center;
+	padding-right: 25px;
+	line-height: 60px;
+	font-size: 15px;
+	font-family: 'function_probook';
+}
+/*商品一覧*/
+#products .detail .detail_main {
+
+}
+#products .detail .detail_main  h3{
+
+	font-family: 'function_probook';
+	text-align: center;
+	font-size: 24px;
+	margin-bottom: 26px;
+}
+#products .detail .detail_main .product_list{
+	letter-spacing: -0.4em;
+	overflow: hidden;
+	padding-bottom: 30px;
+}
+#products .detail .detail_main .product_list .column{
+	display: inline-block;
+	letter-spacing: normal;
+	width: 210px;
+	margin-bottom: 20px;
+	margin-right: 35px;
+	vertical-align: top;
+}
+#products .detail .detail_main .product_list .column:nth-child(3n){
+	margin-right: 0px;
+}
+#products .detail .detail_main .product_list .column a{
+	display: block;
+}
+#products .detail .detail_main .product_list .column a .image{
+	width: 210px;
+	margin-bottom: 10px;
+	position: relative;
+	background:#FFF;
+}
+#products .detail .detail_main .product_list .column a .image img{
+	width: 100%;
+	height: auto;
+    -webkit-transition: all 0.5s ease;
+       -moz-transition: all 0.5s ease;
+        -ms-transition: all 0.5s ease;
+         -o-transition: all 0.5s ease;
+            transition: all 0.5s ease;
+}
+#products .detail .detail_main .product_list .column a .image span{
+	background: url(../../images/brand/icon_zoom.png) no-repeat;
+	width: 210px;
+	height: 210px;
+	position: absolute;
+	top: 0;
+	right: 0;
+	opacity: 0;
+    -webkit-transition: all 0.5s ease;
+       -moz-transition: all 0.5s ease;
+        -ms-transition: all 0.5s ease;
+         -o-transition: all 0.5s ease;
+            transition: all 0.5s ease;
+}
+#products .detail .detail_main .product_list .column a:hover .image img{
+	opacity: 0.94;
+}
+#products .detail .detail_main .product_list .column a:hover .image span{
+	opacity: 1;
+}
+#products .detail .detail_main .product_list .column a .productName{
+	font-size: 14px;
+	line-height: 150%;
+	margin-bottom: 10px;
+}
+#products .detail .detail_main .product_list .column a .exp{
+	font-size: 12px;
+	line-height: 150%;
+}
+#products .detail .detail_main .product_list .column a:hover{
+	color: #3a1e87;
+}
+
+/*----------------------------------------------------
+  商品
+--------------------------------------------------- */
+#product{
+	width: 100%;
+	position: relative;
+}
+#product .image{
+	position: absolute;
+	top: 30px;
+	left: 0px;
+	width: 410px;
+}
+#product .image img{
+	width: 410px;
+	height: auto;
+}
+#product .detail{
+	margin-left: 410px;
+	padding-top: 30px;
+	width: 411px;
+}
+#product .detailInner{
+	height: 470px;
+	overflow-y:auto;
+}
+#product .detail .brandName{
+	padding-top: 55px;
+	font-family: 'function_probook';
+	font-size: 14px;
+	margin-bottom: 20px;
+	width: 355px;
+}
+#product .detail h2{
+	font-size: 18px;
+	line-height: 150%;
+	width: 355px;
+	margin-bottom: 15px;
+}
+#product .detail .exp{
+	font-size: 12px;
+	margin-bottom: 15px;
+	line-height: 150%;
+	width: 355px;
+}
+#product .detail .ext{
+	font-size: 12px;
+	margin-bottom: 40px;
+	line-height: 150%;
+	width: 355px;
+}
+
+#product .detail .site{
+	position: relative;
+	margin-bottom: 20px;
+}
+#product .detail .site a{
+	display: block;
+	width: 138px;
+	height: 28px;
+	border: 1px #e5e5e5 solid;
+	background: #FFF;
+	text-align: center;
+	line-height: 28px;
+    -webkit-transition: all 0.3s ease;
+       -moz-transition: all 0.3s ease;
+        -ms-transition: all 0.3s ease;
+         -o-transition: all 0.3s ease;
+            transition: all 0.3s ease;
+}
+#product .detail .site a:hover{
+	border: 1px #e5e5e5 solid;
+	background: #3a1e87;
+	color: #FFF;
+}
+#product .detail .site a span{
+	
+	font-family: 'function_probook';
+	font-size: 12px;
+	padding-right: 20px;
+	background:url(../../images/icon_blank1.png) no-repeat right center;
+	
+}
+#product .detail .link{
+	width: 355px;
+	position: relative;
+	padding-top: 20px;
+	border-top: 1px #e5e5e5 solid;
+	overflow: hidden;
+	padding-bottom: 20px;
+}
+#product .detail .link li{
+	float: left;
+	height: 20px;
+	margin-right: 30px;
+}
+#product .detail .link li a{
+	font-family: 'function_probook';
+  color: #313131;
+  position: relative;
+}
+#product .detail .link li a span.line{
+  position: absolute;
+  bottom: -2px;
+  left: 0px;
+  width: 0%;
+  height: 1px;
+  background: #3a1e87;
+    -webkit-transition: all 0.3s ease;
+       -moz-transition: all 0.3s ease;
+        -ms-transition: all 0.3s ease;
+         -o-transition: all 0.3s ease;
+            transition: all 0.3s ease;
+  opacity: 0;
+}
+#product .detail .link li a:hover span.line{
+  width: 100%;
+  opacity: 1;
+}
+
+#product .detail .link li a:hover{
+  color: #3a1e87;
+}
+#product .detail .link li a span.file{
+	background: url(../../images/brand/icon_file.png) no-repeat right center;
+	padding-right: 18px;
+}
+#product .detail .link li a:hover span.file{
+	background: url(../../images/brand/icon_file_on.png) no-repeat right center;
+	padding-right: 18px;
+}
+#product .detail .link li a span.download{
+	background: url(../../images/brand/icon_download.png) no-repeat right center;
+	padding-right: 18px;
+}
+#product .detail .link li a:hover span.download{
+	background: url(../../images/brand/icon_download_on.png) no-repeat right center;
+	padding-right: 18px;
+}
+#product .detail .link li a span.youtube{
+	background: url(../../images/icon_blank1.png) no-repeat right center;
+	padding-right: 18px;
+}
+
+
+/*----------------------------------------------------
+  ナビゲーション
+--------------------------------------------------- */
+#products .detail_prev{
+	position: fixed;
+	top: 50%;
+	left: 27px;
+	width: 96px;
+	z-index: 1;
+	margin-top: -48px;
+
+}
+#products .detail_prev a{
+	display: block;
+	width: 96px;
+	height: 96px;
+	position: relative;
+	overflow: hidden;
+}
+#products .detail_prev a .arrow{
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: block;
+	width: 96px;
+	height: 70px;
+	background: url(../../images/top/arrow_prev.png) no-repeat center center;
+    background-size: 50px 15px;
+}
+#products .detail_prev a .over{
+	position: absolute;
+	top: 0;
+	left: 0;
+	opacity: 0;
+}
+#products .detail_prev a:hover .over{
+	
+}
+#products .detail_prev a .over .image{
+	width: 96px;
+	height: 54px;
+	margin-bottom: 8px;
+	overflow: hidden;
+	text-align: center;
+}
+#products .detail_prev a .over .image img{
+	width: auto;
+	height: 54px;
+}
+#products .detail_prev a .over p{
+	text-align: center;
+	font-size: 10px;
+	font-family: 'function_probook';
+}
+#products .detail_next{
+	position: fixed;
+	top: 50%;
+	right: 27px;
+	width: 96px;
+	z-index: 1;
+	margin-top: -48px;
+
+}
+#products .detail_next a{
+	display: block;
+	width: 96px;
+	height: 96px;
+	position: relative;
+	overflow: hidden;
+}
+#products .detail_next a .arrow{
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: block;
+	width: 96px;
+	height: 70px;
+	background: url(../../images/top/arrow_next.png) no-repeat center center;
+    background-size: 50px 15px;
+}
+#products .detail_next a .over{
+	position: absolute;
+	top: 0;
+	left: 0;
+	opacity: 0;
+}
+#products .detail_next a:hover .over{
+}
+#products .detail_next a .over .image{
+	width: 96px;
+	height: 54px;
+	margin-bottom: 8px;
+	overflow: hidden;
+	text-align: center;
+}
+#products .detail_next a .over .image img{
+	width: auto;
+	height: 54px;
+}
+#products .detail_next a .over p{
+	text-align: center;
+	font-size: 10px;
+	font-family: 'function_probook';
+}
+
+
+/*----------------------------------------------------
+  #our
+--------------------------------------------------- */
+#our{
+	position: fixed;
+	top: 0;
+	left:0;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	padding-bottom: 0px;
+	z-index: 1;
+}
+#our .block{
+	text-align: center;
+	position: relative;
+}
+
+#our .scrolldown{
+	position: fixed;
+	z-index: 2;
+	bottom: 10px;
+	left: 50%;
+	margin-left: -45px;
+}
+#our .scrolldown a{
+	position: relative;
+	display: block;
+	width: 110px;
+	height: 14px;
+	overflow: hidden;
+	color: #959595;
+	font-family: 'function_probook';
+	font-size: 12px;
+    -webkit-transition: all 0.3s ease;
+       -moz-transition: all 0.3s ease;
+        -ms-transition: all 0.3s ease;
+         -o-transition: all 0.3s ease;
+            transition: all 0.3s ease;
+}
+
+#our .scrolldown a:hover{
+	color: #3a1e87;
+}
+#our .scrolldown a span{
+	position: absolute;
+	display: block;
+	top:0px;
+	left: 0px;
+	width: 100px;
+	height: 14px;
+	background: url(../../images/top/scrolldown.png) no-repeat right center;
+    -webkit-transition: all 0.3s ease;
+       -moz-transition: all 0.3s ease;
+        -ms-transition: all 0.3s ease;
+         -o-transition: all 0.3s ease;
+            transition: all 0.3s ease;
+}
+#our .scrolldown a:hover span{
+	background: url(../../images/top/scrolldown_on.png) no-repeat right center;
+
+}
+
+#our .block .textArea{
+	position: absolute;
+	text-align: left;
+}
+
+
+#our .header{
+	text-align: center;
+	position: relative;
+}
+#our .header h1{
+	padding-top: 85px;
+	font-family: 'function_probook';
+	font-size: 35px;
+	margin-bottom:56px;
+	line-height: 1;
+}
+#our .header p{
+	font-size: 16px;
+	line-height: 200%;
+	margin-bottom: 40px;
+}
+#our .header h2{
+	font-size: 48px;
+	font-weight: bold;
+	margin-bottom: 47px;
+}
+.firstPos{
+	position: absolute;
+	top: 50%;
+	left: 0;
+	width: 100%;
+	text-align: center;
+}
+
+#our .moniter01{
+	height: 700px;
+	background: url(../../images/brand/our/moniter_bg01.jpg) no-repeat center center;
+	background-size: cover;
+}
+#our .moniter01 .textArea{
+	left: 50%;
+	top: 0px;
+
+}
+#our .moniter01 h2{
+	font-size: 26px;
+	margin-bottom: 47px;
+} 
+#our .moniter01 p{
+	font-size: 14px;
+	line-height: 185%;
+	margin-bottom: 15px;
+}
+#our .moniter02{
+	height: 700px;
+	background: url(../../images/brand/our/moniter_bg02.jpg) no-repeat center center;
+	background-size: cover;
+}
+#our .moniter02 .textArea{
+	left: 50%;
+	top: 0px;
+	margin-left: -490px;
+
+}
+#our .moniter02 h2{
+	font-size: 26px;
+	margin-bottom: 47px;
+} 
+#our .moniter02 p{
+	font-size: 14px;
+	line-height: 185%;
+	margin-bottom: 15px;
+}
+
+#our .moniter03{
+	height: 670px;
+	background: url(../../images/brand/our/moniter_bg03.jpg) no-repeat center center;
+	background-size: cover;
+}
+#our .moniter03 .textArea{
+	left: 50%;
+	top: 0px;
+	margin-left: 80px;
+
+}
+#our .moniter03 h2{
+	font-size: 26px;
+	margin-bottom: 47px;
+} 
+#our .moniter03 p{
+	font-size: 14px;
+	line-height: 185%;
+	margin-bottom: 15px;
+}
+
+#our .moniter04{
+	height: 670px;
+	background: url(../../images/brand/our/moniter_bg04.jpg) no-repeat center center;
+	background-size: cover;
+}
+#our .moniter04 .textArea{
+	left: 50%;
+	top: 0px;
+	margin-left: -490px;
+
+}
+#our .moniter04 h2{
+	font-size: 26px;
+	margin-bottom: 47px;
+} 
+#our .moniter04 p{
+	font-size: 14px;
+	line-height: 185%;
+	margin-bottom: 15px;
+}
+
+#our .moniter05{
+	height: 670px;
+	background: url(../../images/brand/our/moniter_bg05.jpg) no-repeat center center;
+	background-size: cover;
+}
+#our .moniter05 .textArea{
+	left: 50%;
+	top: 0px;
+	margin-left: 80px;
+
+}
+#our .moniter05 h2{
+	font-size: 26px;
+	margin-bottom: 47px;
+} 
+#our .moniter05 p{
+	font-size: 14px;
+	line-height: 185%;
+	margin-bottom: 15px;
+}
+
+#our #pageTop{
+	display: none;
+}
+#our .moniter05 #pageTop{
+	display: block;
+	position: absolute;
+	bottom: 0px;
+	background: none;
+
+}

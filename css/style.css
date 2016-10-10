@@ -1,0 +1,993 @@
+
+
+/*----------------------------------------------------
+  #top
+--------------------------------------------------- */
+#top{
+	position: relative;
+	width: 100%;
+	overflow: hidden;
+}
+#top li{
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	width: 100%;
+	height: 100%;
+}
+#top li img{
+	width: 100%;
+	height: auto;
+}
+#top h1{
+	position: fixed;
+	top: 120px;
+	left: 110px;
+}
+#top .scrolldown{
+	position: absolute;
+	bottom: 10px;
+	left: 50%;
+	margin-left: -45px;
+}
+#top .scrolldown a{
+	position: relative;
+	display: block;
+	width: 120px;
+	height: 14px;
+	overflow: hidden;
+	color: #959595;
+	font-size: 12px;
+	font-family: 'function_probook';
+}
+
+#top .scrolldown a span{
+    -webkit-transition: all 0.3s ease;
+       -moz-transition: all 0.3s ease;
+        -ms-transition: all 0.3s ease;
+         -o-transition: all 0.3s ease;
+            transition: all 0.3s ease;
+	padding-right: 20px;
+	padding-left: 10px;
+	background: url(../images/top/scrolldown.png) no-repeat right center;
+}
+#top .scrolldown a:hover span{
+	color: #3a1e87;
+	background: url(../images/arrow_down_on.png) no-repeat right center;
+}
+
+/*----------------------------------------------------
+  #comment
+--------------------------------------------------- */
+#comment{
+	position: relative;
+	width: 100%;
+	overflow: hidden;
+	background: #FFF;
+	border-bottom: 1px #eeeeee solid;
+	text-align: center;
+	padding: 42px 0;
+	font-size: 15px;
+	line-height: 100%;
+}
+/*----------------------------------------------------
+  #topBrand
+--------------------------------------------------- */
+#topBrand{
+	position: relative;
+	width: 100%;
+	overflow: hidden;
+	background: #FFF;
+}
+#topBrand h2{
+	font-size: 40px;
+	color: #000000;
+	text-align: center;
+	line-height: 1;
+	padding: 60px 0 44px 0;
+	font-family: 'function_probook',"游明朝体", "Yu Mincho", YuMincho, 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'ヒラギノ角ゴ Pro W3', 'メイリオ', Meiryo, sans-serif;
+}
+#topBrand a.view{
+	font-size: 14px;
+	position: absolute;
+	top: 70px;
+	left: 50%;
+	margin-left: 367px;
+	height: 21px;
+	display: block;
+	font-family: 'function_probook',"游明朝体", "Yu Mincho", YuMincho, 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'ヒラギノ角ゴ Pro W3', 'メイリオ', Meiryo, sans-serif;
+}
+#topBrand a.view span.line{
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  width: 0%;
+  height: 1px;
+  background: #3a1e87;
+    -webkit-transition: all 0.3s ease;
+       -moz-transition: all 0.3s ease;
+        -ms-transition: all 0.3s ease;
+         -o-transition: all 0.3s ease;
+            transition: all 0.3s ease;
+  opacity: 0;
+}
+#topBrand a.view:hover{
+  color: #3a1e87;
+}
+#topBrand a.view:hover span.line{
+  width: 100%;
+  height: 1px;
+  opacity: 1;
+}
+
+#topBrand a.view span{
+	height: 21px;
+	vertical-align: top;
+}
+#topBrand a.view span.text{
+	display: inline-block;
+	margin-right: 4px;
+}
+#topBrand a.view span.arrow{
+	width: 14px;
+	height: 21px;
+	overflow: hidden;
+	position: relative;
+	display: inline-block;
+}
+#topBrand a.view span.arrow span.arrow_img{
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+#topBrand .slide-area{
+	position: relative;
+	width: 100%;
+	height: 550px;
+	overflow: hidden;
+}
+#topBrand .slide-area .slide-inner{
+	position: absolute;
+	top: 0;
+	left: 0%;
+}
+#topBrand .slide-area .slide-inner .slide{
+	overflow: hidden;
+	float: left;
+}
+#topBrand .slide-area .slide-inner .slide .column{
+	width: 800px;
+	margin: 0 25px;
+	float: left;
+	position: relative;
+}
+#topBrand .slide-area .slide-inner .slide .column a{
+	display: block;
+}
+
+#topBrand .slide-area .slide-inner .slide .column .visual{
+	width: 800px;
+	height: 450px;
+	overflow: hidden;
+	margin-bottom: 7px;
+}
+#topBrand .slide-area .slide-inner .slide .column .visual img{
+    -webkit-transition: all 6.5s ease;
+       -moz-transition: all 6.5s ease;
+        -ms-transition: all 6.5s ease;
+         -o-transition: all 6.5s ease;
+            transition: all 6.5s ease;
+}
+#topBrand .slide-area .slide-inner .slide .column:hover .visual img{
+-webkit-transform: scale3d(1.1,1.1,1.1);
+   -moz-transform: scale3d(1.1,1.1,1.1);
+    -o-transform:  scale3d(1.1,1.1,1.1);
+        transform: scale3d(1.1,1.1,1.1);
+}
+#topBrand .slide-area .slide-inner .slide .column .date{
+	line-height: 1;
+	font-size: 10px;
+	font-family: 'function_probook',"游明朝体", "Yu Mincho", YuMincho, 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'ヒラギノ角ゴ Pro W3', 'メイリオ', Meiryo, sans-serif;
+	color: #b3b3b3;
+	opacity: 0;
+    -webkit-transition: all 0.5s ease;
+       -moz-transition: all 0.5s ease;
+        -ms-transition: all 0.5s ease;
+         -o-transition: all 0.5s ease;
+            transition: all 0.5s ease;
+}
+#topBrand .slide-area .slide-inner .slide .column .date.view{
+	opacity: 1;
+}
+#topBrand .slide-area .slide-inner .slide .column .date .category{
+	color: #313131;
+}
+#topBrand .slide-area .slide-inner .slide .column .date .day{
+	color: #898989;
+}
+#topBrand .slide-area .slide-inner .slide .column .over{
+	position: absolute;
+	top: 0;
+	left: 0px;
+	width: 800px;
+	height: 450px;
+	overflow: hidden;
+	background: url(../images/top/brand_slide_cover.png);
+	opacity: 0;
+    -webkit-transition: all 0.5s ease;
+       -moz-transition: all 0.5s ease;
+        -ms-transition: all 0.5s ease;
+         -o-transition: all 0.5s ease;
+            transition: all 0.5s ease;
+
+}
+#topBrand .slide-area .slide-inner .slide .column:hover .over{
+	opacity: 1;
+
+}
+#topBrand .slide-area .slide-inner .slide .column .over .over-inner{
+	display: table-cell;
+	width: 800px;
+	height: 450px;
+	vertical-align: middle;
+	text-align: center;
+	color: #FFF;
+  -webkit-transform: translate3d(0px,10px,0px);
+     -moz-transform: translate3d(0px,10px,0px);
+      -ms-transform: translate3d(0px,10px,0px);
+       -o-transform: translate3d(0px,10px,0px);
+          transform: translate3d(0px,10px,0px);
+    -webkit-transition: all 0.5s ease;
+       -moz-transition: all 0.5s ease;
+        -ms-transition: all 0.5s ease;
+         -o-transition: all 0.5s ease;
+            transition: all 0.5s ease;
+}
+#topBrand .slide-area .slide-inner .slide .column:hover .over .over-inner{
+  -webkit-transform: translate3d(0px,0%,0px);
+     -moz-transform: translate3d(0px,0%,0px);
+      -ms-transform: translate3d(0px,0%,0px);
+       -o-transform: translate3d(0px,0%,0px);
+          transform: translate3d(0px,0%,0px);
+
+}
+#topBrand .slide-area .slide-inner .slide .column .over .over-inner .brandName{
+	font-size: 40px;
+	line-height: 1;
+	margin-bottom: 10px;
+	font-family: 'function_probook',"游明朝体", "Yu Mincho", YuMincho, 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'ヒラギノ角ゴ Pro W3', 'メイリオ', Meiryo, sans-serif;
+}
+#topBrand .slide-area .slide-inner .slide .column .over .over-inner .category{
+	font-size: 12px;
+	margin-bottom: 22px;
+	font-family: 'function_probook',"游明朝体", "Yu Mincho", YuMincho, 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'ヒラギノ角ゴ Pro W3', 'メイリオ', Meiryo, sans-serif;
+}
+#topBrand .slide-area .slide-inner .slide .column .over .over-inner .ja{
+	font-size: 18px;
+	margin-bottom: 38px;
+}
+#topBrand .slide-area .slide-inner .slide .column .over .over-inner .detail{
+	color: #FFF;
+	position: relative;
+}
+#topBrand .slide-area .slide-inner .slide .column .over .over-inner .detail span{
+  position: absolute;
+  bottom: -10px;
+  left: 0px;
+  width: 0%;
+  height: 1px;
+  font-family: 'function_probook',"游明朝体", "Yu Mincho", YuMincho, 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'ヒラギノ角ゴ Pro W3', 'メイリオ', Meiryo, sans-serif;
+  background: #FFF;
+    -webkit-transition: all 0.3s 0.5s ease;
+       -moz-transition: all 0.3s 0.5s ease;
+        -ms-transition: all 0.3s 0.5s ease;
+         -o-transition: all 0.3s 0.5s ease;
+            transition: all 0.3s 0.5s ease;
+            opacity: 0;
+}
+#topBrand .slide-area .slide-inner .slide .column .over .over-inner .detail{
+  color: #FFF;
+  font-family: 'function_probook',"游明朝体", "Yu Mincho", YuMincho, 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'ヒラギノ角ゴ Pro W3', 'メイリオ', Meiryo, sans-serif;
+
+}
+#topBrand .slide-area .slide-inner .slide .column a:hover .over .over-inner .detail span{
+  width: 100%;
+  opacity: 1;
+}
+#topBrand .slide-area .slide-inner .slide .column .site{
+	position: absolute;
+	top: 425px;
+	right: -10px;
+	opacity: 0;
+    -webkit-transition: all 0.5s ease;
+       -moz-transition: all 0.5s ease;
+        -ms-transition: all 0.5s ease;
+         -o-transition: all 0.5s ease;
+            transition: all 0.5s ease;
+}
+#topBrand .slide-area .slide-inner .slide .column .site.view{
+	opacity: 1;
+}
+#topBrand .slide-area .slide-inner .slide .column .site a{
+	display: block;
+	width: 140px;
+	height: 36px;
+	border: 1px #e5e5e5 solid;
+	background: #FFF;
+	text-align: center;
+	line-height: 36px;
+	font-family: 'function_probook',"游明朝体", "Yu Mincho", YuMincho, 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'ヒラギノ角ゴ Pro W3', 'メイリオ', Meiryo, sans-serif;
+    -webkit-transition: all 0.5s ease;
+       -moz-transition: all 0.5s ease;
+        -ms-transition: all 0.5s ease;
+         -o-transition: all 0.5s ease;
+            transition: all 0.5s ease;
+}
+#topBrand .slide-area .slide-inner .slide .column .site a:hover{
+	background: #3a1e87;
+	border: 1px #3a1e87 solid;
+	color: #FFF;
+
+}
+#topBrand .slide-area .slide-inner .slide .column .site a span{
+	font-size: 13px;
+	padding-right: 20px;
+	background:url(../images/icon_blank1.png) no-repeat right center;
+}
+#topBrand .slide-area .prev{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 200px;
+	height: 450px;
+}
+#topBrand .slide-area .prev .bg{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: #FFF;
+	opacity: 0.8;
+    -webkit-transition: all 0.5s ease;
+       -moz-transition: all 0.5s ease;
+        -ms-transition: all 0.5s ease;
+         -o-transition: all 0.5s ease;
+            transition: all 0.5s ease;
+}
+#topBrand .slide-area .prev .arrow{
+	position: absolute;
+	top: 50%;
+	right: 50px;
+	width: 50px;
+	height: 15px;
+	margin-top: -7px;
+	overflow: hidden;
+    -webkit-transition: all 0.5s ease;
+       -moz-transition: all 0.5s ease;
+        -ms-transition: all 0.5s ease;
+         -o-transition: all 0.5s ease;
+            transition: all 0.5s ease;
+}
+#topBrand .slide-area .prev .arrow span{
+	position: absolute;
+	top: 0%;
+	left: 0px;
+	background: url(../images/top/arrow_prev.png) no-repeat;
+	background-size: 50px 15px;
+	width: 50px;
+	height: 15px;
+	display: block;
+}
+/*#topBrand .slide-area .prev:hover .arrow{
+	width: 0;
+	right: 100px;
+}*/
+#topBrand .slide-area .prev:hover .bg{
+	opacity: 0;
+}
+#topBrand .slide-area .next{
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 200px;
+	height: 450px;
+}
+#topBrand .slide-area .next .bg{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: #FFF;
+	opacity: 0.8;
+    -webkit-transition: all 0.5s ease;
+       -moz-transition: all 0.5s ease;
+        -ms-transition: all 0.5s ease;
+         -o-transition: all 0.5s ease;
+            transition: all 0.5s ease;
+}
+#topBrand .slide-area .next:hover .bg{
+	opacity: 0;
+}
+#topBrand .slide-area .next .arrow{
+	position: absolute;
+	top: 50%;
+	left: 50px;
+	width: 50px;
+	height: 15px;
+	margin-top: -7px;
+	overflow: hidden;
+    -webkit-transition: all 0.5s ease;
+       -moz-transition: all 0.5s ease;
+        -ms-transition: all 0.5s ease;
+         -o-transition: all 0.5s ease;
+            transition: all 0.5s ease;
+}
+#topBrand .slide-area .next .arrow span{
+	position: absolute;
+	top: 0%;
+	right: 0px;
+	background: url(../images/top/arrow_next.png) no-repeat;
+	background-size: 50px 15px;
+	width: 50px;
+	height: 15px;
+}
+/*#topBrand .slide-area .next:hover .arrow{
+	width: 0;
+	left: 100px;
+}*/
+#topBrand .slide-area .navi{
+	position: absolute;
+	bottom: 15px;
+	left: 0px;
+	width: 100%;
+	text-align: center;
+	letter-spacing: -0.4em;
+}
+#topBrand .slide-area .navi li{
+	letter-spacing: normal;
+	display: inline-block;
+	margin: 0 1px;
+}
+#topBrand .slide-area .navi li a{
+	display: block;
+	width: 52px;
+	height: 2px;
+	background: #eeeeee;
+}
+#topBrand .slide-area .navi li a span{
+	display: block;
+	width: 0px;
+	height: 2px;
+	background: #3a1e87;
+    -webkit-transition: all 0.3s ease;
+       -moz-transition: all 0.3s ease;
+        -ms-transition: all 0.3s ease;
+         -o-transition: all 0.3s ease;
+            transition: all 0.3s ease;
+	-webkit-transform: scale3d(1,1,1);
+	   -moz-transform: scale3d(1,1,1);
+	    -o-transform:  scale3d(1,1,1);
+	        transform: scale3d(1,1,1);
+	        opacity: 0;
+}
+#topBrand .slide-area .navi li a.active span,
+#topBrand .slide-area .navi li a:hover span{
+-webkit-transform: scale3d(1,1,1);
+   -moz-transform: scale3d(1,1,1);
+    -o-transform:  scale3d(1,1,1);
+        transform: scale3d(1,1,1);
+	width: 52px;
+        opacity: 1;
+}
+
+/*----------------------------------------------------
+  #topLinks
+--------------------------------------------------- */
+#topLinks{
+	position: relative;
+	width: 100%;
+	overflow: hidden;
+	background: #f5f4f9;
+}
+#topLinks h2{
+	font-size: 40px;
+	color: #000000;
+	text-align: center;
+	line-height: 1;
+	padding: 60px 0 28px 0;
+	font-family: 'function_probook',"游明朝体", "Yu Mincho", YuMincho, 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'ヒラギノ角ゴ Pro W3', 'メイリオ', Meiryo, sans-serif;
+}
+#topLinks .view {
+	position: absolute;
+	top: 70px;
+	right: 50%;
+	margin-right: -491px;
+}
+#topLinks .view li{
+	display: none;
+}
+#topLinks .view li.list01{
+	display: block;
+}
+#topLinks .view a{
+	font-size: 14px;
+	height: 21px;
+	display: block;
+	font-family: 'function_probook',"游明朝体", "Yu Mincho", YuMincho, 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'ヒラギノ角ゴ Pro W3', 'メイリオ', Meiryo, sans-serif;
+}
+#topLinks .view a{
+	font-size: 14px;
+	right: 110px;
+	height: 21px;
+	display: block;
+}
+#topLinks .view a span.line{
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  width: 0%;
+  height: 1px;
+  background: #3a1e87;
+    -webkit-transition: all 0.3s ease;
+       -moz-transition: all 0.3s ease;
+        -ms-transition: all 0.3s ease;
+         -o-transition: all 0.3s ease;
+            transition: all 0.3s ease;
+  opacity: 0;
+}
+#topLinks .view a:hover{
+  color: #3a1e87;
+}
+#topLinks .view a:hover span.line{
+  width: 100%;
+  opacity: 1;
+}
+
+#topLinks .view a span{
+	height: 21px;
+	vertical-align: top;
+}
+#topLinks .view a span.text{
+	display: inline-block;
+	margin-right: 4px;
+}
+#topLinks .view a span.arrow{
+	width: 14px;
+	height: 21px;
+	overflow: hidden;
+	position: relative;
+	display: inline-block;
+}
+#topLinks .view a span.arrow span.arrow_img{
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+
+#topLinks ul.navi{
+	text-align: center;
+	letter-spacing: -0.4em;
+	margin-bottom: 44px;
+}
+#topLinks ul.navi li{
+	display: inline-block;
+	letter-spacing: normal;
+	margin: 0 17px;
+}
+#topLinks ul.navi li a{
+	position: relative;
+	font-size: 16px;
+	height: 21px;
+	line-height: 1;
+	color: #313131;
+	display: block;
+	font-family: 'function_probook',"游明朝体", "Yu Mincho", YuMincho, 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'ヒラギノ角ゴ Pro W3', 'メイリオ', Meiryo, sans-serif;
+}
+#topLinks ul.navi li a span{
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  width: 0%;
+  height: 1px;
+  background: #3a1e87;
+    -webkit-transition: all 0.3s ease;
+       -moz-transition: all 0.3s ease;
+        -ms-transition: all 0.3s ease;
+         -o-transition: all 0.3s ease;
+            transition: all 0.3s ease;
+  opacity: 0;
+}
+#topLinks ul.navi li a:hover,
+#topLinks ul.navi li a.active{
+  color: #3a1e87;
+}
+#topLinks ul.navi li a:hover span,
+#topLinks ul.navi li a.active span{
+  width: 100%;
+  opacity: 1;
+}
+
+#topLinks .list{
+	overflow: hidden;
+	text-align: center;
+	letter-spacing: -0.4em;
+	display: none;
+	padding-bottom: 80px;
+}
+#topLinks .list01{
+	display: block;
+}
+#topLinks .list .column{
+	display: inline-block;
+	letter-spacing: normal;
+	width: 224px;
+	height: 252px;
+	background: #FFF;
+	margin: 0 14px;
+	opacity: 0;
+  -webkit-transform: scale3d(1,1,1) translate3d(0px,20px,0px);
+     -moz-transform: scale3d(1,1,1) translate3d(0px,20px,0px);
+      -ms-transform: scale3d(1,1,1) translate3d(0px,20px,0px);
+       -o-transform: scale3d(1,1,1) translate3d(0px,20px,0px);
+          transform: scale3d(1,1,1) translate3d(0px,20px,0px);
+}
+#topLinks .list .column.show{
+	opacity: 1;
+    -webkit-transition: all 0.8s ease;
+       -moz-transition: all 0.8s ease;
+        -ms-transition: all 0.8s ease;
+         -o-transition: all 0.8s ease;
+            transition: all 0.8s ease;
+  -webkit-transform: scale3d(1,1,1) translate3d(0px,0%,0px);
+     -moz-transform: scale3d(1,1,1) translate3d(0px,0%,0px);
+      -ms-transform: scale3d(1,1,1) translate3d(0px,0%,0px);
+       -o-transform: scale3d(1,1,1) translate3d(0px,0%,0px);
+          transform: scale3d(1,1,1) translate3d(0px,0%,0px);
+
+}
+#topLinks .list .column a{
+	width: 224px;
+	height: 252px;
+	display: block;
+	position: relative;
+}
+#topLinks .list .column a .visual{
+	width: 224px;
+	height: 126px;
+	overflow: hidden;
+	background:#a584ff;
+}
+#topLinks .list .column a .visual img{
+    -webkit-transition: all 0.5s ease;
+       -moz-transition: all 0.5s ease;
+        -ms-transition: all 0.5s ease;
+         -o-transition: all 0.5s ease;
+            transition: all 0.5s ease;
+}
+#topLinks .list .column a:hover .visual img{
+	opacity: 0.8;
+}
+
+#topLinks .list .column a .defalt{
+  height: 126px;
+  width: 224px;
+  text-align: center;
+}
+#topLinks .list .column a .defalt span{
+  display: table-cell;
+  height: 126px;
+  width: 224px;
+  vertical-align: middle;
+  text-align: center;
+  font-size: 15px;
+  line-height: 1.3;
+  color: #313131;
+  font-family: 'function_probook',"游明朝体", "Yu Mincho", YuMincho, 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'ヒラギノ角ゴ Pro W3', 'メイリオ', Meiryo, sans-serif;
+}
+#topLinks .list .column a .over{
+  position: absolute;
+  top: 126px;
+  height: 126px;
+  width: 224px;
+  opacity: 0;
+    -webkit-transition: all 0.5s ease;
+       -moz-transition: all 0.5s ease;
+        -ms-transition: all 0.5s ease;
+         -o-transition: all 0.5s ease;
+            transition: all 0.5s ease;
+}
+#topLinks .list .column a .over .bg{
+  position: absolute;
+  top: 0px;
+  height: 126px;
+  width: 224px;
+  background: #3a1e87;
+  z-index: 1;
+    -webkit-transition: all 0.5s ease;
+       -moz-transition: all 0.5s ease;
+        -ms-transition: all 0.5s ease;
+         -o-transition: all 0.5s ease;
+            transition: all 0.5s ease;
+            opacity: 0;
+}
+#topLinks .list .column a:hover .over .bg{
+        opacity: 1;
+}
+#topLinks .list .column a:hover .over{
+  opacity: 1;
+}
+#topLinks .list .column a .over span{
+  display: table-cell;
+  height: 126px;
+  width: 224px;
+  vertical-align: middle;
+  text-align: center;
+  font-size: 15px;
+  font-family: 'function_probook',"游明朝体", "Yu Mincho", YuMincho, 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'ヒラギノ角ゴ Pro W3', 'メイリオ', Meiryo, sans-serif;
+  line-height: 1.3;
+  color: #FFF;
+  position: relative;
+  z-index: 2;
+    -webkit-transition: all 0.5s ease;
+       -moz-transition: all 0.5s ease;
+        -ms-transition: all 0.5s ease;
+         -o-transition: all 0.5s ease;
+            transition: all 0.5s ease;
+  -webkit-transform: translate3d(0px,10px,0px);
+     -moz-transform: translate3d(0px,10px,0px);
+      -ms-transform: translate3d(0px,10px,0px);
+       -o-transform: translate3d(0px,10px,0px);
+          transform: translate3d(0px,10px,0px);
+}
+#topLinks .list .column a:hover .over span{
+  -webkit-transform: translate3d(0px,0px,0px);
+     -moz-transform: translate3d(0px,0px,0px);
+      -ms-transform: translate3d(0px,0px,0px);
+       -o-transform: translate3d(0px,0px,0px);
+          transform: translate3d(0px,0px,0px);
+
+}
+
+#topLinks .list .column a .over span p{
+  text-align: center;
+  font-size: 12px;
+  line-height: 1.3;
+  color: #FFF;
+  padding-top: 4px;
+}
+#topLinks .list .column a .over .icon{
+  position: absolute;
+  bottom: 10px;
+  right: 12px;
+  color: #FFF;
+  line-height: 1;
+  font-size: 12px;
+  font-family: 'function_probook',"游明朝体", "Yu Mincho", YuMincho, 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'ヒラギノ角ゴ Pro W3', 'メイリオ', Meiryo, sans-serif;
+  background: url(../images/icon_blank1.png) no-repeat right center;
+  padding-right: 19px;
+  z-index: 2;
+    -webkit-transition: all 0.5s ease;
+       -moz-transition: all 0.5s ease;
+        -ms-transition: all 0.5s ease;
+         -o-transition: all 0.5s ease;
+            transition: all 0.5s ease;
+}
+#topLinks .list .column a:hover .over .icon{
+}
+
+
+/*----------------------------------------------------
+  #topNews
+--------------------------------------------------- */
+#topNews{
+	position: relative;
+	width: 100%;
+	min-height: 457px;
+	overflow: hidden;
+	background: #FFF;
+}
+#topNews h2{
+	font-size: 40px;
+	color: #000000;
+	text-align: center;
+	line-height: 1;
+	padding: 60px 0 44px 0;
+	font-family: 'function_probook',"游明朝体", "Yu Mincho", YuMincho, 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'ヒラギノ角ゴ Pro W3', 'メイリオ', Meiryo, sans-serif;
+}
+#topNews .view {
+	position: absolute;
+	top: 71px;
+	left: 50%;
+	margin-left: 379px;
+}
+#topNews .view a{
+	font-size: 14px;
+	height: 21px;
+	display: block;
+	font-family: 'function_probook',"游明朝体", "Yu Mincho", YuMincho, 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'ヒラギノ角ゴ Pro W3', 'メイリオ', Meiryo, sans-serif;
+}
+#topNews .view a{
+	font-size: 14px;
+	right: 110px;
+	height: 21px;
+	display: block;
+}
+#topNews .view a span.line{
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  width: 0%;
+  height: 1px;
+  background: #3a1e87;
+    -webkit-transition: all 0.3s ease;
+       -moz-transition: all 0.3s ease;
+        -ms-transition: all 0.3s ease;
+         -o-transition: all 0.3s ease;
+            transition: all 0.3s ease;
+  opacity: 0;
+}
+#topNews .view a:hover{
+  color: #3a1e87;
+}
+#topNews .view a:hover span.line{
+  width: 100%;
+  opacity: 1;
+}
+#topNews .view a span{
+	height: 21px;
+	vertical-align: top;
+}
+#topNews .view a span.text{
+	display: inline-block;
+	margin-right: 4px;
+}
+#topNews .view a span.arrow{
+	width: 14px;
+	height: 21px;
+	overflow: hidden;
+	position: relative;
+	display: inline-block;
+}
+#topNews .view a span.arrow span.arrow_img{
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+#topNews .list{
+	overflow: hidden;
+	text-align: center;
+	letter-spacing: -0.4em;
+}
+#topNews .list .column{
+	display: inline-block;
+	letter-spacing: normal;
+	width: 224px;
+	height: 252px;
+	background: #FFF;
+	margin: 0 14px;
+	vertical-align: top;
+	opacity: 0;
+  -webkit-transform: scale3d(1,1,1) translate3d(0px,20px,0px);
+     -moz-transform: scale3d(1,1,1) translate3d(0px,20px,0px);
+      -ms-transform: scale3d(1,1,1) translate3d(0px,20px,0px);
+       -o-transform: scale3d(1,1,1) translate3d(0px,20px,0px);
+          transform: scale3d(1,1,1) translate3d(0px,20px,0px);
+}
+#topNews .list .column.show{
+	opacity: 1;
+    -webkit-transition: all 0.8s ease;
+       -moz-transition: all 0.8s ease;
+        -ms-transition: all 0.8s ease;
+         -o-transition: all 0.8s ease;
+            transition: all 0.8s ease;
+  -webkit-transform: scale3d(1,1,1) translate3d(0px,0%,0px);
+     -moz-transform: scale3d(1,1,1) translate3d(0px,0%,0px);
+      -ms-transform: scale3d(1,1,1) translate3d(0px,0%,0px);
+       -o-transform: scale3d(1,1,1) translate3d(0px,0%,0px);
+          transform: scale3d(1,1,1) translate3d(0px,0%,0px);
+
+}
+#topNews .list .column a{
+	width: 224px;
+	height: 252px;
+	display: block;
+	position: relative;
+}
+#topNews .list .column a .visual{
+	width: 224px;
+	height: 126px;
+	overflow: hidden;
+	margin-bottom: 6px;
+	background:#a584ff;
+}
+#topNews .list .column a .visual img{
+    -webkit-transition: all 0.5s ease;
+       -moz-transition: all 0.5s ease;
+        -ms-transition: all 0.5s ease;
+         -o-transition: all 0.5s ease;
+            transition: all 0.5s ease;
+}
+#topNews .list .column a:hover .visual img{
+	opacity: 0.8;
+}
+
+#topNews .list .column a .meta{
+	text-align: left;
+	font-size: 10px;
+	color: #959595;
+	line-height: 1;
+	margin-bottom: 15px;
+	font-family: 'function_probook',"游明朝体", "Yu Mincho", YuMincho, 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'ヒラギノ角ゴ Pro W3', 'メイリオ', Meiryo, sans-serif;
+}
+#topNews .list .column a .meta .category{
+	color: #313131;
+}
+
+#topNews .list .column a p{
+	color: #313131;
+	font-size: 14px;
+	line-height: 1.5;
+	text-align: left;
+}
+#topNews .list .column a:hover p{
+	color: #3a1e87;
+}
+
+
+#topNews .list .column a .more{
+	position: absolute;
+	bottom: 0px;
+	left:0;
+	width: 100%;
+	text-align: left;
+	color: #3a1e87;
+}
+
+#topNews .list .column a .more span.t{
+	text-align: right;
+	font-size: 12px;
+	display: block;
+	margin-bottom: 8px;
+	line-height: 1;
+	opacity: 0;
+	font-family: 'function_probook',"游明朝体", "Yu Mincho", YuMincho, 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'ヒラギノ角ゴ Pro W3', 'メイリオ', Meiryo, sans-serif;
+    -webkit-transition: all 0.5s ease;
+       -moz-transition: all 0.5s ease;
+        -ms-transition: all 0.5s ease;
+         -o-transition: all 0.5s ease;
+            transition: all 0.5s ease;
+  -webkit-transform: translate3d(-10px,0%,0px);
+     -moz-transform: translate3d(-10px,0%,0px);
+      -ms-transform: translate3d(-10px,0%,0px);
+       -o-transform: translate3d(-10px,0%,0px);
+          transform: translate3d(-10px,0%,0px);
+}
+#topNews .list .column a:hover .more span.t{
+	opacity: 1;
+  -webkit-transform: translate3d(0px,0%,0px);
+     -moz-transform: translate3d(0px,0%,0px);
+      -ms-transform: translate3d(0px,0%,0px);
+       -o-transform: translate3d(0px,0%,0px);
+          transform: translate3d(0px,0%,0px);
+}
+#topNews .list .column a .more span.line{
+	width: 0%;
+	height: 1px;
+	background: #3a1e87;
+	display: block;
+    -webkit-transition: all 0.3s ease;
+       -moz-transition: all 0.3s ease;
+        -ms-transition: all 0.3s ease;
+         -o-transition: all 0.3s ease;
+            transition: all 0.3s ease;
+  opacity: 0;
+}
+#topNews .list .column a:hover .more span.line{
+	width: 100%;
+  opacity: 1;
+
+}

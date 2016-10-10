@@ -1,0 +1,49 @@
+@charset "utf-8";
+
+form.wpcf7-form-mode-edit{
+	
+}
+
+/*
+ * 確認時に付加するclass
+ */
+form.wpcf7-form-mode-confirm{
+	
+}
+form.wpcf7-form-mode-confirm th{	/* 問い合わせページのプレビューで、<TH>の幅が広がりすぎるので  */
+	width:150px;
+}
+
+/*
+ * 「確認へ」を押したときの入力チェックでひっかかった時に表示するメッセージ
+ */
+form.wpcf7-form ul.error-messages{
+	color:red;
+	margin:0 0 20px 20px;
+}
+
+/*
+ * 入力チェックに引っかかったときに tr.addClass('error')
+ */
+form.wpcf7-form table tr.error td input,form.wpcf7-form table tr.error td textarea{
+	border:1px solid red;
+}
+
+/*
+ * プレビュー時のテキスト
+ */
+form.wpcf7-form table td span.wpcf7-form-control-wrap-confirm{
+	color:green;
+}
+
+
+
+/*
+ * ボタンエリア、書き直す、送信（「書き直す」が加わるため位置調整）
+ */
+form.wpcf7-form p.buttons-area .button-rewrite{
+	margin-right:20px;
+}
+
+
+
