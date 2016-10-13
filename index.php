@@ -25,7 +25,7 @@
   //////////////////////////////////////////////////////////////////////////////-->
   <section id="topBrand">
     <h2>BRAND</h2>
-    <a href="<?php echo get_post_type_archive_link( 'milbon-brands' ); ?>" class="pageLink view"><span class="text">VIEW ALL BRANDS</span><span class="arrow"><span class="arrow_img">→</span></span><span class="line"></span></a>
+    <a href="<?php echo esc_url( get_post_type_archive_link( 'milbon-brands' ) ); ?>" class="pageLink view"><span class="text">VIEW ALL BRANDS</span><span class="arrow"><span class="arrow_img">→</span></span><span class="line"></span></a>
     <div class="slide-area">
       <div class="slide-inner">
         <div class="slide">
@@ -33,6 +33,13 @@
             // GET BLOG POSTS
             $shortcode_blog_query = new WP_Query(array(
               'post_type' => 'milbon-brands',
+              'meta_query' => array(
+                array(
+                  'key' => 'field_id',
+                  'value' => 'yes',
+                  'compare' => '='
+                )
+              ),
               'order' => 'ASC'
             ));
           ?>
@@ -40,9 +47,8 @@
            <?php
            if ( $shortcode_blog_query->have_posts()) {
             while($shortcode_blog_query->have_posts()) : $shortcode_blog_query->the_post(); ?>
-              <?php if (get_post_meta( $post->ID, 'field_id', TRUE ) ==  "yes") { ?>
                 <div class="column">
-                  <a href="<?php echo get_post_meta($post->ID, '_location', true); ?>" class="pageLink">
+                  <a href="<?php echo esc_url( get_permalink( $post->ID ) );  ?>" class="pageLink">
                     <div class="visual"><img src="
                       <?php 
                         if ( has_post_thumbnail($post->ID) ) :
@@ -65,15 +71,14 @@
                           }
 
                         ?>
-                        <p class="category"><?php echo $post_categories; ?></p>
-                        <p class="ja">［ ヴィラロドラ ］</p>
+                        <p class="ja"><?php echo esc_html( get_post_meta($post->ID,'_title_japanese', true) ); ?></p>
+
                           <span class="detail">VIEW DETAIL →<span></span></span>
                       </div>
                     </div>
                   </a>
                   <div class="site"><a href="http://www.villalodola.jp/" target="_blank"><span>BRAND SITE</span></a></div>
-                </div>
-                <?php } ?>
+                </div>     
             <?php 
               endwhile;
             }
@@ -236,7 +241,7 @@
   <section id="topNews">
     <h2>NEWS</h2>
     <ul class="view">
-      <li><a href="<?php echo get_post_type_archive_link( 'milbon-news' ); ?>" class="pageLink"><span class="text">VIEW ALL NEWS</span><span class="arrow"><span class="arrow_img">→</span></span><span class="line"></span></a></li>
+      <li><a href="<?php echo esc_url( get_post_type_archive_link( 'milbon-news' ) ); ?>" class="pageLink"><span class="text">VIEW ALL NEWS</span><span class="arrow"><span class="arrow_img">→</span></span><span class="line"></span></a></li>
     </ul>
     <!-- NEWS LIST -->
     <?php
