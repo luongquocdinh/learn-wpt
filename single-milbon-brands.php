@@ -33,7 +33,7 @@ get_header(); ?>
 					<span>ミルボン製品について</span>
 				</a>
 				<div class="btn_return">
-					<a href="#" class="pageLink">
+					<a href="<?php echo esc_url(get_post_type_archive_link( 'milbon-brands' )); ?>" class="pageLink">
 						<span class="arrow_img">←</span>
 						<span class="text">VIEW ALL BRAND</span>
 						<span class="line"></span>
