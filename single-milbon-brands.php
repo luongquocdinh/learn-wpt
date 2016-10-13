@@ -9,19 +9,19 @@ get_header(); ?>
 			<nav id="breadcrumb">
 				<ul>
 					<li>
-						<a href="../../../" class="pageLink">
+						<a href="./../../" class="pageLink">
 							TOP
 							<span></span>
 						</a>
 					</li>
 					<li>
-						<a href="../../../brand/" class="pageLink">
+						<a href="<?php echo esc_url(get_post_type_archive_link( 'milbon-brands' )); ?>" class="pageLink">
 							BRAND
 							<span></span>
 						</a>
 					</li>
 					<li>
-						<a href="../../../" class="pageLink">
+						<a href="<?php echo esc_url( get_permalink( $post->ID ) );  ?>" class="pageLink">
 							PLARMIA
 							<span></span>
 						</a>
