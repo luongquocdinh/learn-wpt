@@ -38,7 +38,13 @@ get_header(); ?>
 	            <?php
 	            	if( !empty( $terms ) ) {
 	            		foreach ( $terms as $term ) {
-	            			echo '<li><a class="pageLink category-filter" data-slug="'. esc_attr( $term->slug ) .'" href="javascript:void(0)">'. esc_html( $term->name ) .'</a></li>';
+	            ?>
+	            			<li>
+	            				<a href="<?php echo esc_url(get_category_link( get_cat_ID($term->name)) ); ?>" class="pageLink category-filter" data-slug="<?php echo esc_attr( $term->slug ) ?>">
+	            					<?php echo esc_html( $term->name ) ?>
+	            				</a>
+	            			</li>
+	            			<?php
 	            		}
 	            	}
 	            ?>
@@ -94,7 +100,13 @@ get_header(); ?>
 								<span class="category"><?php echo esc_html( $milbon_brands_term ); ?></span> ｜ <span class="day"><?php echo get_the_date('Y-m-d', $post->ID); ?></span>
 							</div>
 							<div class="brandName"><?php echo esc_html( get_the_title( $post->ID ) ); ?></div>
-							<div class="ja"><?php echo esc_html( get_post_meta($post->ID,'_title_japanese', true) ); ?></div>
+							<div class="ja">
+								<?php
+			            if (get_post_meta($post->ID,'_title_japanese', true) !== '') { 
+			              echo esc_html( "[" . get_post_meta($post->ID,'_title_japanese', true) . "]" );
+			            } 
+		            ?>
+							</div>
 							<p><?php echo wp_kses_post( nl2br( wp_trim_words(get_the_excerpt( $post->ID ), 15, ' [...]') ) ); ?></p>
 							<div class="more"><span class="t">VIEW DETAIL →</span><span class="line"></span></div>
 						</a>

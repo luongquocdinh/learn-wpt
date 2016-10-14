@@ -78,7 +78,7 @@ get_header(); ?>
 				</footer>
 			</article>
 			<nav class="detail_next">
-				<a href="#" class="pageLink">
+				<a href="<?php echo esc_url( get_permalink( get_next_post()->ID )); ?>" class="pageLink">
 					<div class="arrow" style="left: 0px;"></div>
 					<div class="over" style="opacity: 0;">
 						<div class="image">

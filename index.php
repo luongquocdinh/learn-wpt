@@ -59,7 +59,6 @@
                     <div class="date"><span class="category">
                       <?php
                         echo get_first_cateogry($post->ID, 'brand_category');
-                        // Name category
                       ?>
                       </span> ｜ <span class="day"><?php the_date('Y-m-d'); ?> UPDATE</span>
                     </div>
@@ -68,11 +67,16 @@
                         <p class="brandName"><?php the_title(); ?></p>
                         <div class="category">
                           <?php
-                            // Name category
                           echo get_first_cateogry($post->ID, 'brand_category');
                           ?>
                         </div>
-                        <p class="ja">[<?php echo esc_html( get_post_meta($post->ID,'_title_japanese', true) ); ?>]</p>
+                        <p class="ja">
+                          <?php
+                          if (get_post_meta($post->ID,'_title_japanese', true) != '') { 
+                            echo esc_html( "[" . get_post_meta($post->ID,'_title_japanese', true) . "]" );
+                          } 
+                          ?>
+                        </p>
 
                           <span class="detail">VIEW DETAIL →<span></span></span>
                       </div>

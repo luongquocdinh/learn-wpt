@@ -32,7 +32,13 @@ get_header(); ?>
 	            <?php
 	            	if( !empty( $terms ) ) {
 	            		foreach ( $terms as $term ) {
-	            			echo '<li><a class="pageLink category-filter" data-slug="'. esc_attr( $term->slug ) .'" href="javascript:void(0)">'. esc_html( $term->name ) .'</a></li>';
+	            			?>
+	            			<li>
+	            				<a href="<?php echo esc_url(get_category_link( get_cat_ID($term->name)) ); ?>" class="pageLink category-filter" data-slug="<?php echo esc_attr( $term->slug ) ?>">
+	            					<?php echo esc_html( $term->name ) ?>
+	            				</a>
+	            			</li>
+	            			<?php
 	            		}
 	            	}
 	            ?>
@@ -82,7 +88,15 @@ get_header(); ?>
 					<div class="column">
 						<a href="<?php echo esc_url( get_permalink( $post->ID ) ); ?>" class="pageLink">
 							<div class="visual view">
-								<img src="<?php echo esc_url( wp_get_attachment_url( get_post_thumbnail_id( $post->ID ) ) ); ?>" height="139" width="300" alt="<?php echo get_the_title( $post->ID ); ?>">
+								<img src="
+									<?php
+		              if ( has_post_thumbnail($post->ID) ) :
+		                  get_featured_url($post->ID);
+		              else:
+		            ?>
+		            <?php echo get_template_directory_uri(); ?>/images/no_image.jpg"
+		            <?php endif; ?>
+								" height="126" width="224" alt="<?php echo get_the_title( $post->ID ); ?>">
 							</div>
 							<div class="date">
 								<span class="category"><?php echo esc_html( $milbon_brands_term ); ?></span> ｜ <span class="day"><?php echo get_the_date('Y-m-d', $post->ID); ?></span>
