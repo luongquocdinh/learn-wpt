@@ -1,0 +1,587 @@
+
+
+/*----------------------------------------------------
+  #contact
+--------------------------------------------------- */
+#contact{
+	position: relative;
+	width: 100%;
+	overflow: hidden;
+}
+#contact a.btn_about_product{
+	position: absolute;
+	top: 20px;
+	right: 20px;
+	width: 158px;
+	height: 28px;
+	display: block;
+	background: #FFF;
+	border: 1px #e5e5e5 solid;
+	text-align: center;
+	line-height: 28px;
+	font-size: 12px;
+    -webkit-transition: all 0.3s ease;
+       -moz-transition: all 0.3s ease;
+        -ms-transition: all 0.3s ease;
+         -o-transition: all 0.3s ease;
+            transition: all 0.3s ease;
+            z-index: 1;
+}
+#contact a.btn_about_product:hover{
+	background: #3a1e87;
+	border: 1px #3a1e87 solid;
+	color: #FFF;
+
+}
+
+/*ä¸€è¦§ãƒ˜ãƒƒãƒ€ãƒ¼*/
+#contact .header{
+	padding-top: 85px;
+	text-align: center;
+	position: relative;
+	padding-bottom: 50px;
+}
+#contact .header h1{
+	font-size: 35px;
+	margin-bottom:20px;
+	line-height: 1;
+	font-family: 'function_probook';
+}
+#contact .header p{
+	font-size: 17px;
+	line-height: 1;
+}
+#contact .header p span{
+	font-size: 14px;
+}
+#contact .contents{
+	width: 700px;
+	margin: 0 auto;
+	padding-bottom: 100px;
+}
+#contact .contents h2{
+	text-align: center;
+	color: #313131;
+	font-size: 16px;
+	margin-bottom: 35px;
+	font-weight: bold;
+}
+#contact .contents .attention{
+	background: #f3f1f7;
+	padding: 35px;
+	margin-bottom: 50px;
+}
+#contact .contents .attention .btn{
+	text-align: center;
+}
+#contact .contents .attention .btn a span{
+	background: url(../../img/contact/arrow_down.png) no-repeat right center;
+	padding-right: 20px;
+}
+#contact .contents .attention .area{
+	padding-top: 25px;
+	display: none;
+}
+#contact .contents .attention .area p{
+	line-height: 166%;
+	font-size: 12px;
+	margin-bottom: 30px;
+}
+#contact .contents .attention .area p.c{
+	color: #3a1e87;
+}
+#contact .contents .attention .close{
+	text-align: center;
+}
+#contact .contents .attention .close a span{
+	font-family: 'function_probook';
+	background: url(../../img/contact/close.png) no-repeat right center;
+	padding-right: 20px;
+}
+#contact .contents .form{
+}
+#contact .contents .form .column{
+	position: relative;
+	margin-bottom: 30px;
+}
+#contact .contents .form .column.mb{
+	position: relative;
+	margin-bottom: 40px;
+}
+#contact .contents .form .column .subject_title{
+	font-size: 14px;
+	line-height: 1;
+	margin-bottom: 15px;
+	font-weight: bold;
+}
+#contact .contents .form .column ul.subject_btn01{
+	overflow: hidden;
+	padding-bottom: 10px;
+}
+#contact .contents .form .column ul.subject_btn01 li{
+	width: 343px;
+	height: 58px;
+	float: left;
+}
+#contact .contents .form .column ul.subject_btn01 li:first-child{
+	margin-right: 10px;
+}
+#contact .contents .form .column ul.subject_btn01 li a{
+	width: 343px;
+	height: 58px;
+	display: block;
+	border: 1px #eeeeee solid;
+	text-align: center;
+	line-height: 58px;
+    -webkit-transition: all 0.3s ease;
+       -moz-transition: all 0.3s ease;
+        -ms-transition: all 0.3s ease;
+         -o-transition: all 0.3s ease;
+            transition: all 0.3s ease;
+}
+#contact .contents .form .column ul.subject_btn01 li a:hover,
+#contact .contents .form .column ul.subject_btn01 li a.active{
+	background: #3a1e87;
+	border: 1px #3a1e87 solid;
+	color: #FFF;
+}
+#contact .contents .form .column ul.subject_btn02{
+	overflow: hidden;
+	padding-bottom: 10px;
+}
+#contact .contents .form .column ul.subject_btn02 li{
+	width: 345px;
+	height: 40px;
+	float: left;
+}
+#contact .contents .form .column ul.subject_btn02 li:first-child{
+	margin-right: 8px;
+}
+#contact .contents .form .column ul.subject_btn02 li a{
+	width: 345px;
+	height: 40px;
+	display: block;
+	background: #c4bbdb;
+	text-align: center;
+	line-height: 40px;
+	color: #FFF;
+    -webkit-transition: all 0.3s ease;
+       -moz-transition: all 0.3s ease;
+        -ms-transition: all 0.3s ease;
+         -o-transition: all 0.3s ease;
+            transition: all 0.3s ease;
+}
+#contact .contents .form .column ul.subject_btn02 li a span{
+	padding-right: 20px;
+	background: url(../../img/contact/icon_blank.png) no-repeat right center;
+}
+#contact .contents .form .column ul.subject_btn02 li a:hover,
+#contact .contents .form .column ul.subject_btn02 li a.active{
+	background: #8978b7;
+	color: #FFF;
+}
+
+#contact .contents .form .column .select_subject{
+	height: 60px;
+	line-height: 60px;
+	color: #FFF;
+	background: #3a1e87;
+	text-align: center;
+	font-size: 14px;
+}
+
+#contact .contents .form .column .must{
+	position: absolute;
+	top: 10px;
+	left: -44px;
+	background: url(../../img/contact/icon_must.png) no-repeat;
+	background-size: 34px;
+	width: 34px;
+	height: 15px;
+}
+#contact .contents .form .column .must.t{
+	position: absolute;
+	top: 1px;
+}
+#contact .contents .form .column .check{
+	position: absolute;
+	top: 0;
+	right: 0px;
+}
+#contact .contents .form .column .check.bottom{
+	position: absolute;
+	top: auto;
+	bottom:15px;
+	right: 15px;
+}
+#contact .contents .form .column .check .ok{
+	background: url(../../img/contact/icon_ok.png) no-repeat;
+	background-size: 20px;
+	width: 20px;
+	height: 20px;
+}
+#contact .contents .form .column .check .miss{
+	color: #ff0000;
+}
+#contact .contents .form .column .check .miss span{
+	background: url(../../img/contact/icon_miss.png) no-repeat right center;
+	background-size: 20px;
+	padding-right: 27px;
+	line-height: 19px;
+	font-weight: bold;
+	display: inline-block;
+	height: 19px;
+}
+#contact .contents .form .column ul.twoColumn{
+}
+#contact .contents .form .column ul.twoColumn > li{
+	width: 310px;
+	height: 40px;
+	float: left;
+	position: relative;
+}
+#contact .contents .form .column ul.twoColumn > li:first-child{
+	margin-right: 80px;
+}
+#contact .contents .form .column ul.twoColumn .check{
+	position: absolute;
+	top: 4px;
+	right: 0px;
+}
+
+#contact .contents .form .column ul.twoColumn > li ul.radio{
+	overflow: hidden;
+	letter-spacing: -0.4em;
+}
+#contact .contents .form .column ul.twoColumn > li ul.radio li{
+	display: inline-block;
+	letter-spacing: normal;
+	vertical-align: middle;
+	font-size: 14px;
+	margin-right: 25px;
+  	position: relative;
+}
+#contact .contents .form .column ul.twoColumn > li ul.radio li.q{
+	font-weight: bold;
+}
+
+#contact .contents .form .column ul.twoColumn > li ul.radio li input[type="radio"]{
+  position: absolute;
+  top: 0;
+  left: 0px;
+  opacity: 0;
+}
+
+#contact .contents .form .column ul.twoColumn > li ul.radio li a{
+	background: url(../../img/contact/icon_check.png) no-repeat;
+	background-size: 20px;
+	height: 20px;
+	line-height: 20px;
+	padding-left: 24px;
+	display: block;
+}
+#contact .contents .form .column ul.twoColumn > li ul.radio li a.active{
+	background: url(../../img/contact/icon_check_ok.png) no-repeat;
+	background-size: 20px;
+
+}
+#contact .contents .form .column .clear{
+	clear: both;
+}
+input[type="text"], 
+input[type="password"], 
+textarea, 
+select {
+    outline: none;
+}
+#contact .contents .form .column .input01{
+    width: 100%;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    border:none;
+    border-bottom: 1px solid #eeeeee;
+    font-size: 14px;
+    color: #3a1e87;
+    padding:0 0 12px 0;
+}
+#contact .contents .form .column .input01:focus{
+	outline:none;
+    border-bottom: 1px solid #3a1e87;
+}
+#contact .contents .form .column .input01.miss{
+    border-bottom: 1px solid #ff0000;
+    color: #ff0000;
+}
+
+#contact .contents .form .column .input02{
+    width: 100%;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    border: 1px solid #eeeeee;
+    font-size: 14px;
+    color: #3a1e87;
+    padding:15px
+}
+#contact .contents .form .column .input02:focus{
+	outline:none;
+    border: 1px solid #3a1e87;
+}
+#contact .contents .form .column .input02.miss{
+    border-bottom: 1px solid #ff0000;
+    color: #ff0000;
+}
+
+#contact .contents .form .column .input03{
+    width:120px;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    border:none;
+    border-bottom: 1px solid #eeeeee;
+    font-size: 14px;
+    color: #3a1e87;
+    padding:0 0 12px 0;
+    margin-right: 20px;
+}
+#contact .contents .form .column .input04{
+    width:70px;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    border:none;
+    border-bottom: 1px solid #eeeeee;
+    font-size: 14px;
+    color: #3a1e87;
+    padding:0 0 12px 0;
+    margin-right: 20px;
+}
+#contact .contents .form .column .input05{
+    width:70px;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    border:none;
+    border-bottom: 1px solid #eeeeee;
+    font-size: 14px;
+    color: #3a1e87;
+    padding:0 0 12px 0;
+}
+
+#contact .contents .form .column .input03:focus,
+#contact .contents .form .column .input04:focus,
+#contact .contents .form .column .input05:focus{
+	outline:none;
+    border-bottom: 1px solid #3a1e87;
+}
+#contact .contents .form .column ul.conf{
+	overflow: hidden;
+	letter-spacing: -0.4em;
+}
+#contact .contents .form .column ul.conf li{
+	display: inline-block;
+	vertical-align: middle;
+	letter-spacing: normal;
+	line-height: 20px;
+	height: 20px;
+}
+#contact .contents .form .column ul.conf li:first-child{
+	width: 80px;
+	font-weight: bold;
+}
+#contact .contents .form .column ul.conf li a{
+	background: url(../../img/contact/icon_check.png) no-repeat left center;
+	background-size: 20px;
+	padding-left: 27px;
+	line-height: 20px;
+	height: 20px;
+	display: block;
+}
+#contact .contents .form .column ul.conf li a.miss{
+	background: url(../../img/contact/icon_check_miss.png) no-repeat left center;
+	background-size: 20px;
+    color: #ff0000;
+}
+#contact .contents .form .column ul.conf li a.ok{
+	background: url(../../img/contact/icon_check_ok.png) no-repeat left center;
+	background-size: 20px;
+}
+#contact .contents .btn_set{
+	text-align: center;
+	letter-spacing: -0.4em;
+}
+#contact .contents .btn_set li{
+	letter-spacing: normal;
+	display: inline-block;
+	vertical-align: top;
+	margin: 0 14px;
+}
+#contact .contents .btn_set li a{
+	font-family:"æ¸¸æ˜Žæœä½“", "Yu Mincho", YuMincho, 'ãƒ’ãƒ©ã‚®ãƒŽè§’ã‚´ Pro W3', 'Hiragino Kaku Gothic Pro', 'ãƒ’ãƒ©ã‚®ãƒŽè§’ã‚´ Pro W3', 'ãƒ¡ã‚¤ãƒªã‚ª', Meiryo, sans-serif;
+	width: 218px;
+	height: 58px;
+	display: block;
+	border: 1px #eeeeee solid;
+	text-align: center;
+	line-height: 58px;
+	font-weight: bold;
+	cursor: pointer;
+	background: #FFF;
+	font-size: 14px;
+    -webkit-transition: all 0.3s ease;
+       -moz-transition: all 0.3s ease;
+        -ms-transition: all 0.3s ease;
+         -o-transition: all 0.3s ease;
+            transition: all 0.3s ease;
+}
+#contact .contents .btn_set li .btn{
+	font-family:"æ¸¸æ˜Žæœä½“", "Yu Mincho", YuMincho, 'ãƒ’ãƒ©ã‚®ãƒŽè§’ã‚´ Pro W3', 'Hiragino Kaku Gothic Pro', 'ãƒ’ãƒ©ã‚®ãƒŽè§’ã‚´ Pro W3', 'ãƒ¡ã‚¤ãƒªã‚ª', Meiryo, sans-serif;
+	width: 220px;
+	height: 60px;
+	display: block;
+	border: 1px #eeeeee solid;
+	text-align: center;
+	font-weight: bold;
+	line-height: 60px;
+	cursor: pointer;
+	background: #FFF;
+	font-size: 14px;
+    -webkit-transition: all 0.3s ease;
+       -moz-transition: all 0.3s ease;
+        -ms-transition: all 0.3s ease;
+         -o-transition: all 0.3s ease;
+            transition: all 0.3s ease;
+}
+#contact .contents .btn_set li a:hover,
+#contact .contents .btn_set li .btn:hover{
+	background: #3a1e87;
+	border: 1px #3a1e87 solid;
+	color: #FFF;
+}
+#contact .contents .btn_set li .conf{
+	background: url(../../img/contact/kakunin_off.jpg) no-repeat;
+	background-size: 220px;
+	width: 220px;
+	height: 60px;
+	text-indent: -9999px;
+
+}
+#contact .contents .btn_set li .conf:hover{
+	background: url(../../img/contact/kakunin_on.jpg) no-repeat;
+	background-size: 220px;
+	width: 220px;
+	height: 60px;
+	text-indent: -9999px;
+
+}
+#contact .contents .btn_set li .send{
+	background: url(../../img/contact/soshin_off.jpg) no-repeat;
+	background-size: 220px;
+	width: 220px;
+	height: 60px;
+	text-indent: -9999px;
+	border: 1px #eeeeee solid;
+    -webkit-transition: all 0.3s ease;
+       -moz-transition: all 0.3s ease;
+        -ms-transition: all 0.3s ease;
+         -o-transition: all 0.3s ease;
+            transition: all 0.3s ease;
+            cursor: pointer;
+
+}
+#contact .contents .btn_set li .send:hover{
+	background: url(../../img/contact/soshin_on.jpg) no-repeat;
+	background-size: 220px;
+	width: 220px;
+	height: 60px;
+	text-indent: -9999px;
+	border: 1px #3a1e87 solid;
+
+}
+
+#contact .contents .btn_set li a.btn_reset{
+	background: url(../../img/contact/reset_off.png) no-repeat;
+	background-size: 220px;
+	width: 220px;
+	height: 60px;
+	text-indent: -9999px;
+
+}
+#contact .contents .btn_set li a.btn_reset:hover{
+	background: url(../../img/contact/reset_on.png) no-repeat;
+	background-size: 220px;
+	width: 220px;
+	height: 60px;
+	text-indent: -9999px;
+}
+#contact .contents .btn_set li .btn_kakunin{
+	background: url(../../img/contact/kakunin_off.png) no-repeat;
+	background-size: 220px;
+	width: 220px;
+	height: 60px;
+	text-indent: -9999px;
+	border: 1px #eeeeee solid;
+    -webkit-transition: all 0.3s ease;
+       -moz-transition: all 0.3s ease;
+        -ms-transition: all 0.3s ease;
+         -o-transition: all 0.3s ease;
+            transition: all 0.3s ease;
+            cursor: pointer;
+
+}
+#contact .contents .btn_set li .btn_kakunin:hover{
+	background: url(../../img/contact/kakunin_on.png) no-repeat;
+	background-size: 220px;
+	width: 220px;
+	height: 60px;
+	text-indent: -9999px;
+	border: 1px #3a1e87 solid;
+}
+
+#contact .contents .form .column dl.input_preview{
+	overflow: hidden;
+    font-size: 14px;
+    color: #3a1e87;
+    font-weight: bold;
+}
+#contact .contents .form .column dl.input_preview dt{
+	float: left;
+	width: 155px;
+	line-height: 150%;
+
+}
+#contact .contents .form .column dl.input_preview dd{
+	float: left;
+	width: 545px;
+	line-height: 150%;
+	font-size: 19px;
+}
+
+#contact .contents .form .column .input_preview_textarea{
+    width: 100%;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    border: 1px solid #3a1e87;
+    font-size: 14px;
+    color: #3a1e87;
+    padding:15px
+
+}
+
+#contact .contents .thank{
+	text-align: center;
+	color: #313131;
+	font-size: 20px;
+	margin-bottom: 30px;
+	font-weight: bold;
+}
+#contact .contents .thank_conf{
+	text-align: center;
+	color: #3a1e87;
+	font-size: 16px;
+	line-height: 162%;
+	margin-bottom: 60px;
+	font-weight: bold;
+}
+#contact .contents .thank_attention{
+	color: #313131;
+	font-size: 12px;
+	line-height: 162%;
+	margin-bottom: 60px;
+}

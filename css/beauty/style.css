@@ -1,0 +1,173 @@
+
+/*----------------------------------------------------
+  #beauty
+--------------------------------------------------- */
+#beauty{
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+/*一覧ヘッダー*/
+#beauty .header{
+  padding-top: 85px;
+  text-align: center;
+  position: relative;
+  padding-bottom: 50px;
+}
+#beauty .header h1{
+  font-family: 'function_probook';
+  font-size: 35px;
+  margin-bottom:25px;
+  line-height: 1;
+}
+#beauty .header p{
+  font-size: 14px;
+  line-height: 1;
+}
+
+#beauty .list{
+  overflow: hidden;
+  text-align: left;
+  letter-spacing: -0.4em;
+  padding-bottom: 80px;
+}
+#beauty .list .column{
+  vertical-align: top;
+  display: inline-block;
+  letter-spacing: normal;
+  width: 50%;
+  background: #FFF;
+  -webkit-transform: scale3d(1,1,1) translate3d(0px,20px,0px);
+     -moz-transform: scale3d(1,1,1) translate3d(0px,20px,0px);
+      -ms-transform: scale3d(1,1,1) translate3d(0px,20px,0px);
+       -o-transform: scale3d(1,1,1) translate3d(0px,20px,0px);
+          transform: scale3d(1,1,1) translate3d(0px,20px,0px);
+}
+#beauty .list .column.show{
+  opacity: 1;
+    -webkit-transition: all 0.8s ease;
+       -moz-transition: all 0.8s ease;
+        -ms-transition: all 0.8s ease;
+         -o-transition: all 0.8s ease;
+            transition: all 0.8s ease;
+  -webkit-transform: scale3d(1,1,1) translate3d(0px,0%,0px);
+     -moz-transform: scale3d(1,1,1) translate3d(0px,0%,0px);
+      -ms-transform: scale3d(1,1,1) translate3d(0px,0%,0px);
+       -o-transform: scale3d(1,1,1) translate3d(0px,0%,0px);
+          transform: scale3d(1,1,1) translate3d(0px,0%,0px);
+
+}
+#beauty .list .column a{
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: relative;
+}
+#beauty .list .column a .visual{
+  width: 100%;
+  overflow: hidden;
+  background:#a584ff;
+}
+#beauty .list .column a .visual img{
+  width: 100%;
+  height: auto;
+    -webkit-transition: all 0.5s ease;
+       -moz-transition: all 0.5s ease;
+        -ms-transition: all 0.5s ease;
+         -o-transition: all 0.5s ease;
+            transition: all 0.5s ease;
+}
+#beauty .list .column a:hover .visual img{
+  opacity: 0.8;
+}
+
+#beauty .list .column a .over{
+  position: absolute;
+  top: 0px;
+  height: 100%;
+  width: 100%;
+  display: table;
+  opacity: 0;
+    -webkit-transition: all 0.5s ease;
+       -moz-transition: all 0.5s ease;
+        -ms-transition: all 0.5s ease;
+         -o-transition: all 0.5s ease;
+            transition: all 0.5s ease;
+}
+#beauty .list .column a .over .bg{
+  position: absolute;
+  top: 0px;
+  height: 100%;
+  width: 100%;
+  background: #b39df1;
+  z-index: 1;
+    -webkit-transition: all 0.5s ease;
+       -moz-transition: all 0.5s ease;
+        -ms-transition: all 0.5s ease;
+         -o-transition: all 0.5s ease;
+            transition: all 0.5s ease;
+            opacity: 0;
+}
+#beauty .list .column a:hover .over .bg{
+        opacity: 0.88;
+}
+#beauty .list .column a:hover .over{
+  opacity: 1;
+}
+#beauty .list .column a .over span{
+  display: table-cell !important;
+  height: 100%;
+  width: 100%;
+  vertical-align: middle;
+  text-align: center;
+  font-size: 25px;
+  font-family: 'function_probook',"游明朝体", "Yu Mincho", YuMincho, 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'ヒラギノ角ゴ Pro W3', 'メイリオ', Meiryo, sans-serif;
+  line-height: 1.3;
+  color: #FFF;
+  position: relative;
+  z-index: 2;
+    -webkit-transition: all 0.5s ease;
+       -moz-transition: all 0.5s ease;
+        -ms-transition: all 0.5s ease;
+         -o-transition: all 0.5s ease;
+            transition: all 0.5s ease;
+  -webkit-transform: translate3d(0px,10px,0px);
+     -moz-transform: translate3d(0px,10px,0px);
+      -ms-transform: translate3d(0px,10px,0px);
+       -o-transform: translate3d(0px,10px,0px);
+          transform: translate3d(0px,10px,0px);
+}
+#beauty .list .column a:hover .over span{
+  -webkit-transform: translate3d(0px,-5px,0px);
+     -moz-transform: translate3d(0px,-5px,0px);
+      -ms-transform: translate3d(0px,-5px,0px);
+       -o-transform: translate3d(0px,-5px,0px);
+          transform: translate3d(0px,-5px,0px);
+
+}
+
+#beauty .list .column a .over span p.ja{
+  text-align: center;
+  font-size: 14px;
+  line-height: 150%;
+  color: #FFF;
+  padding-top: 4px;
+}
+#beauty .list .column a .over span p.text{
+  text-align: center;
+  font-size: 14px;
+  line-height: 170%;
+  color: #FFF;
+  margin-bottom: 30px;
+  padding-top: 20px;
+}
+#beauty .list .column a .over span  .icon{
+  color: #FFF;
+  line-height: 1;
+  font-size: 14px;
+  font-family: 'function_probook',"游明朝体", "Yu Mincho", YuMincho, 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'ヒラギノ角ゴ Pro W3', 'メイリオ', Meiryo, sans-serif;
+  background: url(../../img/beauty/icon_blank.png) no-repeat right center;
+  padding-right: 19px;
+  display: inline-block;
+}
