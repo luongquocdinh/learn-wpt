@@ -2,6 +2,8 @@ var WinScroll;
 var WinW;
 var WinH;
 var LoadEnd=false;
+var checkHomePage = $('body.home');
+
 
 
 /*----------------------------------------------------------
@@ -35,10 +37,12 @@ if(navigator.userAgent.indexOf('iPad') > 0) {
 jQuery.event.add(window,"load",function() {
 
   //cover
-  setTimeout(function(){
-    $("#cover").fadeOut(500);
-    LoadEnd=true;
-  },500);
+  if (checkHomePage.length) {
+    setTimeout(function(){
+      $("#cover").fadeOut(500);
+      LoadEnd=true;
+    },500);
+  } 
 
   //PRODUCT
   if($("#products").length){

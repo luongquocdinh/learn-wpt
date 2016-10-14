@@ -20,8 +20,12 @@
   <link href="<?php echo get_template_directory_uri(); ?>/css/style.css" rel="stylesheet" type="text/css">
   <link href="<?php echo get_template_directory_uri(); ?>/css/brand/style.css" rel="stylesheet" type="text/css">
   <link href="<?php echo get_template_directory_uri(); ?>/css/news/style.css" rel="stylesheet" type="text/css">
-
-
+  <link href="<?php echo get_template_directory_uri(); ?>/css/concept/style.css" rel="stylesheet" type="text/css">
+  <link href="<?php echo get_template_directory_uri(); ?>/css/contact/style.css" rel="stylesheet" type="text/css">
+  <link href="<?php echo get_template_directory_uri(); ?>/css/beauty/style.css" rel="stylesheet" type="text/css">
+  <script src="<?php echo get_template_directory_uri(); ?>/js/jquery.min.js"></script>
+  <script src="<?php echo get_template_directory_uri(); ?>/js/jquery.libs.js"></script>
+  <script src="<?php echo get_template_directory_uri(); ?>/js/common.js"></script>
 </head>
 
 <body <?php body_class(); ?>>
@@ -41,7 +45,7 @@
       <li><a class="pageLink" href="<?php echo esc_url(get_post_type_archive_link( 'milbon-brands' )); ?>">BRAND<span></span></a></li>
       <li><a class="pageLink" href="./company/gaiyou.html">COMPANY<span></span></a></li>
       <li><a class="pageLink" href="<?php echo esc_url(get_post_type_archive_link( 'milbon-news' )); ?>">NEWS<span></span></a></li>
-      <li><a class="pageLink" href="./contact/">CONTACT<span></span></a></li>
+      <li><a class="pageLink" href="">CONTACT<span></span></a></li>
     </ul>
     <ul class="subMenu">
       <li class="submenu01"><a href="./beauty/">FOR HAIR DESIGNER</a></li>
