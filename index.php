@@ -106,11 +106,13 @@
       <li class="list01"><a href="./beauty/" class="pageLink"><span class="text">VIEW ALL FOR HAIR DESINGERS</span><span class="arrow"><span class="arrow_img">→</span></span><span class="line"></span></a></li>
       <li class="list02"><a href="./brand/" class="pageLink"><span class="text">VIEW ALL BRAND</span><span class="arrow"><span class="arrow_img">→</span></span><span class="line"></span></a></li>
       <li class="list03"><a href="#" class="pageLink"><span class="text">VIEW ALL GROUP</span><span class="arrow"><span class="arrow_img">→</span></span><span class="line"></span></a></li>
+      <li class="list04"><a href="#" class="pageLink"><span class="text">VIEW ALL DISTRIBUTE</span><span class="arrow"><span class="arrow_img">→</span></span><span class="line"></span></a></li>
     </ul>
     <ul class="navi">
       <li><a href="list01" class="active">FOR HAIR DESIGNER<span></span></a></li>
       <li><a href="list02">BRAND<span></span></a></li>
       <li><a href="list03">GROUP<span></span></a></li>
+      <li><a href="list04">DISTRIBUTE<span></span></a></li>
     </ul>
 
     <!-- FOR HAIR DESIGNER LIST -->
@@ -233,8 +235,48 @@
       }
       ?>
     </div>
-  </section>
 
+    <!-- DISTRIBUTE LIST -->
+     <?php
+      // GET BLOG POSTS
+        $shortcode_blog_query = new WP_Query(array(
+          'post_type' => 'milbon-links',
+          'tax_query' => array(
+              array(
+                'taxonomy' => 'link_category',
+                'field' => 'slug',
+                'terms' => 'distribute-slug'
+              )
+           ),
+          'showposts' => 4,
+          'order' => 'ASC'
+        ));
+
+    ?>
+
+    <div class="list list04">
+      <?php if ( $shortcode_blog_query->have_posts() ) {
+      while($shortcode_blog_query->have_posts()) : $shortcode_blog_query->the_post(); ?>
+      <div class="column">
+        <a href="<?php echo get_post_meta($post->ID, "_location", true); ?>" target="_blank">
+          <div class="visual"><img src="
+            <?php
+              if ( has_post_thumbnail($post->ID) ) :
+                  get_featured_url($post->ID);
+              endif;
+           ?>
+           " height="126" width="224" alt="<?php the_title(); ?>"></div>
+          <div class="defalt"><span><?php the_title(); ?></span></div>
+          <div class="over"><div class="bg"></div><span><?php the_title(); ?><p><?php the_content(); ?></p></span><p class="icon">VISIT SITE</p></div>
+        </a>
+      </div>
+      <?php
+        endwhile;
+      }
+      ?>
+    </div>
+
+  </section>
   <!-- /////////////////////////////////////////////////////////////////////////
      topNews
   //////////////////////////////////////////////////////////////////////////////-->

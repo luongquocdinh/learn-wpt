@@ -278,6 +278,16 @@ if (file_exists (ABSPATH.'/wp-admin/includes/taxonomy.php')) {
 	);
 
 	$group_id = wp_insert_category($group);
+
+	$distribute = array (
+		'cat_name' => 'Distribute',
+		'category_description' => 'Distribute',
+	  'category_nicename' => 'distribute-slug',
+	  'category_parent' => '',
+	  'taxonomy' => 'link_category'
+	);
+
+	$distribute_id = wp_insert_category($distribute);
 }
 /**
  * CREATE META BOX LINKS POST TYPE
