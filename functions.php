@@ -298,6 +298,7 @@ add_action( 'add_meta_boxes', 'add_events_metaboxes_links' );
 // Add the Events Meta Boxes
 function add_events_metaboxes_links() {
 	add_meta_box('wpt_events_location_links', 'Links', 'wpt_events_location_links', 'milbon-links', 'side', 'default');
+	add_meta_box('wpt_japan_title_links', 'Japan Title', 'wpt_japan_title_links', 'milbon-links', 'side', 'default');
 }
 
 // The Event Location Metabox
@@ -311,6 +312,17 @@ function wpt_events_location_links() {
 
 	echo '<input type="text" name="_location" value="' . $location  . '" class="widefat" />';
 
+}
+
+function wpt_japan_title_links() {
+	global $post;
+
+	echo '<input type="hidden" name="brandmeta_noncename" id="brandmeta_noncename" value="' .
+	wp_create_nonce( plugin_basename(__FILE__) ) . '" />';
+
+	$location = get_post_meta($post->ID, '_title_japanese', true);
+
+	echo '<input type="text" name="_title_japanese" value="' . $location  . '" class="widefat" />';
 }
 
 // Save the Metabox Data

@@ -144,7 +144,7 @@
            ?>
            " height="126" width="224" alt="<?php the_title(); ?>"></div>
           <div class="defalt"><span><?php the_title(); ?></span></div>
-          <div class="over"><div class="bg"></div><span><?php the_title(); ?><p><?php the_content(); ?></p></span><p class="icon">VISIT SITE</p></div>
+          <div class="over"><div class="bg"></div><span><?php the_title(); ?><p class="ja"><?php echo esc_html( get_post_meta($post->ID,'_title_japanese', true) ); ?></p></span><p class="icon">VISIT SITE</p></div>
         </a>
       </div>
       <?php
@@ -187,7 +187,7 @@
            ?>
            " height="126" width="224" alt="<?php the_title(); ?>"></div>
           <div class="defalt"><span><?php the_title(); ?></span></div>
-          <div class="over"><div class="bg"></div><span><?php the_title(); ?><p><?php the_content(); ?></p></span><p class="icon">VISIT SITE</p></div>
+          <div class="over"><div class="bg"></div><span><?php the_title(); ?><p class="ja"><?php echo esc_html( get_post_meta($post->ID,'_title_japanese', true) ); ?></p></span><p class="icon">VISIT SITE</p></div>
         </a>
       </div>
       <?php
@@ -227,7 +227,7 @@
            ?>
            " height="126" width="224" alt="<?php the_title(); ?>"></div>
           <div class="defalt"><span><?php the_title(); ?></span></div>
-          <div class="over"><div class="bg"></div><span><?php the_title(); ?><p><?php the_content(); ?></p></span><p class="icon">VISIT SITE</p></div>
+          <div class="over"><div class="bg"></div><span><?php the_title(); ?><p class="ja"><?php echo esc_html( get_post_meta($post->ID,'_title_japanese', true) ); ?></p></span><p class="icon">VISIT SITE</p></div>
         </a>
       </div>
       <?php
@@ -267,7 +267,7 @@
            ?>
            " height="126" width="224" alt="<?php the_title(); ?>"></div>
           <div class="defalt"><span><?php the_title(); ?></span></div>
-          <div class="over"><div class="bg"></div><span><?php the_title(); ?><p><?php the_content(); ?></p></span><p class="icon">VISIT SITE</p></div>
+          <div class="over"><div class="bg"></div><span><?php the_title(); ?><p class="ja"><?php echo esc_html( get_post_meta($post->ID,'_title_japanese', true) ); ?></p></span><p class="icon">VISIT SITE</p></div>
         </a>
       </div>
       <?php
