@@ -38,9 +38,9 @@
     <ul class="globalNavi">
       <li><a class="active pageLink" href="./">TOP<span></span></a></li>
       <li><a class="pageLink" href="./concept/">CONCEPT<span></span></a></li>
-      <li><a class="pageLink" href="./brand/">BRAND<span></span></a></li>
+      <li><a class="pageLink" href="<?php echo esc_url(get_post_type_archive_link( 'milbon-brands' )); ?>">BRAND<span></span></a></li>
       <li><a class="pageLink" href="./company/gaiyou.html">COMPANY<span></span></a></li>
-      <li><a class="pageLink" href="./news/">NEWS<span></span></a></li>
+      <li><a class="pageLink" href="<?php echo esc_url(get_post_type_archive_link( 'milbon-news' )); ?>">NEWS<span></span></a></li>
       <li><a class="pageLink" href="./contact/">CONTACT<span></span></a></li>
     </ul>
     <ul class="subMenu">
