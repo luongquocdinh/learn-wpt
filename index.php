@@ -58,6 +58,7 @@
                     </div>
                     <div class="date"><span class="category">
                       <?php
+                        echo get_first_cateogry($post->ID, 'brand_category');
                         // Name category
                       ?>
                       </span> ｜ <span class="day"><?php the_date('Y-m-d'); ?> UPDATE</span>
@@ -68,6 +69,7 @@
                         <div class="category">
                           <?php
                             // Name category
+                          echo get_first_cateogry($post->ID, 'brand_category');
                           ?>
                         </div>
                         <p class="ja">[<?php echo esc_html( get_post_meta($post->ID,'_title_japanese', true) ); ?>]</p>
@@ -324,12 +326,14 @@
             <?php
               if ( has_post_thumbnail($post->ID) ) :
                   get_featured_url($post->ID);
-              endif;
-           ?>
+              else:
+            ?>
+            <?php echo get_template_directory_uri(); ?>/images/no_image.jpg"
+            <?php endif; ?>
            " height="126" width="224" alt="<?php the_title(); ?>"></div>
           <div class="meta"><span class="category">
             <?php 
-              get_first_cateogry($post->ID, 'news_category');
+              echo get_first_cateogry($post->ID, 'news_category');
             ?>
               
             </span> ｜ <span class="date">

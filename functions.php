@@ -561,11 +561,14 @@ function get_featured_url($pid){
 }
 
 
-function get_first_cateogry($pid, $post_type){
-	$categories = get_the_terms($pid, $post_type);
+function get_first_cateogry($pid, $taxonomy_name){
+	$category = array();
+	$categories = get_the_terms($pid, $taxonomy_name);
 	foreach ( $categories as $cat){
-		echo $cat->name;
+		array_push($category, $cat->name);
 	}
+	$post_categories = implode(', ', $category);
+	echo $post_categories;
 }
 
 /*

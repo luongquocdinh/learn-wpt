@@ -34,9 +34,9 @@
 //////////////////////////////////////////////////////////////////////////////-->
 <header id="header">
   <div class="header-block">
-    <div class="logo"><a href="./"><img src="<?php echo get_template_directory_uri(); ?>/images/logo.png" height="40" width="200" alt="株式会社 MILBON"></a></div>
+    <div class="logo"><a href="./../../"><img src="<?php echo get_template_directory_uri(); ?>/images/logo.png" height="40" width="200" alt="株式会社 MILBON"></a></div>
     <ul class="globalNavi">
-      <li><a class="active pageLink" href="./">TOP<span></span></a></li>
+      <li><a class="active pageLink" href="./../../">TOP<span></span></a></li>
       <li><a class="pageLink" href="./concept/">CONCEPT<span></span></a></li>
       <li><a class="pageLink" href="<?php echo esc_url(get_post_type_archive_link( 'milbon-brands' )); ?>">BRAND<span></span></a></li>
       <li><a class="pageLink" href="./company/gaiyou.html">COMPANY<span></span></a></li>
