@@ -575,6 +575,7 @@ function get_first_cateogry($pid, $post_type){
 add_action( 'add_meta_boxes', 'add_brands_metaboxes_links' );
 function add_brands_metaboxes_links() {
 	add_meta_box('wpt_brands_titles_japan', 'Title', 'wpt_brands_titles_japan', 'milbon-brands', 'side', 'default');
+	add_meta_box('wpt_brands_link', 'Link', 'wpt_brands_link', 'milbon-brands', 'side', 'default');
 }
 
 function wpt_brands_titles_japan() {
@@ -587,6 +588,17 @@ function wpt_brands_titles_japan() {
 
 	echo '<input type="text" name="_title_japanese" value="' . $location  . '" class="widefat" />';
 
+}
+
+function wpt_brands_link() {
+	global $post;
+
+	echo '<input type="hidden" name="brandmeta_linkname" id="brandmeta_linkname" value="' .
+	wp_create_nonce( plugin_basename(__FILE__) ) . '" />';
+
+	$location = get_post_meta($post->ID, '_link', true);
+
+	echo '<input type="text" name="_link" value="' . $location  . '" class="widefat" />';
 }
 
 function wpt_save_brands_meta($post_id, $post) {
@@ -612,4 +624,27 @@ function wpt_save_brands_meta($post_id, $post) {
 	}
 
 }
+
+function wpt_save_brands_link ($post_id, $post) {
+	if ( !wp_verify_nonce( $_POST['brandmeta_linkname'], plugin_basename(__FILE__) )) {
+	return $post->ID;
+	}
+
+	if ( !current_user_can( 'edit_post', $post->ID ))
+		return $post->ID;
+
+	$events_meta['_link'] = $_POST['_link'];
+
+	foreach ($events_meta as $key => $value) {
+		if( $post->post_type == 'revision' ) return;
+		$value = implode(',', (array)$value);
+		if(get_post_meta($post->ID, $key, FALSE)) {
+			update_post_meta($post->ID, $key, $value);
+		} else {
+			add_post_meta($post->ID, $key, $value);
+		}
+		if(!$value) delete_post_meta($post->ID, $key);
+	}
+}
 add_action('save_post', 'wpt_save_brands_meta', 1, 2);
+add_action('save_post', 'wpt_save_brands_link', 1, 2);

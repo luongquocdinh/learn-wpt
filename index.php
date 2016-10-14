@@ -7,7 +7,7 @@
     <ul>
       <li><img src="<?php echo get_template_directory_uri(); ?>/images/top/visual.jpg" height="700" width="1200" alt=""></li>
     </ul>
-    <h1><img src="<?php echo get_template_directory_uri(); ?>/images/top/top_copy.png" width="349" alt="美しさを拓く。MILBON"></h1>
+    <a href="./../../"><h1><img src="<?php echo get_template_directory_uri(); ?>/images/top/top_copy.png" width="349" alt="美しさを拓く。MILBON"></h1></a>
     <div class="scrolldown"><a href="#"><span>SCROLL DOWN</span></a></div>
   </section>
 
@@ -49,35 +49,34 @@
             while($shortcode_blog_query->have_posts()) : $shortcode_blog_query->the_post(); ?>
                 <div class="column">
                   <a href="<?php echo esc_url( get_permalink( $post->ID ) );  ?>" class="pageLink">
-                    <div class="visual"><img src="
+                    <div class="visual view"><img src="
                       <?php 
                         if ( has_post_thumbnail($post->ID) ) :
                             get_featured_url($post->ID);
                         endif;
                       ?>" height="450" width="800" alt="Villa Lodola">
                     </div>
-                    <div class="date"><span class="category"><?php the_title(); ?></span> ｜ <span class="day"><?php the_date('Y-m-d'); ?> UPDATE</span></div>
+                    <div class="date"><span class="category">
+                      <?php
+                        // Name category
+                      ?>
+                      </span> ｜ <span class="day"><?php the_date('Y-m-d'); ?> UPDATE</span>
+                    </div>
                     <div class="over">
                       <div class="over-inner">
-                        <p class="brandName"><img src=""></p>
-                        <?php 
-                          $cat = array();
-                          foreach (get_the_category($post_id) as $c) {
-                            $cat = get_category($c);
-                            array_push($cats, $cat->name);
-                          }
-                          if (sizeOf($cats) > 0) {
-                            $post_categories = implode(', ', $cats);
-                          }
-
-                        ?>
-                        <p class="ja"><?php echo esc_html( get_post_meta($post->ID,'_title_japanese', true) ); ?></p>
+                        <p class="brandName"><?php the_title(); ?></p>
+                        <div class="category">
+                          <?php
+                            // Name category
+                          ?>
+                        </div>
+                        <p class="ja">[<?php echo esc_html( get_post_meta($post->ID,'_title_japanese', true) ); ?>]</p>
 
                           <span class="detail">VIEW DETAIL →<span></span></span>
                       </div>
                     </div>
                   </a>
-                  <div class="site"><a href="http://www.villalodola.jp/" target="_blank"><span>BRAND SITE</span></a></div>
+                  <div class="site"><a href="<?php echo esc_html( get_post_meta($post->ID,'_link', true) ); ?>" target="_blank"><span>BRAND SITE</span></a></div>
                 </div>     
             <?php 
               endwhile;
@@ -105,8 +104,6 @@
     <ul class="view">
       <li class="list01"><a href="./beauty/" class="pageLink"><span class="text">VIEW ALL FOR HAIR DESINGERS</span><span class="arrow"><span class="arrow_img">→</span></span><span class="line"></span></a></li>
       <li class="list02"><a href="./brand/" class="pageLink"><span class="text">VIEW ALL BRAND</span><span class="arrow"><span class="arrow_img">→</span></span><span class="line"></span></a></li>
-      <li class="list03"><a href="#" class="pageLink"><span class="text">VIEW ALL GROUP</span><span class="arrow"><span class="arrow_img">→</span></span><span class="line"></span></a></li>
-      <li class="list04"><a href="#" class="pageLink"><span class="text">VIEW ALL DISTRIBUTE</span><span class="arrow"><span class="arrow_img">→</span></span><span class="line"></span></a></li>
     </ul>
     <ul class="navi">
       <li><a href="list01" class="active">FOR HAIR DESIGNER<span></span></a></li>
@@ -144,7 +141,14 @@
            ?>
            " height="126" width="224" alt="<?php the_title(); ?>"></div>
           <div class="defalt"><span><?php the_title(); ?></span></div>
-          <div class="over"><div class="bg"></div><span><?php the_title(); ?><p class="ja"><?php echo esc_html( get_post_meta($post->ID,'_title_japanese', true) ); ?></p></span><p class="icon">VISIT SITE</p></div>
+          <div class="over"><div class="bg"></div><span><?php the_title(); ?><p class="ja">
+            <?php
+              if (get_post_meta($post->ID,'_title_japanese', true) != '') { 
+                echo esc_html( "[" . get_post_meta($post->ID,'_title_japanese', true) . "]" );
+              } 
+            ?>
+            </p></span><p class="icon">VISIT SITE</p>
+          </div>
         </a>
       </div>
       <?php
@@ -187,7 +191,13 @@
            ?>
            " height="126" width="224" alt="<?php the_title(); ?>"></div>
           <div class="defalt"><span><?php the_title(); ?></span></div>
-          <div class="over"><div class="bg"></div><span><?php the_title(); ?><p class="ja"><?php echo esc_html( get_post_meta($post->ID,'_title_japanese', true) ); ?></p></span><p class="icon">VISIT SITE</p></div>
+          <div class="over"><div class="bg"></div><span><?php the_title(); ?><p class="ja">
+            <?php
+              if (get_post_meta($post->ID,'_title_japanese', true) != '') { 
+                echo esc_html( "[" . get_post_meta($post->ID,'_title_japanese', true) . "]" );
+              } 
+            ?> 
+          </p></span><p class="icon">VISIT SITE</p></div>
         </a>
       </div>
       <?php
@@ -227,7 +237,13 @@
            ?>
            " height="126" width="224" alt="<?php the_title(); ?>"></div>
           <div class="defalt"><span><?php the_title(); ?></span></div>
-          <div class="over"><div class="bg"></div><span><?php the_title(); ?><p class="ja"><?php echo esc_html( get_post_meta($post->ID,'_title_japanese', true) ); ?></p></span><p class="icon">VISIT SITE</p></div>
+          <div class="over"><div class="bg"></div><span><?php the_title(); ?><p class="ja">
+            <?php
+              if (get_post_meta($post->ID,'_title_japanese', true) != '') { 
+                echo esc_html( "[" . get_post_meta($post->ID,'_title_japanese', true) . "]" );
+              } 
+            ?>
+          </p></span><p class="icon">VISIT SITE</p></div>
         </a>
       </div>
       <?php
@@ -267,7 +283,13 @@
            ?>
            " height="126" width="224" alt="<?php the_title(); ?>"></div>
           <div class="defalt"><span><?php the_title(); ?></span></div>
-          <div class="over"><div class="bg"></div><span><?php the_title(); ?><p class="ja"><?php echo esc_html( get_post_meta($post->ID,'_title_japanese', true) ); ?></p></span><p class="icon">VISIT SITE</p></div>
+          <div class="over"><div class="bg"></div><span><?php the_title(); ?><p class="ja">
+            <?php
+              if (get_post_meta($post->ID,'_title_japanese', true) != '') { 
+                echo esc_html( "[" . get_post_meta($post->ID,'_title_japanese', true) . "]" );
+              } 
+            ?>
+          </p></span><p class="icon">VISIT SITE</p></div>
         </a>
       </div>
       <?php
@@ -275,7 +297,6 @@
       }
       ?>
     </div>
-
   </section>
   <!-- /////////////////////////////////////////////////////////////////////////
      topNews
