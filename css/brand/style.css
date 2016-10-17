@@ -139,6 +139,7 @@
 	opacity: 0;
 }
 #products .header .category .pullDown.view{
+	display: block;
 }
 #products .header .category .pullDown ul{
 	padding-left: 27px;

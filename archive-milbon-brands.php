@@ -21,7 +21,7 @@ get_header(); ?>
           <?php 
 				$terms = get_terms( array(
 				    'taxonomy' => 'brand_category',
-				    'hide_empty' => false,
+				    'hide_empty' => true,
 				) );
           ?>
     <section id="products">
@@ -38,13 +38,7 @@ get_header(); ?>
 	            <?php
 	            	if( !empty( $terms ) ) {
 	            		foreach ( $terms as $term ) {
-	            ?>
-	            			<li>
-	            				<a href="<?php echo esc_url(get_category_link( get_cat_ID($term->name)) ); ?>" class="pageLink category-filter" data-slug="<?php echo esc_attr( $term->slug ) ?>">
-	            					<?php echo esc_html( $term->name ) ?>
-	            				</a>
-	            			</li>
-	            			<?php
+	            			echo '<li><a class="pageLink category-filter" data-slug="'. esc_attr( $term->slug ) .'" href="javascript:void(0)">'. esc_html( $term->name ) .'</a></li>';
 	            		}
 	            	}
 	            ?>

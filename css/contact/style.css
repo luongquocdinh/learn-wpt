@@ -75,7 +75,7 @@
 	text-align: center;
 }
 #contact .contents .attention .btn a span{
-	background: url(../../img/contact/arrow_down.png) no-repeat right center;
+	background: url(../../images/contact/arrow_down.png) no-repeat right center;
 	padding-right: 20px;
 }
 #contact .contents .attention .area{
@@ -95,7 +95,7 @@
 }
 #contact .contents .attention .close a span{
 	font-family: 'function_probook';
-	background: url(../../img/contact/close.png) no-repeat right center;
+	background: url(../../images/contact/close.png) no-repeat right center;
 	padding-right: 20px;
 }
 #contact .contents .form{
@@ -173,7 +173,7 @@
 }
 #contact .contents .form .column ul.subject_btn02 li a span{
 	padding-right: 20px;
-	background: url(../../img/contact/icon_blank.png) no-repeat right center;
+	background: url(../../images/contact/icon_blank.png) no-repeat right center;
 }
 #contact .contents .form .column ul.subject_btn02 li a:hover,
 #contact .contents .form .column ul.subject_btn02 li a.active{
@@ -194,7 +194,7 @@
 	position: absolute;
 	top: 10px;
 	left: -44px;
-	background: url(../../img/contact/icon_must.png) no-repeat;
+	background: url(../../images/contact/icon_must.png) no-repeat;
 	background-size: 34px;
 	width: 34px;
 	height: 15px;
@@ -215,7 +215,7 @@
 	right: 15px;
 }
 #contact .contents .form .column .check .ok{
-	background: url(../../img/contact/icon_ok.png) no-repeat;
+	background: url(../../images/contact/icon_ok.png) no-repeat;
 	background-size: 20px;
 	width: 20px;
 	height: 20px;
@@ -224,7 +224,7 @@
 	color: #ff0000;
 }
 #contact .contents .form .column .check .miss span{
-	background: url(../../img/contact/icon_miss.png) no-repeat right center;
+	background: url(../../images/contact/icon_miss.png) no-repeat right center;
 	background-size: 20px;
 	padding-right: 27px;
 	line-height: 19px;
@@ -273,7 +273,7 @@
 }
 
 #contact .contents .form .column ul.twoColumn > li ul.radio li a{
-	background: url(../../img/contact/icon_check.png) no-repeat;
+	background: url(../../images/contact/icon_check.png) no-repeat;
 	background-size: 20px;
 	height: 20px;
 	line-height: 20px;
@@ -281,7 +281,7 @@
 	display: block;
 }
 #contact .contents .form .column ul.twoColumn > li ul.radio li a.active{
-	background: url(../../img/contact/icon_check_ok.png) no-repeat;
+	background: url(../../images/contact/icon_check_ok.png) no-repeat;
 	background-size: 20px;
 
 }
@@ -386,7 +386,7 @@ select {
 	font-weight: bold;
 }
 #contact .contents .form .column ul.conf li a{
-	background: url(../../img/contact/icon_check.png) no-repeat left center;
+	background: url(../../images/contact/icon_check.png) no-repeat left center;
 	background-size: 20px;
 	padding-left: 27px;
 	line-height: 20px;
@@ -394,12 +394,12 @@ select {
 	display: block;
 }
 #contact .contents .form .column ul.conf li a.miss{
-	background: url(../../img/contact/icon_check_miss.png) no-repeat left center;
+	background: url(../../images/contact/icon_check_miss.png) no-repeat left center;
 	background-size: 20px;
     color: #ff0000;
 }
 #contact .contents .form .column ul.conf li a.ok{
-	background: url(../../img/contact/icon_check_ok.png) no-repeat left center;
+	background: url(../../images/contact/icon_check_ok.png) no-repeat left center;
 	background-size: 20px;
 }
 #contact .contents .btn_set{
@@ -455,7 +455,7 @@ select {
 	color: #FFF;
 }
 #contact .contents .btn_set li .conf{
-	background: url(../../img/contact/kakunin_off.jpg) no-repeat;
+	background: url(../../images/contact/kakunin_off.jpg) no-repeat;
 	background-size: 220px;
 	width: 220px;
 	height: 60px;
@@ -463,7 +463,7 @@ select {
 
 }
 #contact .contents .btn_set li .conf:hover{
-	background: url(../../img/contact/kakunin_on.jpg) no-repeat;
+	background: url(../../images/contact/kakunin_on.jpg) no-repeat;
 	background-size: 220px;
 	width: 220px;
 	height: 60px;
@@ -471,7 +471,7 @@ select {
 
 }
 #contact .contents .btn_set li .send{
-	background: url(../../img/contact/soshin_off.jpg) no-repeat;
+	background: url(../../images/contact/soshin_off.jpg) no-repeat;
 	background-size: 220px;
 	width: 220px;
 	height: 60px;
@@ -486,7 +486,7 @@ select {
 
 }
 #contact .contents .btn_set li .send:hover{
-	background: url(../../img/contact/soshin_on.jpg) no-repeat;
+	background: url(../../images/contact/soshin_on.jpg) no-repeat;
 	background-size: 220px;
 	width: 220px;
 	height: 60px;
@@ -496,7 +496,7 @@ select {
 }
 
 #contact .contents .btn_set li a.btn_reset{
-	background: url(../../img/contact/reset_off.png) no-repeat;
+	background: url(../../images/contact/reset_off.png) no-repeat;
 	background-size: 220px;
 	width: 220px;
 	height: 60px;
@@ -504,14 +504,14 @@ select {
 
 }
 #contact .contents .btn_set li a.btn_reset:hover{
-	background: url(../../img/contact/reset_on.png) no-repeat;
+	background: url(../../images/contact/reset_on.png) no-repeat;
 	background-size: 220px;
 	width: 220px;
 	height: 60px;
 	text-indent: -9999px;
 }
 #contact .contents .btn_set li .btn_kakunin{
-	background: url(../../img/contact/kakunin_off.png) no-repeat;
+	background: url(../../images/contact/kakunin_off.png) no-repeat;
 	background-size: 220px;
 	width: 220px;
 	height: 60px;
@@ -526,7 +526,7 @@ select {
 
 }
 #contact .contents .btn_set li .btn_kakunin:hover{
-	background: url(../../img/contact/kakunin_on.png) no-repeat;
+	background: url(../../images/contact/kakunin_on.png) no-repeat;
 	background-size: 220px;
 	width: 220px;
 	height: 60px;
