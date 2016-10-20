@@ -21,7 +21,7 @@
           </li>
           <li><a class="pageLink" href="./news/">NEWS<span></span></a></li>
           <li><a class="pageLink" href="./contact/">CONTACT<span></span></a></li>
-          <li><a class="pageLink" href="./brand/tenpan.html">OUR PRODUCT<span></span></a></li>
+          <li><a class="pageLink" href="<?php echo esc_url( home_url( '/' ) ) . 'brand_tenpan/';?>">OUR PRODUCT<span></span></a></li>
           <li><a class="pageLink" href="./guide/faq.html">ヘアカラー使用上の注意点<span></span></a></li>
         </ul>
         <ul class="menu footer-column02">
@@ -84,10 +84,9 @@
 </div><!-- end wrapper -->
 	
 <?php wp_footer(); ?>
-<!-- #footer_area -->
 <script src="<?php echo get_template_directory_uri(); ?>/js/jquery.min.js"></script>
 <script src="<?php echo get_template_directory_uri(); ?>/js/jquery.libs.js"></script>
 <script src="<?php echo get_template_directory_uri(); ?>/js/common.js"></script>
 <script src="<?php echo get_template_directory_uri(); ?>/js/index.js"></script>
 </body>
-</html>
+</html>d

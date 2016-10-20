@@ -82,7 +82,15 @@ get_header(); ?>
 					<div class="arrow" style="left: 0px;"></div>
 					<div class="over" style="opacity: 0;">
 						<div class="image">
-							<img src="<?php get_featured_url(get_next_post()->ID) ?>">
+							<img src="
+									<?php
+		              if ( has_post_thumbnail($post->ID) ) :
+		                  get_featured_url($post->ID);
+		              else:
+		            ?>
+		            <?php echo get_template_directory_uri(); ?>/images/no_image.jpg"
+		            <?php endif; ?>
+								">
 						</div>
 					</div>
 				</a>

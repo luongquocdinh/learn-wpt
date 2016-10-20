@@ -1,12 +1,12 @@
 <?php
 /**
- * Template Name: Page Beauty
+ * Template Name: Page Company Eco
  *
  * @package WordPress
  * @subpackage Milbon
  */
 get_header();
 
-get_template_part('pages/designer');
+get_template_part('pages/eco');
 
 get_footer();

@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Contact
+ * Template Name: Page Contact
  *
  * @package WordPress
  * @subpackage Milbon

@@ -18,7 +18,7 @@
 
 
     <section id="concept">
-        <a href="../brand/tenpan.html" class="btn_about_product pageLink"><span>ミルボン製品について</span></a>
+        <a href="<?php echo esc_url( home_url( '/' ) ) . 'brand_tenpan/';?>" class="btn_about_product pageLink"><span>ミルボン製品について</span></a>
 
         <!-- メインビジュアル -->
         <div class="mainvisual">
@@ -42,7 +42,7 @@
                 endwhile;
                 ?>
                 <section class="product">
-                    <a href="../brand/tenpan.html" class="pageLink">
+                    <a href="<?php echo esc_url( home_url( '/' ) ) . 'brand_tenpan/';?>" class="pageLink">
                         <h3>OUR PRODUCT</h3>
                         <div class="ja">［ ミルボン製品について ］</div>
                         <div class="view">VIEW DETAIL →<span class="line"></span></div>
@@ -51,29 +51,52 @@
             </section>
 
             <h4>MILBON GROUP SITE</h4>
-            <section class="list">
-                <div class="column">
-                    <a href="http://www.milbon.co.jp/ir/" target="_blank">
-                        <div class="visual"><img src="<?php echo get_template_directory_uri(); ?>/images/header_group_image01.jpg" height="126" width="224" alt="IR SITE"></div>
-                        <div class="defalt"><span>IR SITE</span></div>
-                        <div class="over"><div class="bg"></div><span>IR SITE<p>［ IRサイト ］</p></span><p class="icon">VISIT SITE</p></div>
+
+                <!-- GROUP LIST -->
+                 <?php
+                  // GET BLOG POSTS
+                    $shortcode_blog_query = new WP_Query(array(
+                      'post_type' => 'milbon-links',
+                      'tax_query' => array(
+                          array(
+                            'taxonomy' => 'link_category',
+                            'field' => 'slug',
+                            'terms' => 'group-slug'
+                          )
+                       ),
+                      'showposts' => 4,
+                      'order' => 'ASC'
+                    ));
+
+                ?>
+                <section class="list">
+                  <?php if ( $shortcode_blog_query->have_posts() ) {
+                  while($shortcode_blog_query->have_posts()) : $shortcode_blog_query->the_post(); ?>
+                  <div class="column">
+                    <a href="<?php echo get_post_meta($post->ID, "_location", true); ?>" target="_blank">
+                      <div class="visual"><img src="
+                        <?php
+                          if ( has_post_thumbnail($post->ID) ) :
+                              get_featured_url($post->ID);
+                          endif;
+                       ?>
+                       " height="126" width="224" alt="<?php the_title(); ?>"></div>
+                      <div class="defalt"><span><?php the_title(); ?></span></div>
+                      <div class="over"><div class="bg"></div><span><?php the_title(); ?><p class="ja">
+                        <?php
+                          if (get_post_meta($post->ID,'_title_japanese', true) != '') { 
+                            echo esc_html( "[" . get_post_meta($post->ID,'_title_japanese', true) . "]" );
+                          } 
+                        ?>
+                      </p></span><p class="icon">VISIT SITE</p></div>
                     </a>
+                  </div>
+                  <?php
+                    endwhile;
+                  }
+                  ?>
                 </div>
-                <div class="column">
-                    <a href="http://www.milbon.com/" target="_blank">
-                        <div class="visual"><img src="<?php echo get_template_directory_uri(); ?>/images/header_group_image02.jpg" height="126" width="224" alt="GLOBAL SITE"></div>
-                        <div class="defalt"><span>GLOBAL SITE</span></div>
-                        <div class="over"><div class="bg"></div><span>GLOBAL SITE<p>［ グローバルサイト ］</p></span><p class="icon">VISIT SITE</p></div>
-                    </a>
-                </div>
-                <div class="column">
-                    <a href="http://www.milbon.co.jp/recruit/" target="_blank">
-                        <div class="visual"><img src="<?php echo get_template_directory_uri(); ?>/images/header_group_image03.jpg" height="126" width="224" alt="RECRUIT SITE 2017"></div>
-                        <div class="defalt"><span>RECRUIT SITE 2017</span></div>
-                        <div class="over"><div class="bg"></div><span>RECRUIT SITE 2017<p>［ 採用情報サイト ］</p></span><p class="icon">VISIT SITE</p></div>
-                    </a>
-                </div>
-            </section>
+
         </article>
 
     </section>

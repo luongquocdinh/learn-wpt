@@ -9,7 +9,7 @@
   </nav>
 
   <section id="contact">
-    <a href="../brand/tenpan.html" class="btn_about_product pageLink">
+    <a href="<?php echo esc_url( home_url( '/' ) ) . 'brand_tenpan/';?>" class="btn_about_product pageLink">
       <span>ミルボン製品について</span>
     </a>
   	<header class="header">

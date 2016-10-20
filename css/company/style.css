@@ -1,0 +1,917 @@
+
+
+/*----------------------------------------------------
+  #message
+--------------------------------------------------- */
+#message{
+	position: relative;
+	width: 100%;
+	overflow: hidden;
+}
+
+/*一覧ヘッダー*/
+#message .header{
+	padding-top: 85px;
+	text-align: center;
+	position: relative;
+	padding-bottom: 15px;
+}
+#message .header h1{
+	font-family: 'function_probook';
+	font-size: 35px;
+	margin-bottom:20px;
+	line-height: 1;
+}
+#message .header p{
+	font-size: 17px;
+	line-height: 1;
+	padding-bottom: 57px;
+}
+#message .header .copy{
+	font-size: 20px;
+	text-align: center;
+	margin: 0 auto;
+	line-height: 170%;
+	margin-bottom: 20px;
+	width: 50%;
+}
+#message .header p span{
+	font-size: 14px;
+}
+#message .contents{
+	width: 990px;
+	margin: 0 auto;
+	overflow: hidden;
+	padding-bottom: 85px;
+}
+#message .contents figure{
+	float: left;
+	padding-top: 6px;
+
+}
+#message .contents figure img{
+	margin-bottom: 18px;
+}
+#message .contents figure figcaption{
+	margin-bottom: 15px;
+}
+#message .contents .text{
+	float: right;
+	width: 470px;
+}
+#message .contents .text p{
+	line-height: 185%;
+	margin-bottom: 15px;
+}
+
+/*----------------------------------------------------
+  #outline
+--------------------------------------------------- */
+#outline{
+	position: relative;
+	width: 100%;
+	overflow: hidden;
+}
+
+/*一覧ヘッダー*/
+#outline .header{
+	padding-top: 85px;
+	text-align: center;
+	position: relative;
+	padding-bottom: 50px;
+}
+#outline .header h1{
+	font-family: 'function_probook';
+	font-size: 35px;
+	margin-bottom:20px;
+	line-height: 1;
+	font-weight: 500;
+}
+#outline .header p{
+	font-size: 17px;
+	line-height: 1;
+}
+#outline .header p span{
+}
+#outline .contents{
+	width: 700px;
+	margin: 0 auto;
+	overflow: hidden;
+	padding-bottom: 70px;
+	border-top: 1px #e5e5e5 solid;
+}
+#outline .contents .column{
+	overflow: hidden;
+	border-bottom: 1px solid #e5e5e5 ;
+	line-height: 185%;
+	font-size: 17px;
+	padding: 10px 0;
+}
+#outline .contents .column *{
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+}
+#outline .contents .column .sum{
+	float: left;
+	width: 210px;
+	padding-left:10px;
+}
+#outline .contents .column .detail{
+	float: left;
+	width: 490px;
+}
+#outline .contents .column .detail .s{
+	font-size: 13px;
+}
+#outline .contents .column .detail p{
+	font-weight: 300;
+}
+#outline .contents .column .detail >p:nth-child(2n){
+	font-weight: 300;
+}
+#outline .contents .column .detail dl{
+	overflow: hidden;
+	margin-bottom: 5px;
+	position: relative;
+}
+#outline .contents .column .detail dl dt{
+	float: left;
+	width: 229px;
+	position: relative;
+	background: url(../../images/company/outline/dot.png) repeat-x center center;
+}
+#outline .contents .column .detail dl dt span{
+	background: #FFF;
+	display: inline-block;
+	vertical-align: top;
+	line-height: 1.5;
+}
+#outline .contents .column .detail dl dd{
+	float: left;
+	padding-left: 10px;
+	line-height: 1.5;
+}
+
+/*----------------------------------------------------
+  #policy
+--------------------------------------------------- */
+#policy{
+	position: relative;
+	width: 100%;
+	overflow: hidden;
+}
+
+/*一覧ヘッダー*/
+#policy .header{
+	padding-top: 85px;
+	text-align: center;
+	position: relative;
+}
+#policy .header h1{
+	font-family: 'function_probook';
+	font-size: 35px;
+	margin-bottom:60px;
+	line-height: 1;
+}
+#policy .header ul{
+	text-align: center;
+	letter-spacing: -0.4em;
+	margin-bottom: 44px;
+}
+#policy .header ul li{
+	letter-spacing:normal;
+	display: inline-block;
+	margin: 0 17px;
+}
+#policy .header ul li a{
+	font-size: 15px;
+	height: 23px;
+	display: block;
+	position: relative;
+}
+#policy .header ul li a span.line{
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  width: 0%;
+  height: 1px;
+  background: #3a1e87;
+    -webkit-transition: all 0.3s ease;
+       -moz-transition: all 0.3s ease;
+        -ms-transition: all 0.3s ease;
+         -o-transition: all 0.3s ease;
+            transition: all 0.3s ease;
+  opacity: 0;
+}
+#policy .header ul li a:hover,
+#policy .header ul li a.active{
+  color: #3a1e87;
+}
+#policy .header ul li a:hover span.line,
+#policy .header ul li a.active span.line{
+  width: 100%;
+  opacity: 1;
+}
+#policy .footer{
+	padding-top: 40px;
+	text-align: center;
+	position: relative;
+}
+#policy .footer ul{
+	text-align: center;
+	letter-spacing: -0.4em;
+	margin-bottom: 100px;
+}
+#policy .footer ul li{
+	letter-spacing:normal;
+	display: inline-block;
+	margin: 0 17px;
+}
+#policy .footer ul li a{
+	font-size: 15px;
+	height: 23px;
+	display: block;
+	position: relative;
+}
+#policy .footer ul li a span.line{
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  width: 0%;
+  height: 1px;
+  background: #3a1e87;
+    -webkit-transition: all 0.3s ease;
+       -moz-transition: all 0.3s ease;
+        -ms-transition: all 0.3s ease;
+         -o-transition: all 0.3s ease;
+            transition: all 0.3s ease;
+  opacity: 0;
+}
+#policy .footer ul li a:hover,
+#policy .footer ul li a.active{
+  color: #3a1e87;
+}
+#policy .footer ul li a:hover span.line,
+#policy .footer ul li a.active span.line{
+  width: 100%;
+  opacity: 1;
+}
+
+
+/*----------------------------------------------------
+  #policy01
+--------------------------------------------------- */
+#policy .policy01{
+	width: 980px;
+	margin: 0 auto;
+	overflow: hidden;
+	padding-bottom: 40px;
+	padding-top: 44px;
+	border-top:1px #e5e5e5 solid;
+	border-bottom:1px #e5e5e5 solid;
+}
+
+#policy .policy01 .caption01{
+	text-align: center;
+	line-height: 1;
+	margin-bottom: 10px;
+}
+#policy .policy01 h2{
+	text-align: center;
+	font-size: 22px;
+	line-height: 1;
+	margin-bottom: 65px;
+}
+#policy .policy01 .block{
+	overflow: hidden;
+	margin-bottom: 45px;
+}
+#policy .policy01 .block .left{
+	width: 470px;
+	float: left;
+}
+#policy .policy01 .block .right{
+	width: 470px;
+	float: right;
+}
+#policy .policy01 .block h3{
+	margin-bottom: 20px;
+	line-height: 150%;
+	font-weight: bold;
+
+}
+#policy .policy01 .block h4{
+	margin-bottom: 10px;
+	line-height: 150%;
+	font-weight: bold;
+}
+#policy .policy01 .block p{
+	line-height:185%;
+	margin-bottom: 30px;
+}
+#policy .policy01 .block h5{
+	margin-bottom: 10px;
+	font-size: 12px;
+	font-weight: bold;
+}
+#policy .policy01 .block ul.point{
+
+}
+#policy .policy01 .block ul.point li{
+    padding-left: 1em; /*1em（1文字）分、右に動かす*/
+    text-indent: -1em; /*最初の行だけ1em（1文字）分、左に動かす*/
+	font-size: 12px;
+	line-height: 216%;
+}
+#policy .policy01 .block .mainImage{
+	margin-bottom: 20px;
+}
+#policy .policy01 .block ul.image{
+	overflow: hidden;
+}
+#policy .policy01 .block ul.image li{
+	float: left;
+	margin-right: 20px;
+	text-align: center;
+	font-size: 12px;
+}
+#policy .policy01 .block ul.image li.nm{
+	margin-right: 0px;
+	
+}
+#policy .policy01 .block ul.image li img{
+	margin-bottom: 10px;
+}
+
+
+/*----------------------------------------------------
+  #policy02
+--------------------------------------------------- */
+#policy .policy02{
+	width: 980px;
+	margin: 0 auto;
+	overflow: hidden;
+	padding-bottom: 40px;
+	padding-top: 44px;
+	border-top:1px #e5e5e5 solid;
+	border-bottom:1px #e5e5e5 solid;
+}
+
+#policy .policy02 .caption01{
+	text-align: center;
+	line-height: 1;
+	margin-bottom: 10px;
+}
+#policy .policy02 h2{
+	text-align: center;
+	font-size: 22px;
+	line-height: 150%;
+	margin-bottom: 65px;
+}
+#policy .policy02 .block{
+	overflow: hidden;
+	margin-bottom: 45px;
+}
+#policy .policy02 .block .left{
+	width: 470px;
+	float: left;
+}
+#policy .policy02 .block .right{
+	width: 470px;
+	float: right;
+}
+#policy .policy02 .block h3{
+	margin-bottom: 5px;
+	line-height: 150%;
+	font-weight: bold;
+
+}
+#policy .policy02 .block p{
+	line-height:185%;
+	margin-bottom: 55px;
+}
+#policy .policy02 .block .sum{
+	border: 1px #e5e5e5 solid;
+	padding: 30px 30px 10px 30px;
+	margin-bottom: 40px;
+}
+#policy .policy02 .block ul.point{
+
+}
+#policy .policy02 .block ul.point li{
+    padding-left: 1em; /*1em（1文字）分、右に動かす*/
+    text-indent: -1em; /*最初の行だけ1em（1文字）分、左に動かす*/
+	font-size: 12px;
+	line-height: 170%;
+	margin-bottom: 20px;
+}
+#policy .policy02 .block ul.image{
+	overflow: hidden;
+}
+#policy .policy02 .block ul.image li{
+	float: left;
+	margin-right: 20px;
+	text-align: center;
+	font-size: 12px;
+	line-height: 150%;
+}
+#policy .policy02 .block ul.image li.nm{
+	margin-right: 0px;
+	
+}
+#policy .policy02 .block ul.image li img{
+	margin-bottom: 10px;
+}
+#policy .policy02 .block ul.image li.iso{
+	margin-right: 0px;
+	width: 470px;
+	padding-top: 30px;
+	
+}
+#policy .policy02 .block ul.image li.iso img{
+	display: inline-block;
+	width: 112px;
+	margin-right: 10px;
+	vertical-align: middle;
+}
+#policy .policy02 .block ul.image li.iso figcaption{
+	display: inline-block;
+	width: 337px;
+	text-align: left;
+	vertical-align: middle;
+
+}
+
+/*----------------------------------------------------
+  #policy03
+--------------------------------------------------- */
+#policy .policy03{
+	width: 980px;
+	margin: 0 auto;
+	overflow: hidden;
+	padding-bottom: 40px;
+	padding-top: 44px;
+	border-top:1px #e5e5e5 solid;
+	border-bottom:1px #e5e5e5 solid;
+}
+
+#policy .policy03 .caption01{
+	text-align: center;
+	line-height: 1;
+	margin-bottom: 10px;
+}
+#policy .policy03 h2{
+	text-align: center;
+	font-size: 22px;
+	line-height: 150%;
+	margin-bottom: 65px;
+}
+#policy .policy03 .block{
+	overflow: hidden;
+	margin-bottom: 45px;
+}
+#policy .policy03 .block .left{
+	width: 470px;
+	float: left;
+}
+#policy .policy03 .block .right{
+	width: 470px;
+	float: right;
+}
+#policy .policy03 .block h3{
+	margin-bottom: 5px;
+	line-height: 150%;
+	font-weight: bold;
+
+}
+#policy .policy03 .block p{
+	line-height:185%;
+	margin-bottom: 55px;
+}
+#policy .policy03 .block .sum{
+	border: 1px #e5e5e5 solid;
+	padding: 30px 30px 10px 30px;
+	margin-bottom: 40px;
+}
+#policy .policy03 .block ul.point{
+
+}
+#policy .policy03 .block ul.point li{
+    padding-left: 1em; /*1em（1文字）分、右に動かす*/
+    text-indent: -1em; /*最初の行だけ1em（1文字）分、左に動かす*/
+	font-size: 12px;
+	line-height: 170%;
+	margin-bottom: 20px;
+}
+#policy .policy03 .block ul.image{
+	overflow: hidden;
+	text-align: center;
+}
+#policy .policy03 .block ul.image li{
+	display: inline-block;
+	margin-right: 0px;
+	text-align: left;
+	font-size: 12px;
+	line-height: 150%;
+}
+#policy .policy03 .block ul.image li.nm{
+	margin-right: 0px;
+	width: 227px;
+	
+}
+#policy .policy03 .block ul.image li img{
+	margin-bottom: 10px;
+}
+
+
+
+/*----------------------------------------------------
+  #history
+--------------------------------------------------- */
+#history{
+	position: relative;
+	width: 100%;
+	overflow: hidden;
+}
+#breadcrumb {
+    z-index: 10;
+}
+
+
+/*ナビゲーション*/
+#history .navigation{
+	position: fixed;
+	top: 70px;
+	right: 0px;
+	z-index: 2;
+	text-align: right;
+}
+#history .navigation h2{
+	margin-right: 12px;
+	font-size: 12px;
+	font-family: 'function_probook';
+	margin-bottom: 20px;
+}
+#history .navigation ul{
+}
+#history .navigation ul li{
+	margin-bottom: 7px;
+	overflow: hidden;
+}
+
+#history .navigation ul li a{
+	display: block;
+}
+#history .navigation ul li a span.y{
+	font-size: 11px;
+	font-family: 'function_probook';
+	display: inline-block;
+	vertical-align: middle;
+	margin-right: 10px;
+    -webkit-transition: all 0.3s ease;
+       -moz-transition: all 0.3s ease;
+        -ms-transition: all 0.3s ease;
+         -o-transition: all 0.3s ease;
+            transition: all 0.3s ease;
+}
+#history .navigation ul li a:hover span.y,
+#history .navigation ul li a.active span.y{
+	font-size: 20px;
+}
+#history .navigation ul li a span.line{
+	display: inline-block;
+	height: 1px;
+	width: 15px;
+	background: #555555;
+	vertical-align: middle;
+    -webkit-transition: all 0.3s ease;
+       -moz-transition: all 0.3s ease;
+        -ms-transition: all 0.3s ease;
+         -o-transition: all 0.3s ease;
+            transition: all 0.3s ease;
+
+}
+#history .navigation ul li a:hover span.line,
+#history .navigation ul li a.active span.line{
+	display: inline-block;
+	height: 1px;
+	width: 40px;
+	background: #555555;
+	vertical-align: middle;
+
+}
+#history .navigation ul li span.sline{
+	float: right;
+	display: block;
+	height: 1px;
+	width: 10px;
+	background: #bababa;
+	vertical-align: middle;
+    -webkit-transition: all 0.3s ease;
+       -moz-transition: all 0.3s ease;
+        -ms-transition: all 0.3s ease;
+         -o-transition: all 0.3s ease;
+            transition: all 0.3s ease;
+
+}
+
+#history .scrollContents{
+	position: fixed;
+	top: 0;
+	left: 0px;
+	width: 100%;
+	z-index: 1;
+}
+/*一覧ヘッダー*/
+#history .header{
+	text-align: center;
+	position: relative;
+	height: 100%;
+	background: url(../../images/company/history/header_bg.jpg) no-repeat center center;
+	background-size: cover;
+}
+#history .header h1{
+	font-family: 'function_probook';
+	padding-top: 85px;
+	font-size: 35px;
+	margin-bottom:20px;
+	line-height: 1;
+	font-weight: 500;
+}
+#history .header p.caption{
+	line-height: 1;
+	margin-bottom:35px;
+}
+#history .header h2{
+	font-size: 22px;
+	margin-bottom:30px;
+	line-height: 1;
+}
+#history .header .text{
+	width: 1000px;
+	text-align: left;
+	margin: 0 auto;
+	margin-bottom:30px;
+	line-height: 160%;
+	font-size: 17px;
+}
+
+#history .scrolldown{
+	position: fixed;
+	z-index: 2;
+	bottom: 10px;
+	left: 50%;
+	margin-left: -45px;
+}
+#history .scrolldown a{
+	position: relative;
+	display: block;
+	width: 110px;
+	overflow: hidden;
+	color: #959595;
+	font-family: 'function_probook';
+	font-size: 12px;
+    -webkit-transition: all 0.3s ease;
+       -moz-transition: all 0.3s ease;
+        -ms-transition: all 0.3s ease;
+         -o-transition: all 0.3s ease;
+            transition: all 0.3s ease;
+}
+
+#history .scrolldown a:hover{
+	color: #3a1e87;
+}
+#history .scrolldown a span{
+	position: absolute;
+	display: block;
+	top:0px;
+	left: 0px;
+	width: 100px;
+	height: 14px;
+	background: url(../../images/top/scrolldown.png) no-repeat right center;
+    -webkit-transition: all 0.3s ease;
+       -moz-transition: all 0.3s ease;
+        -ms-transition: all 0.3s ease;
+         -o-transition: all 0.3s ease;
+            transition: all 0.3s ease;
+}
+#history .scrolldown a:hover span{
+	background: url(../../images/top/scrolldown_on.png) no-repeat right center;
+
+}
+#history .yearContents{
+	position: relative;
+
+}
+#history .yearContents .textArea{
+	position: absolute;
+}
+
+#history .yearContents .textArea h2{
+	font-family: 'function_probook';
+	font-size: 70px;
+	line-height: 1;
+	margin-bottom: 30px;
+}
+#history .yearContents .textArea .month{
+	font-size: 14px;
+	line-height: 1;
+	margin-bottom: 10px;
+}
+#history .yearContents .textArea h3{
+	font-size: 28px;
+	line-height: 1;
+	margin-bottom: 10px;
+}
+#history .yearContents .textArea p{
+	line-height: 185%;
+	font-size: 17px;
+}
+#history #y1960 .textArea{
+	width: 100%;
+	text-align: center;
+	width: 700px;
+	left: 50%;
+	transform: translate(-50%,0);
+	-webkit-transform: translate(-50%,0);
+	-moz-transform: translate(-50%,0);
+}
+#history #y1960 .textArea h2{
+	font-size: 70px;
+	line-height: 1;
+	margin-bottom: 10px;
+}
+#history #y1960 .textArea .month{
+	font-size: 14px;
+	line-height: 1;
+	margin-bottom: 40px;
+}
+#history #y1960 .textArea h3{
+	font-size: 40px;
+	line-height: 1;
+	margin-bottom: 25px;
+}
+#history #y1965 {
+	background: url(../../images/company/history/y1965_bg.jpg) no-repeat center center;
+	background-size: cover;
+}
+#history #y1965 .textArea{
+	left: 50%;
+	margin-left: -490px;
+	text-align: left;
+}
+#history #y1969 .textArea{
+	left: 50%;
+	margin-left: 273px;
+	text-align: left;
+	padding-right: 80px;
+}
+#history #y1969 .image01{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-top: -219px;
+	margin-left: -490px;
+}
+#history #y1984 {
+	background: #ebe8f3;
+	background-size: cover;
+}
+#history #y1984 .textArea{
+	left: 50%;
+	margin-left:-490px;
+	text-align: left;
+}
+#history #y1984 .image01{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-top: -235px;
+	margin-left: -60px;
+}
+#history #y1988 {
+	background: #FFF url(../../images/company/history/image_1988.jpg) no-repeat center center;
+}
+#history #y1988 .textArea{
+	left: 50%;
+	margin-left:110px;
+	text-align: left;
+	padding-right: 80px;
+}
+
+
+#history #y2001 {
+	background: #ebe8f3;
+	background-size: cover;
+}
+#history #y2001 .textArea{
+	left: 50%;
+	margin-left:-490px;
+	text-align: left;
+}
+#history #y2001 .image01{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-top: -235px;
+	margin-left: -80px;
+}
+
+#history #y2004 {
+	background-size: cover;
+}
+#history #y2004 .textArea{
+	left: 50%;
+	margin-left:273px;
+	text-align: left;
+	padding-right: 80px;
+}
+#history #y2004 .image01{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-top: -185px;
+	margin-left: -490px;
+}
+
+#history .yearContents .textArea2 h2{
+	font-family: 'function_probook';
+	font-size: 70px;
+	line-height: 1;
+	margin-bottom: 30px;
+}
+#history .yearContents .textArea2 .month{
+	font-size: 14px;
+	line-height: 1;
+	margin-bottom: 10px;
+}
+#history .yearContents .textArea2 h3{
+	font-size: 28px;
+	line-height: 1;
+	margin-bottom: 10px;
+}
+#history .yearContents .textArea2 p{
+	font-size: 14px;
+	line-height: 185%;
+}
+#history #y2005 {
+	background: url(../../images/company/history/image_2005.jpg) no-repeat center center;
+	background-size: cover;
+}
+
+#history #y2005 .textArea2{
+	position: absolute;
+	top: 100px;
+	left: 50%;
+	margin-left:-490px;
+	text-align: left;
+}
+#history #y2010 {
+	background: url(../../images/company/history/image_2010.jpg) no-repeat center center;
+	background-size: cover;
+}
+
+#history #y2010 .textArea2{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-left:210px;
+	text-align: left;
+	padding-right: 50px;
+}
+
+#history #y2013 {
+	background: url(../../images/company/history/image_2013.jpg) no-repeat center center;
+	background-size: cover;
+}
+
+#history #y2013 .textArea2{
+	position: absolute;
+	top: 100px;
+	left: 50%;
+	margin-left:-490px;
+	text-align: left;
+}
+
+#history #y2016 {
+	background: url(../../images/company/history/image_2016.jpg) no-repeat center center;
+	background-size: cover;
+}
+
+#history #y2016 .textArea{
+	left: 50%;
+	margin-left:120px;
+	text-align: left;
+	padding-right: 80px;
+}
+#history #pageTop{
+	display: none;
+}
+#history #y2016 #pageTop{
+	display: block;
+	position: absolute;
+	bottom: 0px;
+	background: none;
+
+}

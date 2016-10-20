@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Concept
+ * Template Name: Page Concept
  *
  * @package WordPress
  * @subpackage Milbon

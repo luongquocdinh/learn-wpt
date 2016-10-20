@@ -1,12 +1,12 @@
 <?php
 /**
- * Template Name: Page Beauty
+ * Template Name: Page Profile & Message
  *
  * @package WordPress
  * @subpackage Milbon
  */
 get_header();
 
-get_template_part('pages/designer');
+get_template_part('pages/introduce');
 
 get_footer();

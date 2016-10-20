@@ -1,174 +1,5 @@
 <?php
 add_theme_support( 'post-thumbnails' );
-add_action( 'after_setup_theme', 'meisho_setup' );
-
-if ( ! function_exists( 'meisho_setup' ) ):
-
-function meisho_setup() {
-	require( get_template_directory() . '/inc/widgets.php' );
-}
-endif;
-
-
-function twentyeleven_widgets_init() {
-
-	register_sidebar( array(
-		'name' => __( 'Main Sidebar', 'twentyeleven' ),
-		'id' => 'sidebar-1',
-		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-		'after_widget' => "</aside>",
-		'before_title' => '<h3 class="widget-title">',
-		'after_title' => '</h3>',
-	) );
-
-
-	register_sidebar( array(
-		'name' => __( 'Footer Area One', 'twentyeleven' ),
-		'id' => 'sidebar-3',
-		'description' => __( 'An optional widget area for your site footer', 'twentyeleven' ),
-		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-		'after_widget' => "</aside>",
-		'before_title' => '<h3 class="widget-title">',
-		'after_title' => '</h3>',
-	) );
-
-	register_sidebar( array(
-		'name' => __( 'Footer Area Two', 'twentyeleven' ),
-		'id' => 'sidebar-4',
-		'description' => __( 'An optional widget area for your site footer', 'twentyeleven' ),
-		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-		'after_widget' => "</aside>",
-		'before_title' => '<h3 class="widget-title">',
-		'after_title' => '</h3>',
-	) );
-
-	register_sidebar( array(
-		'name' => __( 'Footer Area Three', 'twentyeleven' ),
-		'id' => 'sidebar-5',
-		'description' => __( 'An optional widget area for your site footer', 'twentyeleven' ),
-		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-		'after_widget' => "</aside>",
-		'before_title' => '<h3 class="widget-title">',
-		'after_title' => '</h3>',
-	) );
-}
-add_action( 'widgets_init', 'twentyeleven_widgets_init' );
-
-/**
- * Count the number of footer sidebars to enable dynamic classes for the footer
- */
-function twentyeleven_footer_sidebar_class() {
-	$count = 0;
-
-	if ( is_active_sidebar( 'sidebar-3' ) )
-		$count++;
-
-	if ( is_active_sidebar( 'sidebar-4' ) )
-		$count++;
-
-	if ( is_active_sidebar( 'sidebar-5' ) )
-		$count++;
-
-	$class = '';
-
-	switch ( $count ) {
-		case '1':
-			$class = 'one';
-			break;
-		case '2':
-			$class = 'two';
-			break;
-		case '3':
-			$class = 'three';
-			break;
-	}
-
-	if ( $class )
-		echo 'class="' . $class . '"';
-}
-
-
-function meisho_body_classes( $classes ) {
-
-	if ( function_exists( 'is_multi_author' ) && ! is_multi_author() )
-		$classes[] = 'single-author';
-
-	if ( is_singular() && ! is_home() && ! is_page_template( 'showcase.php' ) && ! is_page_template( 'sidebar-page.php' ) )
-		$classes[] = 'singular';
-
-	return $classes;
-}
-add_filter( 'body_class', 'meisho_body_classes' );
-
-function mk_parse_query($query) {
-  if ($query->query_vars['post_type'] == 'meisho_event') {
-        set_query_var( 'posts_per_page', 5);
-  }elseif ($query->query_vars['post_type'] == 'news') {
-        set_query_var( 'posts_per_page', 10);
-  }elseif ($query->query_vars['post_type'] == 'meisho_recommended') {
-        set_query_var( 'posts_per_page', 10);
-  }
-}
-
-add_filter('pre_get_posts','mk_parse_query',1);
-
-//Start of Paganavi
-function wp_corenavi($wp_query) {
-global $wp_rewrite;
-$pages = '';
-$max = $wp_query->max_num_pages;
-if (!$current = get_query_var('paged')) $current = 1;
-$current_a = $_GET['current'];
-$a['base'] = ($wp_rewrite->using_permalinks()) ? user_trailingslashit( trailingslashit( remove_query_arg( 'current', remove_query_arg( 's', get_pagenum_link( 1 )) ) ) . 'page/%#%/', 'paged' ) : @add_query_arg('paged','%#%');
-if( !empty($current_a) )
-$a['base'] = $a['base'].'?current='.$current_a;
-if( !empty($wp_query->query_vars['s']) ) $a['add_args'] = array( 's' => get_query_var( 's' ) );
-$a['total'] = $max;
-$a['current'] = $current;
-
-$total = 1; //1 - display the text "Page N of N", 0 - not display
-$a['mid_size'] = 5; //how many links to show on the left and right of the current
-$a['end_size'] = 1; //how many links to show in the beginning and end
-$a['prev_text'] = '&laquo; 前へ'; //text of the "Previous page" link
-$a['next_text'] = '次へ &raquo;'; //text of the "Next page" link
-
-if ($max > 1) echo '<div class="pagenavi">';
-echo $pages . paginate_links($a);
-if ($max > 1) echo '</div>';
-}//End of Paganavi
-
-
-function list_posts_by_taxonomy( $post_type, $taxonomy, $get_terms_args = array(), $wp_query_args = array() ){
-    $tax_terms = get_terms( $taxonomy, $get_terms_args );
-    if( $tax_terms ){
-        foreach( $tax_terms  as $tax_term ){
-            $query_args = array(
-                'post_type' => $post_type,
-                "$taxonomy" => $tax_term->slug,
-                'post_status' => 'publish',
-                'posts_per_page' => -1,
-                'ignore_sticky_posts' => true,
-                'orderby' => 'name',
-				'order' => 'ASC'
-            );
-            $query_args = wp_parse_args( $wp_query_args, $query_args );
-
-            $my_query = new WP_Query( $query_args );
-            if( $my_query->have_posts() ) { ?>
-				<h3 id="<?php echo $tax_term->slug; ?>" class="h3_title"><?php echo $tax_term->name; ?></h3>
-				<ul class="company_list clearFix">
-					 <?php $i=0; while ($my_query->have_posts()) : $my_query->the_post(); ?>
-					 <?php $i++; ?>
-                    <li <?php if($i%2==0) echo 'class="odd"'; ?>><a target="_blank" <?php $member_url = esc_html( get_post_meta( get_the_ID(), 'member_url', true ) ); if($member_url!='') echo 'href="'.$member_url.'"';?>  title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></li>
-					<?php endwhile; ?>
-
-				</ul>
-                <?php
-            }
-            wp_reset_query();
-        }
-    }
-}
 
 
 /**
@@ -185,7 +16,7 @@ function create_milbon_links () {
 	register_post_type('milbon-links',
 			array(
 				'labels' => array(
-						'name' => esc_html__('Post Links','milbon'),
+						'name' => esc_html__('Links','milbon'),
 						'singular_name' => esc_html__('Link','milbon'),
 						'add_new'   => esc_html__( 'Add New', 'milbon' ),
 						'add_new_item'  => esc_html__( 'Add New Link', 'milbon' ),
@@ -328,14 +159,17 @@ function wpt_japan_title_links() {
 // Save the Metabox Data
 function wpt_save_events_meta($post_id, $post) {
 
-	if ( !wp_verify_nonce( $_POST['eventmeta_noncename'], plugin_basename(__FILE__) )) {
+	if ( isset($_POST['eventmeta_noncename']) && !wp_verify_nonce( $_POST['eventmeta_noncename'], plugin_basename(__FILE__) )) {
 	return $post->ID;
 	}
 
+	$events_meta = array();
 	if ( !current_user_can( 'edit_post', $post->ID ))
 		return $post->ID;
 
-	$events_meta['_location'] = $_POST['_location'];
+	if(isset($_POST['_location'])){
+		$events_meta['_location'] = $_POST['_location'];
+	}
 
 	foreach ($events_meta as $key => $value) {
 		if( $post->post_type == 'revision' ) return;
@@ -352,20 +186,17 @@ function wpt_save_events_meta($post_id, $post) {
 
 add_action('save_post', 'wpt_save_events_meta', 1, 2);
 
-?>
 
-<?php
 /**
  * CREATE BRAND POST TYPE
  */
-?>
-<?php
+
 add_action( 'init', 'create_milbon_brands' );
 function create_milbon_brands () {
 	register_post_type('milbon-brands',
 			array(
 				'labels' => array(
-						'name' => esc_html__('Post Brands','milbon'),
+						'name' => esc_html__('Brands','milbon'),
 						'singular_name' => esc_html__('Brand','milbon'),
 						'add_new'   => esc_html__( 'Add New', 'milbon' ),
 						'add_new_item'  => esc_html__( 'Add New Brand', 'milbon' ),
@@ -451,13 +282,13 @@ function wpt_events_checkbox_brands () {
 add_action('save_post', 'save_details');
 
 function save_details(){
-  global $post;
+ 	global $post;
 
-if (defined('DOING_AUTOSAVE') && DOING_AUTOSAVE) {
-  return $post->ID;
-}
-
-  update_post_meta($post->ID, "field_id", $_POST["field_id"]);
+	if (defined('DOING_AUTOSAVE') && DOING_AUTOSAVE) {
+	  return $post->ID;
+	}
+	if(isset($_POST["field_id"]))
+  		update_post_meta($post->ID, "field_id", $_POST["field_id"]);
 }
 /**
  * CREATE NEWS POST TYPE
@@ -469,7 +300,7 @@ function create_milbon_news () {
 			'milbon-news',
 			array(
 				'labels' => array(
-						'name' => esc_html__('Mibon News','milbon'),
+						'name' => esc_html__('News','milbon'),
 						'singular_name' => esc_html__('News','milbon'),
 						'add_new'   => esc_html__( 'Add New', 'milbon' ),
 						'add_new_item'  => esc_html__( 'Add New Item', 'milbon' ),
@@ -564,10 +395,15 @@ function get_featured_url($pid){
 function get_first_cateogry($pid, $taxonomy_name){
 	$category = array();
 	$categories = get_the_terms($pid, $taxonomy_name);
-	foreach ( $categories as $cat){
-		array_push($category, $cat->name);
+	if(!empty($categories)){
+		foreach ( $categories as $cat){
+			array_push($category, $cat->name);
+		}
+		$post_categories = implode(', ', $category);
 	}
-	$post_categories = implode(', ', $category);
+	else{
+		$post_categories = '';
+	}
 	echo $post_categories;
 }
 
@@ -606,14 +442,16 @@ function wpt_brands_link() {
 
 function wpt_save_brands_meta($post_id, $post) {
 
-	if ( !wp_verify_nonce( $_POST['brandmeta_noncename'], plugin_basename(__FILE__) )) {
+	if ( isset($_POST['brandmeta_noncename']) && !wp_verify_nonce( $_POST['brandmeta_noncename'], plugin_basename(__FILE__) )) {
 	return $post->ID;
 	}
 
 	if ( !current_user_can( 'edit_post', $post->ID ))
 		return $post->ID;
 
-	$events_meta['_title_japanese'] = $_POST['_title_japanese'];
+	$events_meta = array();
+	if(isset($_POST['_title_japanese']))
+		$events_meta['_title_japanese'] = $_POST['_title_japanese'];
 
 	foreach ($events_meta as $key => $value) {
 		if( $post->post_type == 'revision' ) return;
@@ -629,14 +467,16 @@ function wpt_save_brands_meta($post_id, $post) {
 }
 
 function wpt_save_brands_link ($post_id, $post) {
-	if ( !wp_verify_nonce( $_POST['brandmeta_linkname'], plugin_basename(__FILE__) )) {
+	if ( isset($_POST['brandmeta_linkname']) &&  !wp_verify_nonce( $_POST['brandmeta_linkname'], plugin_basename(__FILE__) )) {
 	return $post->ID;
 	}
 
 	if ( !current_user_can( 'edit_post', $post->ID ))
 		return $post->ID;
 
-	$events_meta['_link'] = $_POST['_link'];
+	$events_meta = array();
+	if(isset($_POST['_link']))
+		$events_meta['_link'] = $_POST['_link'];
 
 	foreach ($events_meta as $key => $value) {
 		if( $post->post_type == 'revision' ) return;
@@ -651,3 +491,42 @@ function wpt_save_brands_link ($post_id, $post) {
 }
 add_action('save_post', 'wpt_save_brands_meta', 1, 2);
 add_action('save_post', 'wpt_save_brands_link', 1, 2);
+
+// Add template for single post base on category
+function create_single_post_template($t) {
+	foreach( (array) get_the_category() as $cat ) {
+		if($cat->name === 'office'){
+			if ( file_exists(TEMPLATEPATH . "/single-office.php") )
+				return TEMPLATEPATH . "/single-office.php";
+		}
+	}
+	return $t;
+}
+add_filter('single_template', 'create_single_post_template');
+
+//Add meta box - that allow add slider short code with office post
+function slz_meta_box_office_slider($id_post) {
+    $slider_shortcode =  get_metadata('post', intval($id_post->ID), '_office_slider_shortcode_milbon', true);
+
+    if (empty($slider_shortcode) || $slider_shortcode === false)
+        update_post_meta($id_post, '_office_slider_shortcode_milbon', NULL);
+
+	echo ('<label for="shortcode">Slider Shortcode: </label>');
+    echo "<input id='shortcode' name='_slider_shortcode' value='".$slider_shortcode."'>";
+}
+function office_slider_shortcode() {
+	global $post;
+    if(is_admin())
+        add_meta_box('slz_meta_box_office_slider', __('Office Post Slider Shortcode', 'slz'), 'slz_meta_box_office_slider', 'post', 'normal', 'high');
+}
+
+add_action('add_meta_boxes', 'office_slider_shortcode');
+
+function update_office_slider_shortcode($post_id) {
+	if(isset($_POST['_slider_shortcode'])){
+		$slider_shortcode = sanitize_text_field($_POST['_slider_shortcode']);
+		update_post_meta($_POST['post_ID'], '_office_slider_shortcode_milbon', $slider_shortcode);
+	}
+}
+
+add_action('save_post', 'update_office_slider_shortcode');

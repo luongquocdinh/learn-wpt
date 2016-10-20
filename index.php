@@ -332,7 +332,7 @@
                   get_featured_url($post->ID);
               else:
             ?>
-            <?php echo get_template_directory_uri(); ?>/images/no_image.jpg"
+            <?php echo get_template_directory_uri() . '/images/no_image.jpg"'; ?>
             <?php endif; ?>
            " height="126" width="224" alt="<?php the_title(); ?>"></div>
           <div class="meta"><span class="category">

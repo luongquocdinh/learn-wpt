@@ -1,0 +1,366 @@
+#wrapper{
+	overflow: hidden;
+}
+
+/*----------------------------------------------------
+  #office
+--------------------------------------------------- */
+#office{
+	position: relative;
+	width: 100%;
+	overflow: hidden;
+}
+
+/*一覧ヘッダー*/
+#office .header{
+	padding-top: 85px;
+	text-align: center;
+	position: relative;
+	padding-bottom: 50px;
+}
+#office .header h1{
+	font-family: 'function_probook';
+	font-size: 35px;
+	margin-bottom:20px;
+	line-height: 1;
+}
+#office .header p{
+	font-size: 17px;
+	line-height: 1;
+}
+#office .header p span{
+	font-size: 14px;
+}
+#office .header .category{
+	position: absolute;
+	left: 50%;
+	margin-left: 340px;
+	top: 95px;
+	width: 150px;
+	z-index: 1;
+}
+#office .header .category .btn{
+	padding-left: 27px;
+}
+#office .header .category .btn a{
+	font-family: 'function_probook';
+	font-size: 12px;
+	height: 20px;
+	width: 121px;
+	text-align: left;
+	display: block;
+	line-height: 1;
+	letter-spacing: 0.05em;
+	background: url(../../../img/arrow_down.png) no-repeat right 4px;
+	
+	position: relative;
+    -webkit-transition: all 0.3s ease;
+       -moz-transition: all 0.3s ease;
+        -ms-transition: all 0.3s ease;
+         -o-transition: all 0.3s ease;
+            transition: all 0.3s ease;
+}
+#office .header .category:hover .btn a{
+	color: #3a1e87;
+	background: url(../../../img/arrow_up.png) no-repeat right 4px;
+
+}
+#office .header .category .btn a span{
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  width: 0%;
+  height: 1px;
+  background: #3a1e87;
+  opacity: 0;
+    -webkit-transition: all 0.3s ease;
+       -moz-transition: all 0.3s ease;
+        -ms-transition: all 0.3s ease;
+         -o-transition: all 0.3s ease;
+            transition: all 0.3s ease;
+
+}
+#office .header .category:hover .btn a span{
+	opacity: 1;
+	width: 100%;
+
+}
+#office .header .category .pullDown{
+	width: 130px;
+	padding: 20px 0;
+	overflow: hidden;
+	display: none;
+	opacity: 0;
+}
+#office .header .category .pullDown.view{
+}
+#office .header .category .pullDown ul{
+	padding-left: 27px;
+	text-align: left;
+}
+#office .header .category .pullDown ul li{
+    -webkit-transition: all 0.3s ease;
+       -moz-transition: all 0.3s ease;
+        -ms-transition: all 0.3s ease;
+         -o-transition: all 0.3s ease;
+            transition: all 0.3s ease;
+}
+#office .header .category .pullDown ul li a{
+	font-size: 12px;
+	text-align: left;
+	display: block;
+	padding-bottom: 12px;
+}
+#office .header .category .pullDown ul li.non{
+  opacity: 0.5;
+}
+#office .header .category .pullDown ul li.active{
+  opacity: 1;
+}
+#office .header .category .pullDown ul li a:hover{
+	color: #3a1e87;
+}
+
+#office .contents{
+	position: relative;
+	width: 980px;
+	margin: 0 auto;
+	padding-bottom: 0px;
+}
+#office .contents.list{
+	padding-bottom: 0px;
+}
+#pageTop{
+	padding-top: 100px;
+}
+#office .contents h2{
+	font-size:14px;
+	font-weight: bold;
+	margin-bottom: 20px;
+}
+#office .contents h2 a{
+	background: url(../../../img/icon_blank1.png) no-repeat right center;
+	padding-right: 18px;
+}
+#office .contents .list{
+	width: 530px;
+}
+#office .contents .list .column{
+	margin-top: -1px;
+}
+#office .contents .list a{
+	display: block;
+	border-top: 1px #e5e5e5 solid;
+	border-bottom: 1px #e5e5e5 solid;
+	padding: 18px 0;
+	position: relative;
+	z-index: 0;
+    -webkit-transition: all 0.3s ease;
+       -moz-transition: all 0.3s ease;
+        -ms-transition: all 0.3s ease;
+         -o-transition: all 0.3s ease;
+            transition: all 0.3s ease;
+}
+#office .contents .list a:hover{
+	z-index: 1;
+	border-top: 1px #000 solid;
+	border-bottom: 1px #000 solid;
+}
+#office .contents .list a.active{
+	
+}
+#office .contents .list a.non{
+	opacity: 0.4;
+}
+#office .contents .list a dl{
+	overflow: hidden;
+}
+#office .contents .list a dl dt{
+	width: 170px;
+	float: left;
+	font-size: 14px;
+	font-weight: bold;
+	line-height: 150%;
+}
+#office .contents .list a dl dd{
+	width: 360px;
+	float: left;
+	font-size: 12px;
+	line-height: 150%;
+}
+
+#officeImage{
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	margin-left: 67px;
+}
+#officeImage .slideArea{
+	position: absolute;
+	top: -125px;
+	left: 0%;
+
+}
+#officeImage .slideArea ul{
+	position: absolute;
+	top: 0px;
+	left: 0%;
+}
+#officeImage .slideArea ul li{
+	margin-bottom: 20px;
+    -webkit-transition: all 0.3s ease;
+       -moz-transition: all 0.3s ease;
+        -ms-transition: all 0.3s ease;
+         -o-transition: all 0.3s ease;
+            transition: all 0.3s ease;
+}
+#officeImage .slideArea ul li.non{
+	opacity: 0.4;
+}
+#officeImage .slideArea ul li img{
+	width: 500px;
+	height: auto;
+}
+
+
+/*----------------------------------------------------
+  #detail
+--------------------------------------------------- */
+
+#contents.office_detail #breadcrumb{
+	position: fixed;
+}
+#contents.office_detail a.btn_about_product{
+	position: fixed;
+	top: 60px;
+}
+
+
+#office .btn_return{
+	position: fixed;
+	top: 105px;
+	left: 40px;
+	z-index: 2;
+	font-family: 'function_probook';
+}
+#office .btn_return a span.line{
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  width: 0%;
+  height: 1px;
+  background: #3a1e87;
+    -webkit-transition: all 0.3s ease;
+       -moz-transition: all 0.3s ease;
+        -ms-transition: all 0.3s ease;
+         -o-transition: all 0.3s ease;
+            transition: all 0.3s ease;
+  opacity: 0;
+}
+#office .btn_return a:hover{
+  color: #3a1e87;
+}
+#office .btn_return a:hover span.line{
+  width: 100%;
+  opacity: 1;
+}
+
+#office .btn_return a span{
+	height: 21px;
+	vertical-align: top;
+}
+#office .btn_return a span.text{
+	display: inline-block;
+	margin-left: 4px;
+}
+#office .btn_return a span.arrow{
+	width: 12px;
+	height: 21px;
+	overflow: hidden;
+	position: relative;
+	display: inline-block;
+}
+#office .btn_return a span.arrow span.arrow_img{
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+#office .contents .imageArea{
+	float: left;
+	width: 470px;
+}
+#office .contents .imageArea .mainImage{
+	margin-bottom: 20px;
+}
+#office .contents .imageArea .mainImage img{
+	width: 470px;
+	height: auto;
+}
+#office .contents .imageArea ul.image{
+	overflow: hidden;
+}
+#office .contents .imageArea ul.image li{
+	width: 143px;
+	margin-right:20px;
+	margin-bottom: 20px;
+	float: left;
+	background:#a584ff;
+}
+#office .contents .imageArea ul.image li.nm{
+	margin-right:0px;
+}
+#office .contents .imageArea ul.image li img{
+	width: 100%;
+	height: auto;
+    -webkit-transition: all 0.5s ease;
+       -moz-transition: all 0.5s ease;
+        -ms-transition: all 0.5s ease;
+         -o-transition: all 0.5s ease;
+            transition: all 0.5s ease;
+}
+#office .contents .imageArea ul.image li a:hover img,
+#office .contents .imageArea ul.image li a.active img{
+	opacity: 0.8;
+}
+#office .contents .detail{
+	float: right;
+	width: 470px;
+	padding-bottom: 37px;
+}
+#office .contents .detail .address{
+	line-height: 150%;
+	font-size: 14px;
+	margin-bottom: 30px;
+}
+#office .contents .detail .address a.map{
+	text-decoration: underline;
+	margin-left: 10px;
+
+}
+#office .contents .detail .address a.map span{
+	padding-left: 12px;
+	color: #3a1e87;
+	font-size: 12px;
+	display: inline-block;
+	height: 26px;
+	line-height: 26px;
+	background: url(../../../img/company/office/icon_map.png) no-repeat left center;
+	background-size: 7px;
+}
+#office .contents .detail .contact{
+	line-height: 150%;
+	font-size: 14px;
+	padding-bottom: 80px;
+	border-bottom: 1px #e5e5e5 solid;
+	margin-bottom: 20px;
+}
+#office .contents .detail h3{
+	font-size:14px;
+	font-weight: bold;
+	margin-bottom: 20px;
+}
+#office .contents .detail p{
+	font-size:14px;
+	line-height: 185%;
+}

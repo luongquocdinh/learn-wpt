@@ -1,6 +1,5 @@
 <?php
 /*
-Template Name: Brands
 */
 get_header(); ?>
 
@@ -25,10 +24,10 @@ get_header(); ?>
 				) );
           ?>
     <section id="products">
-      <a href="../brand/tenpan.html" class="pageLink btn_about_product"><span>ミルボン製品について</span></a>
+      <a href="<?php echo esc_url( home_url( '/' ) ) . 'brand_tenpan/';?>" class="pageLink btn_about_product"><span>ミルボン製品について</span></a>
       <header class="header">
         <h1>BRAND</h1>
-        <p>ミルボン製品はヘアデザイナーのアドバイスによりご使用いただく美容室専売品です。</p>
+        <p>Những sản phẩm của Milbon được bán tại các salon chuyên nghiệp dưới sự tư vấn của các hair design.</p>
         <form method="post" action="<?php echo get_post_type_archive_link('milbon-brands'); ?>" class="form-filter-category" >
 	        <div class="category">
 	          <div class="btn"><a href="#">CATEGORY SELECT<span></span></a></div>

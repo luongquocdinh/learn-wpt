@@ -1,21 +1,25 @@
-@charset "utf-8";html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address,cite,code,del,dfn,em,img,ins,kbd,q,samp,small,strong,sub,sup,var,b,i,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent; font-weight:normal;}
+@charset "utf-8";html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address,cite,code,del,dfn,em,img,ins,kbd,q,samp,small,strong,sub,sup,var,b,i,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;outline:0;vertical-align:baseline;background:transparent; font-weight:normal;}
 body{line-height:1;}
 article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block;}
 nav ul{list-style:none;}blockquote,q{quotes:none;}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none;}a{margin:0;padding:0;font-size:100%;vertical-align:baseline;background:transparent;}ins{background-color:#ff9;color:#000;text-decoration:none;}mark{background-color:#ff9;color:#000;font-style:italic;font-weight:bold;}del{text-decoration:line-through;}abbr[title],dfn[title]{border-bottom:1px dotted;cursor:help;}table{border-collapse:collapse;border-spacing:0;}hr{display:block;height:1px;border:0;border-top:1px solid #ccc;margin:1em 0;padding:0;}input,select{vertical-align:middle;}
 img{vertical-align:bottom;}
 ol,ul {list-style:none;}
 
-
+strong, b{
+  font-weight: 500;
+}
 html,body{
     height:100%; margin:0; padding:0; 
-    font-family:"游明朝体", "Yu Mincho", YuMincho, 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'ヒラギノ角ゴ Pro W3', 'メイリオ', Meiryo, sans-serif;
-    font-size: 13px;
-    line-height: 100%;
-    font-weight: 300;
+    // font-family:"游明朝体", "Yu Mincho", YuMincho, 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'ヒラギノ角ゴ Pro W3', 'メイリオ', Meiryo, sans-serif;
+    font-family: 'Cormorant Upright', serif!important;
+    font-size: 19px;
+    line-height: 1.5;
+    font-weight: 300!important;
     color: #313131;
     background-color: #FFF;
     -webkit-font-smoothing: antialiased;
     -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
     /*FIREFOXエイリアス調整*/
     -moz-osx-font-smoothing: grayscale;
 }
@@ -29,9 +33,60 @@ html,body{
          url('webfont/FunctionPro-Book-webfont.svg#function_probook') format('svg');
     font-weight: normal;
     font-style: normal;
-
+}
+@font-face {
+  font-family: 'MinionPro';
+  src: url('webfont/MinionPro-Regular.eot'); /* IE9 Compat Modes */
+  src: url('webfont/MinionPro-Regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('webfont/MinionPro-Regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('webfont/MinionPro-Regular.woff') format('woff'), /* Pretty Modern Browsers */
+       url('webfont/MinionPro-Regular.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('webfont/MinionPro-Regular.svg#svgFontName') format('svg'); /* Legacy iOS */
+      font-weight: normal;
+      font-style: normal;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  clear: both;
+  font-family: inherit;
+  line-height: 1.1;
+  font-weight: 500;
+  margin: 0px 0px 
 }
 
+h1 {
+  font-size: 45px;
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+
+h3 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+h4 {
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+h5 {
+  font-size: 26px;
+  margin-bottom: 10px;
+}
+
+h6 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
 
 
 /*----------------------------------------------------
