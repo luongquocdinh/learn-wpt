@@ -45,6 +45,39 @@ html,body{
       font-weight: normal;
       font-style: normal;
 }
+@font-face {
+  font-family: 'MyriadPro';
+  src: url('webfont/MyriadPro/MyriadPro-Regular.eot'); /* IE9 Compat Modes */
+  src: url('webfont/MyriadPro/MyriadPro-Regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('webfont/MyriadPro/MyriadPro-Regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('webfont/MyriadPro/MyriadPro-Regular.woff') format('woff'), /* Pretty Modern Browsers */
+       url('webfont/MyriadPro/MyriadPro-Regular.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('webfont/MyriadPro/MyriadPro-Regular.svg#svgFontName') format('svg'); /* Legacy iOS */
+      font-weight: 400;
+      font-style: normal;
+}
+@font-face {
+  font-family: 'MyriadPro';
+  src: url('webfont/MyriadPro/MyriadPro-Light.eot'); /* IE9 Compat Modes */
+  src: url('webfont/MyriadPro/MyriadPro-Light.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('webfont/MyriadPro/MyriadPro-Light.woff2') format('woff2'), /* Super Modern Browsers */
+       url('webfont/MyriadPro/MyriadPro-Light.woff') format('woff'), /* Pretty Modern Browsers */
+       url('webfont/MyriadPro/MyriadPro-Light.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('webfont/MyriadPro/MyriadPro-Light.svg#svgFontName') format('svg'); /* Legacy iOS */
+      font-weight: 300;
+      font-style: normal;
+}
+@font-face {
+  font-family: 'MyriadPro';
+  src: url('webfont/MyriadPro/MyriadPro-Semibold.eot'); /* IE9 Compat Modes */
+  src: url('webfont/MyriadPro/MyriadPro-Semibold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('webfont/MyriadPro/MyriadPro-Semibold.woff2') format('woff2'), /* Super Modern Browsers */
+       url('webfont/MyriadPro/MyriadPro-Semibold.woff') format('woff'), /* Pretty Modern Browsers */
+       url('webfont/MyriadPro/MyriadPro-Semibold.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('webfont/MyriadPro/MyriadPro-Semibold.svg#svgFontName') format('svg'); /* Legacy iOS */
+      font-weight: 500;
+      font-style: normal;
+}
 h1,
 h2,
 h3,
@@ -149,7 +182,7 @@ a:hover{
   text-align: right;
   color:#361b82;
   font-size:12px;
-  font-family: 'function_probook';
+  font-family: 'MyriadPro', sans-serif;
 }
 #loading .bar span{
   position: absolute;
@@ -195,7 +228,7 @@ a:hover{
   float: left;
   height: 16px;
   font-size: 10px;
-  font-family: 'function_probook';
+  font-family: 'MyriadPro', sans-serif;
 }
 #breadcrumb ul li a{
   color: #313131;
@@ -287,7 +320,8 @@ a:hover{
   font-size: 14px;
   color: #313131;
   position: relative;
-  font-family: 'function_probook',"游明朝体", "Yu Mincho", YuMincho, 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'ヒラギノ角ゴ Pro W3', 'メイリオ', Meiryo, sans-serif;
+ font-family: 'MyriadPro', sans-serif;
+  font-weight: 400;
 }
 #header .header-block ul.globalNavi li a span{
   position: absolute;
@@ -345,7 +379,8 @@ a:hover{
   font-size: 13px;
   color: #313131;
   position: relative;
-  font-family: 'function_probook',"游明朝体", "Yu Mincho", YuMincho, 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'ヒラギノ角ゴ Pro W3', 'メイリオ', Meiryo, sans-serif;
+  font-family: 'MyriadPro', sans-serif;
+  font-weight: 400;
     -webkit-transition: all 0.5s ease;
        -moz-transition: all 0.5s ease;
         -ms-transition: all 0.5s ease;
@@ -438,7 +473,8 @@ a:hover{
   font-size: 15px;
   line-height: 1.3;
   color: #313131;
-  font-family: 'function_probook',"游明朝体", "Yu Mincho", YuMincho, 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'ヒラギノ角ゴ Pro W3', 'メイリオ', Meiryo, sans-serif;
+  font-family: 'MyriadPro', sans-serif;
+  font-weight: 400;
 }
 #header .pulldown ul li a:hover  img{
   opacity: 0.8;
@@ -466,7 +502,8 @@ a:hover{
   width: 224px;
   vertical-align: middle;
   text-align: center;
-  font-family: 'function_probook',"游明朝体", "Yu Mincho", YuMincho, 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'ヒラギノ角ゴ Pro W3', 'メイリオ', Meiryo, sans-serif;
+  font-family: 'MyriadPro', sans-serif;
+  font-weight: 400;
   font-size: 15px;
   line-height: 1.3;
   color: #FFF;
@@ -503,7 +540,7 @@ a:hover{
   color: #FFF;
   line-height: 1;
   font-size: 12px;
-  font-family: 'function_probook',"游明朝体", "Yu Mincho", YuMincho, 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'ヒラギノ角ゴ Pro W3', 'メイリオ', Meiryo, sans-serif;
+  font-family: 'MyriadPro', sans-serif;
   background: url(../images/icon_blank1.png) no-repeat right center;
   padding-right: 19px;
 }
@@ -514,7 +551,7 @@ a:hover{
   color: #FFF;
   line-height: 1;
   font-size: 12px;
-  font-family: 'function_probook',"游明朝体", "Yu Mincho", YuMincho, 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'ヒラギノ角ゴ Pro W3', 'メイリオ', Meiryo, sans-serif;
+  font-family: 'MyriadPro', sans-serif;
 }
 
 /*----------------------------------------------------
@@ -537,7 +574,7 @@ a:hover{
   width: 100%;
   height: 14px;
   overflow: hidden;
-  font-family: 'function_probook',"游明朝体", "Yu Mincho", YuMincho, 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'ヒラギノ角ゴ Pro W3', 'メイリオ', Meiryo, sans-serif;
+  font-family: 'MyriadPro', sans-serif;
 }
 
 #pageTop a.toTop span{
@@ -587,29 +624,41 @@ a:hover{
   float: left;
 }
 #footer .footer-inner ul.footer-column03{
-  width: 250px;
+  width: 200px;
   float: left;
 }
 #footer .footer-inner ul.footer-column04{
-  width: 120px;
+  width: 170px;
   float: left;
 }
-#footer .footer-inner .pb{
-  padding-top: 20px;
-}
+
 #footer .footer-inner ul.menu > li{
   position: relative;
   margin-bottom: 8px;
   line-height: 1;
   color: #FFF;
-  font-family: 'function_probook',"游明朝体", "Yu Mincho", YuMincho, 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'ヒラギノ角ゴ Pro W3', 'メイリオ', Meiryo, sans-serif;
+  font-family: 'MyriadPro', sans-serif;
+  font-weight: 300;
 
 }
 #footer .footer-inner ul.menu > li > a{
   position: relative;
   line-height: 1;
   color: #FFF;
-  font-family: 'function_probook',"游明朝体", "Yu Mincho", YuMincho, 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'ヒラギノ角ゴ Pro W3', 'メイリオ', Meiryo, sans-serif;
+  font-family: 'MyriadPro', sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+#footer .footer-inner ul.menu > li.withSub{
+  margin-bottom: 20px;
+}
+#footer .footer-inner ul.menu ul.social-list li {
+  display: inline-block;
+  padding-right: 10px;
+}
+#footer .footer-inner ul.menu ul.social-list li a{
+  background: none;
 }
 #footer .footer-inner ul.menu > li.nolink > a{
   cursor: default;
@@ -670,7 +719,7 @@ a:hover{
   margin-left: 15px;
   color: #baace3;
   font-size: 10px;
-  font-family: 'function_probook',"游明朝体", "Yu Mincho", YuMincho, 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'ヒラギノ角ゴ Pro W3', 'メイリオ', Meiryo, sans-serif;
+  font-family: 'MyriadPro', sans-serif;
 }
 #footer .footer-bottom li.copyright{
   padding-bottom: 2px;

@@ -8,7 +8,7 @@ contents
     //////////////////////////////////////////////////////////////////////////////-->
     <nav id="breadcrumb">
         <ul>
-            <li><a href="../" class="pageLink">TOP<span></span></a></li>
+            <li><a href="<?php echo esc_url(home_url('/')) ?>" class="pageLink">TRANG CHỦ<span></span></a></li>
             <li><a href="../company/gaiyou.html" class="pageLink">COMPANY<span></span></a></li>
             <li><a href="../company/factory.html" class="pageLink">OUR POLICY<span></span></a></li>
             <li><a href="../company/qc" class="pageLink">労働安全衛生と社会的支援活動<span></span></a></li>

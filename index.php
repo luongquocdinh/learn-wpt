@@ -7,8 +7,8 @@
     <ul>
       <li><img src="<?php echo get_template_directory_uri(); ?>/images/top/visual.jpg" height="700" width="1200" alt=""></li>
     </ul>
-    <a href="./../../"><h1><img src="<?php echo get_template_directory_uri(); ?>/images/top/top_copy.png" width="349" alt="美しさを拓く。MILBON"></h1></a>
-    <div class="scrolldown"><a href="#"><span>SCROLL DOWN</span></a></div>
+    <a href="./../../"><h1><img src="<?php echo get_template_directory_uri(); ?>/images/top/top_copy_eng.png" width="349" alt="Find your beauty MILBON"></h1></a>
+    <div class="scrolldown"><a href="#"><span>CUỘN XUỐNG</span></a></div>
   </section>
 
 
@@ -16,7 +16,7 @@
      comment
   //////////////////////////////////////////////////////////////////////////////-->
   <section id="comment">
-    <p>この度の熊本地方の地震により被災された皆さまに、心よりお見舞い申し上げます。一日も早い復旧をお祈り申し上げます。</p>
+    
   </section>
 
 
@@ -24,8 +24,8 @@
      topBrand
   //////////////////////////////////////////////////////////////////////////////-->
   <section id="topBrand">
-    <h2>BRAND</h2>
-    <a href="<?php echo esc_url( get_post_type_archive_link( 'milbon-brands' ) ); ?>" class="pageLink view"><span class="text">VIEW ALL BRANDS</span><span class="arrow"><span class="arrow_img">→</span></span><span class="line"></span></a>
+    <h2>Dòng sản phẩm</h2>
+    <a href="<?php echo esc_url( get_post_type_archive_link( 'milbon-brands' ) ); ?>" class="pageLink view"><span class="text">Xem toàn bộ sản phầm</span><span class="arrow"><span class="arrow_img">→</span></span><span class="line"></span></a>
     <div class="slide-area">
       <div class="slide-inner">
         <div class="slide">
@@ -50,7 +50,7 @@
                 <div class="column">
                   <a href="<?php echo esc_url( get_permalink( $post->ID ) );  ?>" class="pageLink">
                     <div class="visual view"><img src="
-                      <?php 
+                      <?php
                         if ( has_post_thumbnail($post->ID) ) :
                             get_featured_url($post->ID);
                         endif;
@@ -60,7 +60,7 @@
                       <?php
                         echo get_first_cateogry($post->ID, 'brand_category');
                       ?>
-                      </span> ｜ <span class="day"><?php the_date('Y-m-d'); ?> UPDATE</span>
+                    </span> ｜ <span class="day">Cập nhật : <?php the_date('Y-m-d'); ?></span>
                     </div>
                     <div class="over">
                       <div class="over-inner">
@@ -72,19 +72,19 @@
                         </div>
                         <p class="ja">
                           <?php
-                          if (get_post_meta($post->ID,'_title_japanese', true) != '') { 
+                          if (get_post_meta($post->ID,'_title_japanese', true) != '') {
                             echo esc_html( "[" . get_post_meta($post->ID,'_title_japanese', true) . "]" );
-                          } 
+                          }
                           ?>
                         </p>
 
-                          <span class="detail">VIEW DETAIL →<span></span></span>
+                          <span class="detail">Chi tiết →<span></span></span>
                       </div>
                     </div>
                   </a>
-                  <div class="site"><a href="<?php echo esc_html( get_post_meta($post->ID,'_link', true) ); ?>" target="_blank"><span>BRAND SITE</span></a></div>
-                </div>     
-            <?php 
+                  <div class="site"><a href="<?php echo esc_html( get_post_meta($post->ID,'_link', true) ); ?>" target="_blank"><span>Trang web sản phẩm</span></a></div>
+                </div>
+            <?php
               endwhile;
             }
             ?>
@@ -106,16 +106,16 @@
      topLinks
   //////////////////////////////////////////////////////////////////////////////-->
   <section id="topLinks">
-    <h2>LINKS</h2>
+    <h2>Liên kết</h2>
     <ul class="view">
-      <li class="list01"><a href="./beauty/" class="pageLink"><span class="text">VIEW ALL FOR HAIR DESINGERS</span><span class="arrow"><span class="arrow_img">→</span></span><span class="line"></span></a></li>
-      <li class="list02"><a href="./brand/" class="pageLink"><span class="text">VIEW ALL BRAND</span><span class="arrow"><span class="arrow_img">→</span></span><span class="line"></span></a></li>
+      <li class="list01"><a href="./beauty/" class="pageLink"><span class="text">Xem tất cả</span><span class="arrow"><span class="arrow_img">→</span></span><span class="line"></span></a></li>
+      <li class="list02"><a href="./brand/" class="pageLink"><span class="text">Xem tất cả các sản phẩm</span><span class="arrow"><span class="arrow_img">→</span></span><span class="line"></span></a></li>
     </ul>
     <ul class="navi">
-      <li><a href="list01" class="active">FOR HAIR DESIGNER<span></span></a></li>
-      <li><a href="list02">BRAND<span></span></a></li>
-      <li><a href="list03">GROUP<span></span></a></li>
-      <li><a href="list04">DISTRIBUTE<span></span></a></li>
+      <li><a href="list01" class="active">Dành cho nhà tạo mẫu tóc<span></span></a></li>
+      <li><a href="list02">Dòng sản phẩm<span></span></a></li>
+      <li><a href="list03">Nhóm<span></span></a></li>
+      <li><a href="list04">Đại lý Milbon<span></span></a></li>
     </ul>
 
     <!-- FOR HAIR DESIGNER LIST -->
@@ -149,11 +149,11 @@
           <div class="defalt"><span><?php the_title(); ?></span></div>
           <div class="over"><div class="bg"></div><span><?php the_title(); ?><p class="ja">
             <?php
-              if (get_post_meta($post->ID,'_title_japanese', true) != '') { 
+              if (get_post_meta($post->ID,'_title_japanese', true) != '') {
                 echo esc_html( "[" . get_post_meta($post->ID,'_title_japanese', true) . "]" );
-              } 
+              }
             ?>
-            </p></span><p class="icon">VISIT SITE</p>
+          </p></span><p class="icon">Vào trang web</p>
           </div>
         </a>
       </div>
@@ -199,11 +199,11 @@
           <div class="defalt"><span><?php the_title(); ?></span></div>
           <div class="over"><div class="bg"></div><span><?php the_title(); ?><p class="ja">
             <?php
-              if (get_post_meta($post->ID,'_title_japanese', true) != '') { 
+              if (get_post_meta($post->ID,'_title_japanese', true) != '') {
                 echo esc_html( "[" . get_post_meta($post->ID,'_title_japanese', true) . "]" );
-              } 
-            ?> 
-          </p></span><p class="icon">VISIT SITE</p></div>
+              }
+            ?>
+          </p></span><p class="icon">Vào trang web</p></div>
         </a>
       </div>
       <?php
@@ -245,11 +245,11 @@
           <div class="defalt"><span><?php the_title(); ?></span></div>
           <div class="over"><div class="bg"></div><span><?php the_title(); ?><p class="ja">
             <?php
-              if (get_post_meta($post->ID,'_title_japanese', true) != '') { 
+              if (get_post_meta($post->ID,'_title_japanese', true) != '') {
                 echo esc_html( "[" . get_post_meta($post->ID,'_title_japanese', true) . "]" );
-              } 
+              }
             ?>
-          </p></span><p class="icon">VISIT SITE</p></div>
+          </p></span><p class="icon">Vào trang web</p></div>
         </a>
       </div>
       <?php
@@ -291,11 +291,11 @@
           <div class="defalt"><span><?php the_title(); ?></span></div>
           <div class="over"><div class="bg"></div><span><?php the_title(); ?><p class="ja">
             <?php
-              if (get_post_meta($post->ID,'_title_japanese', true) != '') { 
+              if (get_post_meta($post->ID,'_title_japanese', true) != '') {
                 echo esc_html( "[" . get_post_meta($post->ID,'_title_japanese', true) . "]" );
-              } 
+              }
             ?>
-          </p></span><p class="icon">VISIT SITE</p></div>
+          </p></span><p class="icon">Vào trang web</p></div>
         </a>
       </div>
       <?php
@@ -308,9 +308,9 @@
      topNews
   //////////////////////////////////////////////////////////////////////////////-->
   <section id="topNews">
-    <h2>NEWS</h2>
+    <h2>Tin tức</h2>
     <ul class="view">
-      <li><a href="<?php echo esc_url( get_post_type_archive_link( 'milbon-news' ) ); ?>" class="pageLink"><span class="text">VIEW ALL NEWS</span><span class="arrow"><span class="arrow_img">→</span></span><span class="line"></span></a></li>
+      <li><a href="<?php echo esc_url( get_post_type_archive_link( 'milbon-news' ) ); ?>" class="pageLink"><span class="text">Xem tất cả tin tức</span><span class="arrow"><span class="arrow_img">→</span></span><span class="line"></span></a></li>
     </ul>
     <!-- NEWS LIST -->
     <?php
@@ -336,18 +336,18 @@
             <?php endif; ?>
            " height="126" width="224" alt="<?php the_title(); ?>"></div>
           <div class="meta"><span class="category">
-            <?php 
+            <?php
               echo get_first_cateogry($post->ID, 'news_category');
             ?>
-              
+
             </span> ｜ <span class="date">
               <?php
-                the_date('Y-m-d'); 
+                the_date('Y-m-d');
               ?>
-            
+
             </span></div>
             <p><?php the_title();?></p>
-          <div class="more"><span class="t">READ MORE →</span><span class="line"></span></div>
+          <div class="more"><span class="t">Xem thêm →</span><span class="line"></span></div>
         </a>
       </div>
       <?php

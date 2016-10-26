@@ -290,6 +290,122 @@ function save_details(){
 	if(isset($_POST["field_id"]))
   		update_post_meta($post->ID, "field_id", $_POST["field_id"]);
 }
+
+//// ADD DROPDOWN CATEGORY COLLECTION
+add_action( 'add_meta_boxes', 'so_custom_meta_box' );
+
+function so_custom_meta_box($post){
+    add_meta_box('so_meta_box', 'Collection', 'custom_element_grid_class_meta_box', 'milbon-brands', 'normal' , 'high');
+}
+
+add_action('save_post', 'so_save_metabox');
+
+function so_save_metabox(){ 
+    global $post;
+    if(isset($_POST['custom_element_grid_class'])){
+         //UPDATE: 
+        $meta_element_class = $_POST['custom_element_grid_class'];
+
+        //END OF UPDATE
+
+        update_post_meta($post->ID, 'custom_element_grid_class_meta_box', $meta_element_class);
+        //print_r($_POST);
+    }
+}
+
+function custom_element_grid_class_meta_box($post){
+	$terms = get_terms( array(
+		'taxonomy' => 'collection_category',
+		'hide_empty' => false,
+	) );
+     //true ensures you get just one value instead of an array
+    ?>   
+    <label>Category:  </label>
+
+    <select name="custom_element_grid_class" id="custom_element_grid_class">
+	<?php
+		$meta_element_class = get_post_meta($post->ID, 'custom_element_grid_class_meta_box', true);
+
+		if( !empty( $terms ) ) {
+			foreach ( $terms as $term ) {
+			$value = esc_attr( $term->slug );
+			
+	?>
+      <option value="<?php echo $value ?>" <?php if ($meta_element_class == $value) echo 'selected'?> >
+	  	<?php echo esc_html( $term->name ) ?>
+	  </option>
+	<?php
+		}
+	}
+	?>
+    </select>
+    <?php
+}
+
+
+/**
+ * CREATE COLLECTION POST TYPE
+ */
+
+add_action( 'init', 'create_brands_collection' );
+function create_brands_collection () {
+	register_post_type(
+			'brands-collection',
+			array(
+				'labels' => array(
+						'name' => esc_html__( 'Collection', 'brands' ),
+						'singular_name' => esc_html__( 'Collection', 'brands' ),
+						'add_new' => esc_html__( 'Add New', 'brands' ),
+						'add_new_item' => esc_html__( 'Add New Item', 'brands' ),
+						'edit_item' => esc_html__( 'Edit Item', 'brands' ),
+						'new_item' => esc_html__( 'New Item', 'brands' ),
+						'view_item' => esc_html__( 'View Item', 'brands' ),
+						'search_items' => esc_html__( 'Search Collection', 'brands' ),
+						'not_found' => esc_html__( 'No Collection Found', 'brands' ),
+						'not_found_in_trash' => esc_html__( 'No Collection Found In Trash', 'brands' )
+				),
+				'description'	=> esc_html__( 'Create a Collection Brands', 'brands' ),
+				'public'	=>	true,
+				'show_ui'            => true,
+				'show_in_menu'       => true,
+				'publicly_queryable' => true,
+				'has_archive' => true,
+				'rewrite'            => array(
+					'slug' => esc_html__('brands-collection','brands')
+				),
+				'menu_position'      => 5,
+				'show_in_nav_menus'  => false,
+				'menu_icon'          => 'dashicons-book',
+				'hierarchical'       => false,
+				'query_var'          => true,
+				'capability_type' => 'post',
+				'supports'           => array(
+					'title', /* Text input field to create a post title. */
+					'editor',
+					'thumbnail', /* Displays a box for featured image. */
+				)
+	));
+}
+
+add_action( 'init', 'create_brands_collection_taxonomies', 0 );
+
+
+function create_brands_collection_taxonomies(){
+	register_taxonomy(
+		'collection_category',
+		'brands-collection', array(
+			'labels' => array(
+				'name' => 'Category',
+				'add_new_item' => 'Add New Case Category',
+				'new_item_name' => "New Case Category"
+			),
+			'show_ui' => true,
+			'show_tagcloud' => true,
+			'hierarchical' => true
+		)
+	);
+}
+
 /**
  * CREATE NEWS POST TYPE
  */
@@ -407,6 +523,21 @@ function get_first_cateogry($pid, $taxonomy_name){
 	echo $post_categories;
 }
 
+function get_slug_category($pid, $taxonomy_name) {
+	$category = array();
+	$categories = get_the_terms($pid, $taxonomy_name);
+	if(!empty($categories)){
+		foreach ( $categories as $cat){
+			array_push($category, $cat->slug);
+		}
+		// $post_categories = implode(', ', $category);
+	}
+	else{
+		$category = '';
+	}
+	return $category;
+}
+
 /*
  * Add meta box for Brand
  */
@@ -492,18 +623,6 @@ function wpt_save_brands_link ($post_id, $post) {
 add_action('save_post', 'wpt_save_brands_meta', 1, 2);
 add_action('save_post', 'wpt_save_brands_link', 1, 2);
 
-// Add template for single post base on category
-function create_single_post_template($t) {
-	foreach( (array) get_the_category() as $cat ) {
-		if($cat->name === 'office'){
-			if ( file_exists(TEMPLATEPATH . "/single-office.php") )
-				return TEMPLATEPATH . "/single-office.php";
-		}
-	}
-	return $t;
-}
-add_filter('single_template', 'create_single_post_template');
-
 //Add meta box - that allow add slider short code with office post
 function slz_meta_box_office_slider($id_post) {
     $slider_shortcode =  get_metadata('post', intval($id_post->ID), '_office_slider_shortcode_milbon', true);
@@ -528,5 +647,72 @@ function update_office_slider_shortcode($post_id) {
 		update_post_meta($_POST['post_ID'], '_office_slider_shortcode_milbon', $slider_shortcode);
 	}
 }
-
 add_action('save_post', 'update_office_slider_shortcode');
+
+// Add template for single post base on category
+function create_single_post_template($t) {
+	foreach( (array) get_the_category() as $cat ) {
+		if($cat->name === 'office'){
+			if ( file_exists(TEMPLATEPATH . "/single-office.php") )
+				return TEMPLATEPATH . "/single-office.php";
+		}
+	}
+	return $t;
+}
+add_filter('single_template', 'create_single_post_template');
+if(!is_admin()){
+	require_once ('mobile_detect.php');
+	$mobile_detect  = new Mobile_Detect();
+
+	function load_mobile() {
+		if(is_home())
+			$template_name = get_home_template();
+		elseif(is_page())
+			$template_name = get_page_template();
+		elseif(is_single()) {
+			$post_type = get_post_type() !== 'post'?'-'.get_post_type():'';
+			$template_name = get_template_directory().'/single'.$post_type.'.php';
+			foreach( (array) get_the_category() as $cat ) {
+				if($cat->name === 'office'){
+					if ( file_exists(TEMPLATEPATH . "/single-office.php") )
+						$template_name = get_template_directory().'/single-office.php';
+				}
+			}
+		} elseif (is_archive()) {
+			$archive_type = get_queried_object()->name;
+			if($archive_type == 'post')
+				$archive_type = '';
+			else
+				$archive_type = '-'.$archive_type;
+			$template_name = get_template_directory().'/archive'.$archive_type.'.php';
+		}
+		$template_name = str_replace('.php', '', $template_name);
+		return $template_name.'-sp.php';
+	}
+
+	if($mobile_detect->isMobile())
+		add_filter('template_include', 'load_mobile');
+}
+
+function editor_sp_version($post) {
+	if(current_user_can('edit_page',$post->ID)) {
+		$content = get_metadata('post', intval($post->ID), '_sp_page_content',true);
+		wp_editor($content, '_sp_page_content');
+	}else
+		return;
+}
+
+function content_sp_page() {
+    if(is_admin())
+        add_meta_box('slz_content_sp_page', __('Content for SP version', 'slz'), 'editor_sp_version', 'page', 'normal', 'high');
+}
+
+function save_content_sp_page($post_id) {
+	if(!current_user_can('edit_page', $post_id))
+		return;
+	if(isset($_POST['_sp_page_content']))
+		update_post_meta($post_id, '_sp_page_content', $_POST['_sp_page_content']);
+}
+//add metabox (editor) for sp content.
+add_action('add_meta_boxes', 'content_sp_page');
+add_action('save_post', 'save_content_sp_page');

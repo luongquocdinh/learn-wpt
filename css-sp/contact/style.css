@@ -1,0 +1,429 @@
+
+#contact{
+	position: relative;
+	width: 100%;
+	overflow: hidden;
+	padding-top: 50px;
+}
+
+input[type="button"],input[type="submit"],input[type="text"] ,textarea{
+    -webkit-appearance: none !important;
+    border-radius: 0px;
+}
+
+/*一覧ヘッダー*/
+#contact .header{
+	padding-top: 40px;
+	text-align: center;
+	position: relative;
+}
+#contact .header h1{
+	font-size: 25px;
+	margin-bottom:10px;
+	line-height: 1;
+}
+#contact .header p{
+	font-size: 13px;
+	line-height: 1;
+	margin-bottom: 40px;
+}
+#contact .contents{
+	width: 100%;
+	margin: 0 auto;
+	padding-bottom: 40px;
+}
+#contact .contents h2{
+	text-align: center;
+	color: #313131;
+	font-size: 16px;
+	margin-bottom: 35px;
+	font-weight: bold;
+}
+#contact .contents .attention{
+	background: #f3f1f7;
+	padding: 18px;
+	margin-bottom: 30px;
+}
+#contact .contents .attention .btn{
+	text-align: center;
+}
+#contact .contents .attention .btn a span{
+	background: url(../../images-sp/contact/arrow_down.png) no-repeat right center;
+	padding-right: 20px;
+}
+#contact .contents .attention .area{
+	padding-top: 25px;
+	display: none;
+}
+#contact .contents .attention .area p{
+	line-height: 166%;
+	font-size: 12px;
+	margin-bottom: 20px;
+}
+#contact .contents .attention .area p.c{
+	color: #3a1e87;
+}
+#contact .contents .attention .close{
+	text-align: center;
+}
+#contact .contents .attention .close a span{
+	background: url(../../images-sp/contact/close.png) no-repeat right center;
+	padding-right: 20px;
+  	font-family: 'function_probook';
+}
+#contact .contents .form{
+	padding-bottom: 50px;
+	margin: 0 20px;
+}
+#contact .contents .form .column{
+	position: relative;
+	margin-bottom: 25px;
+}
+#contact .contents .form .column .subject_title{
+	font-size: 14px;
+	line-height: 1;
+	margin-bottom: 15px;
+	font-weight: bold;
+	padding-left: 35px;
+}
+#contact .contents .form .column ul.subject_btn01{
+	overflow: hidden;
+	padding-bottom: 10px;
+}
+#contact .contents .form .column ul.subject_btn01 li{
+	margin-bottom: 15px;
+}
+#contact .contents .form .column ul.subject_btn01 li a{
+	width: 100%;
+	height: 58px;
+	display: block;
+	border: 1px #eeeeee solid;
+	text-align: center;
+	line-height: 58px;
+    -webkit-transition: all 0.3s ease;
+       -moz-transition: all 0.3s ease;
+        -ms-transition: all 0.3s ease;
+         -o-transition: all 0.3s ease;
+            transition: all 0.3s ease;
+}
+#contact .contents .form .column ul.subject_btn01 li a:hover,
+#contact .contents .form .column ul.subject_btn01 li a.active{
+	background: #3a1e87;
+	border: 1px #3a1e87 solid;
+	color: #FFF;
+}
+#contact .contents .form .column ul.subject_btn02{
+	overflow: hidden;
+	padding-bottom: 10px;
+}
+#contact .contents .form .column ul.subject_btn02 li{
+	margin-bottom: 15px;
+}
+#contact .contents .form .column ul.subject_btn02 li a{
+	width: 100%;
+	height: 40px;
+	display: block;
+	background: #c4bbdb;
+	text-align: center;
+	line-height: 40px;
+	color: #FFF;
+    -webkit-transition: all 0.3s ease;
+       -moz-transition: all 0.3s ease;
+        -ms-transition: all 0.3s ease;
+         -o-transition: all 0.3s ease;
+            transition: all 0.3s ease;
+}
+#contact .contents .form .column ul.subject_btn02 li a span{
+	padding-right: 20px;
+	background: url(../../images-sp/contact/icon_blank.png) no-repeat right center;
+}
+#contact .contents .form .column ul.subject_btn02 li a:hover,
+#contact .contents .form .column ul.subject_btn02 li a.active{
+	background: #8978b7;
+	color: #FFF;
+}
+
+#contact .contents .form .column .select_subject{
+	height: 60px;
+	line-height: 60px;
+	color: #FFF;
+	background: #3a1e87;
+	text-align: center;
+	font-size: 14px;
+}
+#contact .contents .form .column .must{
+	position: absolute;
+	top: -2px;
+	left: 0px;
+	background: url(../../images-sp/contact/icon_must.png) no-repeat;
+	background-size: 30px;
+	width: 34px;
+	height: 18px;
+}
+#contact .contents .form .column .check{
+	position: absolute;
+	top: 0;
+	right: 0px;
+}
+#contact .contents .form .column .check.bottom{
+	position: absolute;
+	top: auto;
+	bottom:5px;
+	right: 0px;
+}
+#contact .contents .form .column .check .ok{
+	background: url(../../images-sp/contact/icon_ok.png) no-repeat;
+	background-size: 20px;
+	width: 20px;
+	height: 20px;
+}
+#contact .contents .form .column .check .miss{
+	color: #ff0000;
+}
+#contact .contents .form .column .check .miss{
+	background: url(../../images-sp/contact/icon_miss.png) no-repeat right center;
+	background-size: 20px;
+	width: 20px;
+	height: 20px;
+}
+#contact .contents .form .column ul.twoColumn{
+}
+#contact .contents .form .column ul.twoColumn li{
+	width: 47.16%;
+	float: left;
+	position: relative;
+}
+#contact .contents .form .column ul.twoColumn li:first-child{
+	margin-right: 4.5%;
+}
+#contact .contents .form .column ul.twoColumn .check{
+	position: absolute;
+	top: 0px;
+	right: 0px;
+}
+#contact .contents .form .column .clear{
+	clear: both;
+}
+#contact .contents .form .column .input01{
+  -webkit-appearance:none;
+	width: 90%;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    border:none;
+    border-bottom: 1px solid #eee;
+    font-size: 14px;
+    color: #3a1e87;
+    padding:0 0 6px 5px;
+    margin-left: 35px;
+}
+#contact .contents .form .column ul.twoColumn .input01{
+	width: 80%;
+}
+#contact .contents .form .column .input01.miss{
+    border-bottom: 1px solid #ff0000;
+    color: #ff0000;
+}
+
+#contact .contents .form .column .input02{
+  -webkit-appearance:none;
+    margin-left: 35px;
+    width: 90%;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    border: 1px solid #eee;
+    font-size: 14px;
+    color: #3a1e87;
+    padding:15px;
+}
+#contact .contents .form .column .input02.miss{
+    border-bottom: 1px solid #ff0000;
+    color: #ff0000;
+}
+#contact .contents .form .column .input03{
+    margin-left: 35px;
+  -webkit-appearance:none;
+    margin-right: 5.6%;
+    width: 40.66%;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    border:none;
+    border-bottom: 1px solid #eee;
+    font-size: 14px;
+    color: #3a1e87;
+    padding:0 0 6px 5px;
+}
+#contact .contents .form .column .input04{
+  -webkit-appearance:none;
+    margin-right: 5.2%;
+    width: 15.66%;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    border:none;
+    border-bottom: 1px solid #eee;
+    font-size: 14px;
+    color: #3a1e87;
+    padding:0 0 6px 5px;
+}
+#contact .contents .form .column .input05{
+  -webkit-appearance:none;
+    width: 15.66%;
+    margin-right:0%;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    border:none;
+    border-bottom: 1px solid #eee;
+    font-size: 14px;
+    color: #3a1e87;
+    padding:0 0 6px 5px;
+}
+
+#contact .contents .form .column  ul.radio{
+    margin-left: 35px;
+    padding:0 0 6px 5px;
+	overflow: hidden;
+	letter-spacing: -0.4em;
+}
+#contact .contents .form .column  ul.radio li{
+	display: inline-block;
+	letter-spacing: normal;
+	vertical-align: middle;
+	font-size: 14px;
+	margin-right: 25px;
+  	position: relative;
+}
+#contact .contents .form .column  ul.radio li.q{
+	font-weight: bold;
+	color: #bfbfbf;
+}
+
+#contact .contents .form .column  ul.radio li input[type="radio"]{
+  position: absolute;
+  top: 0;
+  left: 0px;
+  opacity: 0;
+}
+
+#contact .contents .form .column  ul.radio li a{
+	background: url(../../images-sp/contact/icon_check.png) no-repeat;
+	background-size: 20px;
+	height: 20px;
+	line-height: 20px;
+	padding-left: 24px;
+	display: block;
+}
+#contact .contents .form .column  ul.radio li a.active{
+	background: url(../../images-sp/contact/icon_check_ok.png) no-repeat;
+
+}
+#contact .contents .form .column .conf{
+	overflow: hidden;
+	padding-left: 35px;
+}
+#contact .contents .form .column .conf a{
+	background: url(../../images-sp/contact/icon_check.png) no-repeat left center;
+	background-size: 30px;
+	padding-left: 39px;
+	line-height: 24px;
+	display: block;
+}
+#contact .contents .form .column .conf a.miss{
+	background: url(../../images-sp/contact/icon_check_miss.png) no-repeat left center;
+	background-size: 30px;
+    color: #ff0000;
+}
+#contact .contents .form .column .conf a.ok{
+	background: url(../../images-sp/contact/icon_check_ok.png) no-repeat left center;
+	background-size: 30px;
+}
+#contact .contents .btn_set{
+	text-align: center;
+	letter-spacing: -0.4em;
+}
+#contact .contents .btn_set li{
+	letter-spacing: normal;
+	display: inline-block;
+	vertical-align: top;
+	width: 47.13%;
+}
+#contact .contents .btn_set li:first-child{
+	margin-right: 10px;
+}
+#contact .contents .btn_set li a,
+#contact .contents .btn_set li .btn{
+  -webkit-appearance:none;
+	font-family:"游明朝体", "Yu Mincho", YuMincho, 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'ヒラギノ角ゴ Pro W3', 'メイリオ', Meiryo, sans-serif;
+	width:100%;
+	height: 58px;
+	display: block;
+	border: 1px #eeeeee solid;
+	text-align: center;
+	line-height: 58px;
+	font-weight: bold;
+	cursor: pointer;
+	background: #FFF;
+    -webkit-transition: all 0.3s ease;
+       -moz-transition: all 0.3s ease;
+        -ms-transition: all 0.3s ease;
+         -o-transition: all 0.3s ease;
+            transition: all 0.3s ease;
+}
+#contact .contents .btn_set li .btn{
+	background: #3a1e87;
+	border: 1px #3a1e87 solid;
+	color: #FFF;
+}
+
+
+#contact .contents .form .column dl.input_preview{
+	overflow: hidden;
+    font-size: 14px;
+    color: #3a1e87;
+    font-weight: bold;
+}
+#contact .contents .form .column dl.input_preview dt{
+	float: left;
+	width: 30%;
+	line-height: 150%;
+	font-size: 10px;
+
+}
+#contact .contents .form .column dl.input_preview dd{
+	float: left;
+	width: 70%;
+	line-height: 150%;
+	font-size: 15px;
+}
+#contact .contents .form .column .input_preview_textarea{
+    width: 100%;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    border: 1px solid #3a1e87;
+    font-size: 14px;
+    color: #3a1e87;
+    padding:15px
+
+}
+
+#contact .contents .thank{
+	text-align: center;
+	color: #313131;
+	font-size: 19px;
+	line-height: 157%;
+	margin-bottom: 15px;
+	font-weight: bold;
+}
+#contact .contents .thank_conf{
+	text-align: center;
+	color: #3a1e87;
+	font-size: 13px;
+	line-height: 162%;
+	margin-bottom: 50px;
+	font-weight: bold;
+}
+#contact .contents .thank_attention{
+	color: #313131;
+	margin: 0 20px;
+	font-size: 12px;
+	line-height: 162%;
+	margin-bottom: 20px;
+}

@@ -1,0 +1,477 @@
+
+
+/*----------------------------------------------------
+  #top
+--------------------------------------------------- */
+#top{
+	position: relative;
+	width: 100%;
+	overflow: hidden;
+}
+#top li{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 100%;
+	height: 100%;
+}
+#top li img{
+	width: 100%;
+	height: auto;
+}
+#top h1{
+	position: absolute;
+	top: 120px;
+	left: 110px;
+}
+#top .scrolldown{
+	position: absolute;
+	bottom: 10px;
+	left: 50%;
+	margin-left: -45px;
+}
+#top .scrolldown a{
+	padding-right: 20px;
+	color: #FFF;
+	font-size: 12px;
+  font-family: 'function_probook';
+}
+
+#top .scrolldown a span{
+	height: 14px;
+	vertical-align: top;
+}
+#top .scrolldown a span.text{
+	display: inline-block;
+	margin-right: 4px;
+}
+#top .scrolldown a span.arrow{
+	width: 12px;
+	height: 14px;
+	overflow: hidden;
+	position: relative;
+	display: inline-block;
+}
+#top .scrolldown a span.arrow span.arrow_img{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 12px;
+	height: 14px;
+	background: url(../images/top/scrolldown.png) no-repeat right center;
+	background-size: 11px 6px;
+}
+
+
+/*----------------------------------------------------
+  #comment
+--------------------------------------------------- */
+#comment{
+	position: relative;
+	overflow: hidden;
+	background: #FFF;
+	border-bottom: 1px #eeeeee solid;
+	text-align: left;
+	padding: 42px 20px;
+	font-size: 15px;
+	line-height: 150%;
+}
+/*----------------------------------------------------
+  #topBrand
+--------------------------------------------------- */
+#topBrand{
+	position: relative;
+	width: 100%;
+	overflow: hidden;
+	background: #FFF;
+}
+#topBrand h2{
+  	font-family: 'function_probook';
+	font-size: 36px;
+	color: #000000;
+	text-align: center;
+	line-height: 1;
+	padding: 36px 0 36px 0;
+}
+#topBrand .slide-area{
+	position: relative;
+	width: 100%;
+	margin-bottom: 19px;
+}
+#topBrand .slide-area .slide-inner{
+}
+#topBrand .slide-area .slide-inner .slides{
+}
+#topBrand .slide-area .slide-inner .slides .column{
+	position: relative;
+	padding-bottom: 25px;
+}
+
+#topBrand .slide-area .slide-inner .slides .column .visual{
+	margin-bottom: 10px;
+	position: relative;
+}
+#topBrand .slide-area .slide-inner .slides .column .date{
+  	font-family: 'function_probook';
+	line-height: 1;
+	font-size: 11px;
+	color: #b3b3b3;
+	padding-left: 20px;
+}
+#topBrand .slide-area .slide-inner .slides .column .date .category{
+	color: #313131;
+}
+#topBrand .slide-area .slide-inner .slides .column .date .day{
+	color: #898989;
+}
+#topBrand .slide-area .slide-inner .slides .column .over{
+
+}
+#topBrand .slide-area .slide-inner .slides .column .over .over-inner{
+	padding-top: 26px;
+	text-align: center;
+}
+#topBrand .slide-area .slide-inner .slides .column .over .over-inner .brandName{
+	font-size: 27px;
+	line-height: 1;
+	margin-bottom: 13px;
+  	font-family: 'function_probook';
+}
+#topBrand .slide-area .slide-inner .slides .column .over .over-inner .category{
+	display: none;
+}
+#topBrand .slide-area .slide-inner .slides .column .over .over-inner .ja{
+	font-size: 15px;
+	margin-bottom: 18px;
+}
+#topBrand .slide-area .slide-inner .slides .column .over .over-inner a{
+	color: #3a1e87;
+	position: relative;
+	font-size: 13px;
+  	font-family: 'function_probook';
+}
+#topBrand .slide-area .slide-inner .slides .column .site{
+	position: absolute;
+	bottom: -20px;
+	right: 20px;
+}
+#topBrand .slide-area .slide-inner .slides .column .site a{
+	display: block;
+	width: 110px;
+	height: 40px;
+	background: #3a1e87;
+	text-align: center;
+	line-height: 40px;
+	color: #FFF;
+}
+#topBrand .slide-area .slide-inner .slides .column .site a span{
+	background:url(../images/top/blank.png) no-repeat right center;
+	background-size: 11px 9px;
+	padding-right: 18px;
+  	font-family: 'function_probook';
+}
+
+#topBrand .slide-area .flex-prev{
+	position: absolute;
+	bottom: 60px;
+	left: 10px;
+	background: url(../images/top/arrow_prev.png) no-repeat center center;
+	width: 40px;
+	height: 40px;
+	background-size: 21px;
+	text-indent: -9999px;
+}
+#topBrand .slide-area .flex-next{
+	position: absolute;
+	bottom: 60px;
+	right: 10px;
+	background: url(../images/top/arrow_next.png) no-repeat center center;
+	width: 40px;
+	height: 40px;
+	background-size: 21px;
+	text-indent: -9999px;
+}
+#topBrand .slide-area .flex-control-nav{
+	text-align: center;
+	letter-spacing: -0.4em;
+}
+#topBrand .slide-area .flex-control-nav li{
+	display: inline-block;
+	letter-spacing: normal;
+	margin: 0 5px;
+}
+#topBrand .slide-area .flex-control-nav li a{
+	width: 50px;
+	height: 2px;
+	background: #eeeeee;
+	display: block;
+	text-indent: -9999px;
+    -webkit-transition: all 0.3s ease;
+       -moz-transition: all 0.3s ease;
+        -ms-transition: all 0.3s ease;
+         -o-transition: all 0.3s ease;
+            transition: all 0.3s ease;
+}
+#topBrand .slide-area .flex-control-nav li a.flex-active{
+	background: #3a1e87;
+}
+
+#topBrand a.view{
+	display: block;
+	height: 48px;
+	width: 88.8%;
+	margin: 0 auto;
+	border: 1px #eeeeee solid;
+	margin-bottom: 25px;
+	text-align: center;
+	line-height: 48px;
+	font-size: 13px;
+  	font-family: 'function_probook';
+}
+/*----------------------------------------------------
+  #topLinks
+--------------------------------------------------- */
+#topLinks{
+	position: relative;
+	width: 100%;
+	overflow: hidden;
+	background: #f5f4f9;
+	padding-bottom: 15px;
+}
+#topLinks h2{
+	font-size: 36px;
+	color: #000000;
+	text-align: center;
+	line-height: 1;
+	padding: 35px 0 23px 0;
+  	font-family: 'function_probook';
+}
+
+
+#topLinks ul.navi{
+	text-align: center;
+	letter-spacing: -0.4em;
+	margin-bottom: 25px;
+}
+#topLinks ul.navi li{
+	display: inline-block;
+	letter-spacing: normal;
+	margin: 0 17px;
+}
+#topLinks ul.navi li a{
+	position: relative;
+	font-size: 13px;
+	height: 21px;
+	line-height: 1;
+	color: #313131;
+	display: block;
+  	font-family: 'function_probook';
+}
+#topLinks ul.navi li a span{
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  width: 100%;
+  height: 1px;
+  background: #3a1e87;
+-webkit-transform: scale3d(0,1,1);
+   -moz-transform: scale3d(0,1,1);
+    -o-transform:  scale3d(0,1,1);
+        transform: scale3d(0,1,1);
+    -webkit-transition: all 0.3s ease;
+       -moz-transition: all 0.3s ease;
+        -ms-transition: all 0.3s ease;
+         -o-transition: all 0.3s ease;
+            transition: all 0.3s ease;
+            opacity: 0;
+}
+#topLinks ul.navi li a.active{
+  color: #3a1e87;
+}
+#topLinks ul.navi li a.active span{
+-webkit-transform: scale3d(1,1,1);
+   -moz-transform: scale3d(1,1,1);
+    -o-transform:  scale3d(1,1,1);
+        transform: scale3d(1,1,1);
+        opacity: 1;
+}
+
+#topLinks .list{
+	overflow: hidden;
+	text-align: left;
+	letter-spacing: -0.4em;
+	display: none;
+}
+#topLinks .list01{
+	display: block;
+
+}
+#topLinks .list .column{
+	display: inline-block;
+	letter-spacing: normal;
+	width: 42.6%;
+	background: #FFF;
+	margin-left: 5.3%;
+	vertical-align: top;
+	margin-bottom: 15px;
+}
+#topLinks .list .column:nth-child(2n){
+	margin-left: 4%;
+
+}
+#topLinks .list .column a{
+	width: 100%;
+	display: block;
+	position: relative;
+}
+#topLinks .list .column a .defalt{
+  	display: block;
+  	width: 100%;
+	height: 90px;
+	background: url(../images/blank.png) no-repeat right 8px bottom 8px;
+	background-size: 11px 9px;
+	position: relative;
+}
+
+#topLinks .list .column a .title{
+  	display: block;
+	position: absolute;
+  	width: 100%;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  	vertical-align: middle;
+	text-align: center;
+	font-size: 14px;
+	line-height: 130%;
+  	font-family: 'function_probook';
+}
+#topLinks .list .column a .title .title_ja{
+	text-align: center;
+	display: block;
+	font-size: 11px;
+    font-family:"游明朝体", "Yu Mincho", YuMincho,"ヒラギノ明朝 ProN W6", "HiraMinProN-W6", "HG明朝E", "ＭＳ Ｐ明朝", "MS PMincho", "MS 明朝", serif;
+}
+/*----------------------------------------------------
+  #topNews
+--------------------------------------------------- */
+#topNews{
+	position: relative;
+	width: 100%;
+	min-height: 477px;
+	overflow: hidden;
+	background: #FFF;
+}
+#topNews h2{
+	font-size: 36px;
+	color: #000000;
+	text-align: center;
+	line-height: 1;
+	padding: 35px 0 34px 0;
+  	font-family: 'function_probook';
+}
+
+#topNews .list{
+	overflow: hidden;
+	margin: 0 20px;
+	margin-bottom: 15px;
+	display: block;
+}
+#topNews .list .column{
+	width: 100%;
+	overflow: hidden;
+	padding-bottom: 16px;
+	margin-bottom: 16px;
+	border-bottom:1px #eeeeee solid;
+}
+#topNews .list .column a{
+	display: block;
+	overflow: hidden;
+	position: relative;
+}
+#topNews .list .column .visual{
+	width: 38.2%;
+	float: left;
+}
+#topNews .list .column .sum{
+	width: 56.7%;
+	float: right;
+}
+
+#topNews .list .column .meta{
+	text-align: left;
+	font-size: 11px;
+	color: #959595;
+	line-height: 1;
+	margin-bottom: 5px;
+  	font-family: 'function_probook';
+}
+#topNews .list .column .meta .category{
+	color: #313131;
+}
+
+#topNews .list .column p{
+	color: #313131;
+	font-size: 13px;
+	line-height: 1.5;
+	text-align: left;
+	margin-bottom: 5px;
+}
+
+
+#topNews .list .column .more{
+	color: #3a1e87;
+	font-size: 13px;
+	text-align: right;
+  	font-family: 'function_probook';
+}
+
+#topNews .list .column a .more span.t{
+	text-align: right;
+	font-size: 12px;
+	display: block;
+	margin-bottom: 10px;
+	line-height: 1;
+	opacity: 0;
+    -webkit-transition: all 0.5s ease;
+       -moz-transition: all 0.5s ease;
+        -ms-transition: all 0.5s ease;
+         -o-transition: all 0.5s ease;
+            transition: all 0.5s ease;
+  -webkit-transform: translate3d(-10px,0%,0px);
+     -moz-transform: translate3d(-10px,0%,0px);
+      -ms-transform: translate3d(-10px,0%,0px);
+       -o-transform: translate3d(-10px,0%,0px);
+          transform: translate3d(-10px,0%,0px);
+}
+#topNews .list .column a .more span.line{
+	width: 100%;
+	height: 1px;
+	background: #3a1e87;
+	display: block;
+    -webkit-transition: all 0.3s ease;
+       -moz-transition: all 0.3s ease;
+        -ms-transition: all 0.3s ease;
+         -o-transition: all 0.3s ease;
+            transition: all 0.3s ease;
+-webkit-transform: scale3d(0,1,1);
+   -moz-transform: scale3d(0,1,1);
+    -o-transform:  scale3d(0,1,1);
+        transform: scale3d(0,1,1);
+        opacity: 0;
+}
+
+#topNews a.view{
+	display: block;
+	height: 48px;
+	width: 88.8%;
+	margin: 0 auto;
+	border: 1px #eeeeee solid;
+	margin-bottom: 25px;
+	text-align: center;
+	line-height: 48px;
+	font-size: 13px;
+  	font-family: 'function_probook';
+}

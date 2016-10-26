@@ -1,0 +1,218 @@
+#wrapper{
+	overflow: hidden;
+}
+
+
+/*----------------------------------------------------
+  #office
+--------------------------------------------------- */
+#office{
+	position: relative;
+	width: 100%;
+	overflow: hidden;
+    padding-top: 50px;
+}
+
+/*一覧ヘッダー*/
+#office .header{
+	padding-top: 65px;
+	text-align: center;
+	position: relative;
+	padding-bottom: 40px;
+}
+#office.detail .header{
+	padding-bottom:0px;
+}
+#office .header h1{
+	font-size: 36px;
+	margin-bottom:40px;
+	line-height: 111%;
+  	font-family: 'function_probook';
+}
+#office.detail .header h1{
+  	font-family:"游明朝体", "Yu Mincho", YuMincho,"ヒラギノ明朝 ProN W6", "HiraMinProN-W6", "HG明朝E", "ＭＳ Ｐ明朝", "MS PMincho", "MS 明朝", serif;
+}
+
+#office .header .category{
+}
+#office .header .category .btn{
+}
+#office .header .category .btn a{
+	font-size: 12px;
+	background: #f3f2f8;
+	display: block;
+	line-height: 1;
+	position: relative;
+	padding: 18px 0;
+  	font-family: 'function_probook';
+}
+#office .header .category .btn a span{
+	background: url(../../img/arrow_down.png) no-repeat right 5px;
+	background-size: 13px;
+	padding-right: 24px;
+}
+#office .header .category.active .btn a span{
+	color: #3a1e87;
+	background: url(../../img/arrow_up.png) no-repeat right 5px;
+	background-size: 13px;
+	padding-right: 24px;
+
+}
+#office .header .category .pullDown{
+	width: 100%;
+	padding: 20px 0;
+	background: #FFF;
+	overflow: hidden;
+	display: none;
+	opacity: 0;
+}
+#office .header .category .pullDown.view{
+}
+#office .header .category .pullDown ul{
+	text-align: center;
+}
+#office .header .category .pullDown ul li{
+	margin-bottom: 12px;
+}
+#office .header .category .pullDown ul li a{
+	margin-bottom: 12px;
+	font-size: 12px;
+	text-align: left;
+}
+#office .header .category .pullDown ul li a:hover{
+	color: #3a1e87;
+}
+
+#office .contents{
+	position: relative;
+	margin: 0 20px;
+	padding-bottom: 60px;
+}
+#office.detail .contents{
+	position: relative;
+	margin:0px;
+	padding-bottom: 60px;
+}
+#office .contents h2{
+	font-size:14px;
+	font-weight: bold;
+	margin-bottom: 20px;
+	text-align: center;
+}
+
+#office .contents h2 a{
+	background: url(../../../img/icon_blank1.png) no-repeat right center;
+	padding-right: 18px;
+}
+#office .contents .list{
+}
+#office .contents .list .column{
+	margin-top: -1px;
+}
+#office .contents .list a{
+	display: block;
+	border-top: 1px #e5e5e5 solid;
+	border-bottom: 1px #e5e5e5 solid;
+	padding: 12px 0;
+	padding-right: 10px;
+	position: relative;
+	background: url(../img/arrow.png) no-repeat right center;
+	background-size: 6px;
+	z-index: 0;
+    -webkit-transition: all 0.3s ease;
+       -moz-transition: all 0.3s ease;
+        -ms-transition: all 0.3s ease;
+         -o-transition: all 0.3s ease;
+            transition: all 0.3s ease;
+}
+#office .contents .list a dl{
+	overflow: hidden;
+}
+#office .contents .list a dl dt{
+	font-size: 14px;
+	font-weight: bold;
+	line-height: 150%;
+}
+#office .contents .list a dl dd{
+	font-size: 12px;
+	line-height: 150%;
+}
+
+#office .contents .flexslider {
+	margin-bottom: 17px;
+}
+#office .contents .flexslider .flex-direction-nav{
+	display: none;
+
+}
+#office .contents .flexslider .slides{
+	margin-bottom: 20px;
+	overflow: hidden;
+}
+#office .contents .flexslider .flex-control-nav{
+	text-align: center;
+	letter-spacing: -0.4em;
+}
+#office .contents .flexslider .flex-control-nav li{
+	display: inline-block;
+	letter-spacing: normal;
+	margin: 0 2px;
+}
+#office .contents .flexslider .flex-control-nav li a{
+	display: block;
+	width: 25px;
+	height: 2px;
+	text-indent: -9999px;
+	background:#eeeeee;
+}
+#office .contents .flexslider .flex-control-nav li a.flex-active{
+	background:#3a1e87;
+}
+
+
+/*----------------------------------------------------
+  #detail
+--------------------------------------------------- */
+
+
+#office .contents .detail{
+	margin: 0 20px;
+}
+#office .contents .detail .address{
+	line-height: 150%;
+	font-size: 14px;
+	margin-bottom: 30px;
+}
+#office .contents .detail .address a.map{
+	text-decoration: underline;
+	margin-left: 10px;
+
+}
+#office .contents .detail .address a.map span{
+	padding-left: 15px;
+	color: #3a1e87;
+	font-size: 12px;
+	background: url(../../../img/company/office/icon_map.png) no-repeat left center;
+	background-size: 8px;
+}
+#office .contents .detail .contact{
+	line-height: 185%;
+	font-size: 14px;
+	padding-bottom: 20px;
+	border-bottom: 1px #e5e5e5 solid;
+	margin-bottom: 20px;
+}
+#office .contents .detail h2{
+	font-size:14px;
+	font-weight: bold;
+	margin-bottom: 30px;
+}
+#office .contents .detail h3{
+	font-size:14px;
+	font-weight: bold;
+	margin-bottom: 10px;
+}
+#office .contents .detail p{
+	font-size:14px;
+	line-height: 185%;
+}

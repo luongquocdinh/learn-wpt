@@ -11,14 +11,14 @@
     //////////////////////////////////////////////////////////////////////////////-->
     <nav id="breadcrumb">
         <ul>
-            <li><a href="../" class="pageLink">TOP<span></span></a></li>
-            <li><a href="../concept/" class="pageLink">CONCEPT<span></span></a></li>
+            <li><a href="<?php echo esc_url(home_url('/')) ?>" class="pageLink">TRANG CHỦ<span></span></a></li>
+            <li><a href="<?php echo esc_url( home_url( '/' ) ) . 'concept';?>" class="pageLink">TRIẾT LÝ<span></span></a></li>
         </ul>
     </nav>
 
 
     <section id="concept">
-        <a href="<?php echo esc_url( home_url( '/' ) ) . 'brand_tenpan/';?>" class="btn_about_product pageLink"><span>ミルボン製品について</span></a>
+        <a href="<?php echo esc_url( home_url( '/' ) ) . 'brand_tenpan/';?>" class="btn_about_product pageLink"><span>Về sản phẩm của Milbon</span></a>
 
         <!-- メインビジュアル -->
         <div class="mainvisual">
@@ -31,8 +31,8 @@
         <!-- 詳細 -->
         <article class="detail">
             <header class="detail_header">
-                <h1>CONCEPT</h1>
-                <div class="scrolldown"><a href="#"><span>SCROLL DOWN</span></a></div>
+                <h1>TRIẾT LÝ</h1>
+                <div class="scrolldown"><a href="#"><span>CUỘN XUỐNG</span></a></div>
             </header>
             <section class="detail_main">
                 <?php
@@ -43,14 +43,14 @@
                 ?>
                 <section class="product">
                     <a href="<?php echo esc_url( home_url( '/' ) ) . 'brand_tenpan/';?>" class="pageLink">
-                        <h3>OUR PRODUCT</h3>
-                        <div class="ja">［ ミルボン製品について ］</div>
-                        <div class="view">VIEW DETAIL →<span class="line"></span></div>
+                        <h3>VỀ SẢN PHẨM CỦA MILBON</h3>
+                        <div class="ja"></div>
+                        <div class="view">CHI TIẾT →<span class="line"></span></div>
                     </a>
                 </section>
             </section>
 
-            <h4>MILBON GROUP SITE</h4>
+            <h4>TRANG WEB GROUP MILBON</h4>
 
                 <!-- GROUP LIST -->
                  <?php

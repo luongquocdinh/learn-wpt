@@ -1,0 +1,77 @@
+
+#beauty{
+	position: relative;
+	width: 100%;
+	overflow: hidden;
+	padding-top: 50px;
+}
+
+/*一覧ヘッダー*/
+#beauty .header{
+	padding-top: 40px;
+	text-align: center;
+	position: relative;
+}
+#beauty .header h1{
+	font-size: 36px;
+	margin-bottom:15px;
+	line-height: 1;
+  	font-family: 'function_probook';
+}
+#beauty .header p{
+	font-size: 13px;
+	margin-bottom: 40px;
+	line-height: 170%;
+}
+#beauty .contents{
+	width: 100%;
+	margin: 0 auto;
+}
+
+#beauty .contents .column{
+	width: 100%;
+	text-align: center;
+	padding-bottom: 50px;
+}
+#beauty .contents .column a{
+	display: block;
+}
+#beauty .contents .column img{
+	margin-bottom: 30px;
+}
+#beauty .contents .column h2{
+	font-size: 24px;
+	margin-bottom: 12px;
+	line-height: 120%;
+  	font-family: 'function_probook';
+}
+#beauty .contents .column .ja{
+	font-size: 15px;
+	margin-bottom: 20px;
+	line-height: 1;
+}
+#beauty .contents .column p{
+	margin: 0 20px;
+	text-align: left;
+	font-size: 13px;
+	margin-bottom: 23px;
+	line-height: 170%;
+}
+#beauty .contents .column .visit{
+	display: block;
+	height: 48px;
+	width: 88.8%;
+	margin: 0 auto;
+	background: #3a1e87;
+	margin-bottom: 20px;
+	text-align: center;
+	line-height: 48px;
+	font-size: 13px;
+	color: #FFF;
+  	font-family: 'function_probook';
+}
+#beauty .contents .column .visit span{
+	background:url(../../images-sp/blank.png) no-repeat right center;
+	background-size: 11px;
+	padding-right: 20px;
+}

@@ -1,0 +1,325 @@
+
+/*----------------------------------------------------
+  #faq
+--------------------------------------------------- */
+#faq{
+	position: relative;
+	width: 100%;
+	overflow: hidden;
+    padding-top: 50px;
+}
+
+/*一覧ヘッダー*/
+#faq .header{
+	padding-top: 65px;
+	text-align: center;
+	position: relative;
+}
+#faq .header h1{
+	font-family: 'function_probook';
+	font-size: 36px;
+	margin-bottom:15px;
+	line-height: 1;
+}
+#faq .header p{
+	font-size: 15px;
+	line-height: 1;
+	margin-bottom: 40px;
+}
+#faq .header p.cap{
+	font-size: 18px;
+	line-height: 144%;
+	margin-bottom: 40px;
+}
+#faq .navigation{
+	width: 100%;
+	background: #3a1e87;
+	margin: 0 auto;
+}
+#faq .navigation .navigationInner{
+	padding-top: 20px;
+	color: #FFF;
+}
+#faq .navigation .navigationInner h2{
+	padding:0 20px;
+	font-size: 14px;
+	line-height: 1;
+	margin-bottom: 17px;
+}
+#faq .navigation .navigationInner .catch{
+	padding:0 20px;
+	font-size: 18px;
+	line-height: 144%;
+	margin-bottom: 20px;
+}
+#faq .navigation .navigationInner p{
+	padding:0 20px;
+	font-size: 13px;
+	line-height: 170%;
+	margin-bottom: 12px;
+}
+#faq .navigation .navigationInner .attention{
+	padding:0 20px;
+	font-size: 12px;
+	line-height: 185%;
+	margin-bottom: 30px;
+}
+#faq .navigation .navigationInner ul{
+	overflow: hidden;
+}
+#faq .navigation .navigationInner ul li{
+	width: 50%;
+	float: left;
+}
+#faq .navigation .navigationInner ul li a{
+	display: block;
+	width: 100%;
+	height: 60px;
+	line-height: 60px;
+	text-align: center;
+	background: #b0a5cf;
+	color: #3a1e87;
+	font-size: 15px;
+    -webkit-transition: all 0.3s ease;
+       -moz-transition: all 0.3s ease;
+        -ms-transition: all 0.3s ease;
+         -o-transition: all 0.3s ease;
+            transition: all 0.3s ease;
+}
+#faq .navigation .navigationInner ul li a:hover,
+#faq .navigation .navigationInner ul li a.active{
+	background: #FFF;
+}
+
+
+#faq .contents{
+	display: none;
+	width: 100%;
+	margin: 0 auto;
+	padding-bottom: 40px;
+}
+
+#faq #faq01 .activeMenu{
+	position: relative;
+	background: url(../../img/guide/active_arrow.png) no-repeat center;
+	background-size: contain;
+	width: 50%;
+	height: 6px;
+	margin-bottom: 25px;
+}
+#faq #faq02 .activeMenu{
+	position: relative;
+	margin-left: 50%;
+	background: url(../../img/guide/active_arrow.png) no-repeat  center;
+	background-size: contain;
+	width:50%;
+	height: 6px;
+	margin-bottom: 25px;
+}
+#faq .contents .caution{
+	
+}
+#faq .contents .caution h2{
+	padding: 0 20px;
+	color: #3a1e87;
+	font-size: 18px;
+	line-height: 144%;
+	margin-bottom: 15px;
+	
+}
+#faq .contents .caution ul{
+	padding: 0 20px;
+	margin-bottom: 25px;
+}
+#faq .contents .caution ul li{
+	line-height: 170%;
+}
+
+
+#faq .contents h3{
+	padding: 0 20px;
+	font-size: 14px;
+	font-weight: bold;
+	margin-bottom: 40px;
+}
+#faq .contents .column{
+	font-size: 14px;
+	line-height: 185%;
+	padding: 15px 0 15px 0;
+	border-top: 1px #e5e5e5 solid;
+}
+#faq .contents .column.active{
+	font-size: 14px;
+	line-height: 185%;
+	background: #f5f4f9;
+	padding: 15px 0 15px 0;
+	border-top: 1px #e5e5e5 solid;
+}
+#faq .contents .line{
+	height: 1px;
+	border-top: 1px #e5e5e5 solid;
+	margin-bottom: 55px;
+}
+#faq .contents .column .q{
+	margin: 0 20px;
+	background: url(../../img/guide/q.png) no-repeat left 5px;
+	background-size: 14px;
+	padding-left: 23px;
+	color: #000000;
+}
+#faq .contents .column .q a{
+	color: #000000;
+	padding-right: 30px;
+	display: block;
+	background: url(../../img/guide/plus.png) no-repeat right center;
+	background-size: 15px;
+}
+#faq .contents .column.active .q a{
+	color: #3a1e87;
+	display: block;
+	background:none no-repeat 615px center;
+	margin-bottom: 20px;
+}
+#faq .contents .column.active .q{
+	margin: 0 20px;
+	background: url(../../img/guide/q2.png) no-repeat left 5px;
+	background-size: 14px;
+	padding-left: 23px;
+	margin-bottom: 20px;
+	color: #3a1e87;
+}
+
+#faq .contents .column .q a{
+
+}
+#faq .contents .column .a{
+	display: none;
+	margin: 0 20px;
+	background: url(../../img/guide/a.png) no-repeat left 5px;
+	background-size: 13px;
+	padding-left: 23px;
+	margin-bottom: 20px;
+}
+
+#faq .contents .column.active .a{
+	display: block;
+}
+
+#faq .contents .column .a .step{
+	position: relative;
+	padding-right: 15px;
+
+}
+#faq .contents .column .a .step:first-child{
+	padding-top: 20px;
+}
+
+#faq .contents .column .a .step .step_title{
+	border-bottom: 1px #bdb3d7 solid;
+	position: relative;
+	height: 19px;
+	margin-bottom: 20px;
+}
+#faq .contents .column .a .step .step_title span{
+	background: #3a1e87;
+	color: #FFF;
+	width: 60px;
+	height: 20px;
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0px;
+	text-align: center;
+	line-height: 20px;
+	font-size: 12px;
+	font-family: 'function_probook';
+}
+#faq .contents .column .a .step .step_text{
+	position: relative;
+	padding-bottom: 20px;
+}
+#faq .contents .column .a .movie{
+	padding-right: 15px;
+}
+#faq .contents .column .a .movie a span{
+	color: #FFF;
+	font-size: 13px;
+	padding: 20px 0 0 37px;
+	display: block;
+	text-align: left;
+}
+#faq .contents .column .close{
+	background: url(../../img/guide/close.png) no-repeat;
+	background-size: 11px;
+	width: 11px;
+	height: 11px;
+	display: none;
+	margin: 0 20px 0  auto;
+}
+#faq .contents .column.active .close{
+	display: block;
+}
+#faq .contents .link{
+	margin: 0 20px;
+}
+#faq .contents .link a{
+	display: block;
+	padding: 15px;
+	text-align: left;
+	line-height: 144%;
+	border: 1px #9c8ec3 solid;
+}
+#faq .contents .link a span{
+	background: url(../../img/guide/blank.png) no-repeat right center;
+	background-size: 11px;
+	padding-right: 14px;
+	color: #3a1e87;
+	font-size: 11px;
+}
+/*----------------------------------------------------
+  #other
+--------------------------------------------------- */
+#other{
+	position: relative;
+	width: 100%;
+	overflow: hidden;
+	padding-top: 50px;
+}
+
+#other .header{
+	padding-top: 65px;
+	text-align: center;
+	position: relative;
+}
+#other .header h1{
+	font-size: 25px;
+	margin-bottom:15px;
+	line-height: 1;
+}
+#other .header p{
+	font-size: 15px;
+	line-height: 1;
+	margin-bottom: 40px;
+}
+#other .contents{
+	margin: 0 20px;
+}
+
+
+#other .contents{
+	margin: 0 20px;
+}
+#other .contents h2{
+	font-size: 13px;
+	margin-bottom: 5px;
+	font-weight: bold;
+}
+#other .contents p{
+	font-size: 13px;
+	margin-bottom: 25px;
+	line-height: 170%;
+}
+#other .contents p a{
+	color: #3a1e87;
+	text-decoration: underline;
+}

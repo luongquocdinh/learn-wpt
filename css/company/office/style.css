@@ -19,7 +19,7 @@
 	padding-bottom: 50px;
 }
 #office .header h1{
-	font-family: 'function_probook';
+	font-family: 'MyriadPro', sans-serif;
 	font-size: 35px;
 	margin-bottom:20px;
 	line-height: 1;
@@ -43,7 +43,7 @@
 	padding-left: 27px;
 }
 #office .header .category .btn a{
-	font-family: 'function_probook';
+	font-family: 'MyriadPro', sans-serif;
 	font-size: 12px;
 	height: 20px;
 	width: 121px;
@@ -185,7 +185,7 @@
 #office .contents .list a dl dd{
 	width: 360px;
 	float: left;
-	font-size: 12px;
+	font-size: 16px;
 	line-height: 150%;
 }
 
@@ -241,7 +241,7 @@
 	top: 105px;
 	left: 40px;
 	z-index: 2;
-	font-family: 'function_probook';
+	font-family: 'MyriadPro', sans-serif;
 }
 #office .btn_return a span.line{
   position: absolute;

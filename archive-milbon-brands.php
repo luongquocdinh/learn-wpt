@@ -13,8 +13,8 @@ get_header(); ?>
     //////////////////////////////////////////////////////////////////////////////-->
     <nav id="breadcrumb">
       <ul>
-        <li><a href="../" class="pageLink">TOP<span></span></a></li>
-        <li><a href="../brand/" class="pageLink">BRAND<span></span></a></li>
+        <li><a href="<?php echo esc_url(home_url('/')) ?>" class="pageLink">TRANG CHỦ<span></span></a></li>
+        <li><a href="<?php echo esc_url( get_post_type_archive_link( 'milbon-brands' ) ); ?>" class="pageLink">SẢN PHẨM<span></span></a></li>
       </ul>
     </nav>
           <?php 
@@ -24,13 +24,13 @@ get_header(); ?>
 				) );
           ?>
     <section id="products">
-      <a href="<?php echo esc_url( home_url( '/' ) ) . 'brand_tenpan/';?>" class="pageLink btn_about_product"><span>ミルボン製品について</span></a>
+      <a href="<?php echo esc_url( home_url( '/' ) ) . 'brand_tenpan/';?>" class="pageLink btn_about_product"><span>Về sản phẩm của Milbon</span></a>
       <header class="header">
-        <h1>BRAND</h1>
+        <h1>SẢN PHẨM</h1>
         <p>Những sản phẩm của Milbon được bán tại các salon chuyên nghiệp dưới sự tư vấn của các hair design.</p>
         <form method="post" action="<?php echo get_post_type_archive_link('milbon-brands'); ?>" class="form-filter-category" >
 	        <div class="category">
-	          <div class="btn"><a href="#">CATEGORY SELECT<span></span></a></div>
+	          <div class="btn"><a href="#">CHỌN DANH MỤC SẢN PHẨM<span></span></a></div>
 	          <div class="pullDown">
 	          <ul>
 	            <li><a class="pageLink" href="<?php echo esc_url( get_post_type_archive_link( 'milbon-brands' ) ); ?>">All</a></li>
@@ -101,7 +101,7 @@ get_header(); ?>
 		            ?>
 							</div>
 							<p><?php echo wp_kses_post( nl2br( wp_trim_words(get_the_excerpt( $post->ID ), 15, ' [...]') ) ); ?></p>
-							<div class="more"><span class="t">VIEW DETAIL →</span><span class="line"></span></div>
+							<div class="more"><span class="t">CHI TIẾT →</span><span class="line"></span></div>
 						</a>
 					</div>
 <?php

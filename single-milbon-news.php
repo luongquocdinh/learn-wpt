@@ -8,14 +8,14 @@ get_header(); ?>
 		<nav id="breadcrumb">
 			<ul>
 				<li>
-					<a href="./../../" class="pageLink">
-						TOP
+					<a href="<?php echo esc_url(home_url('/')) ?>" class="pageLink">
+						TRANG CHỦ
 						<span></span>
 					</a>
 				</li>
 				<li>
 					<a href="<?php echo esc_url(get_post_type_archive_link( 'milbon-news' )); ?>" class="pageLink">
-						NEWS
+						TIN TỨC
 						<span></span>
 					</a>
 				</li>
@@ -31,16 +31,16 @@ get_header(); ?>
 			<div class="btn_return" style="margin-top:20px;">
 				<a href="<?php echo esc_url(get_post_type_archive_link( 'milbon-news' )); ?>" class="pageLink">
 					<span class="arrow_img">←</span>
-					<span class="text">View All News</span>
+					<span class="text">Xem toàn bộ tin tức</span>
 					<span class="line"></span>
 				</a>
 			</div>
 			<header class="header">
-				<h1>NEWS</h1>
+				<h1>TIN TỨC</h1>
 			</header>
 			<article class="detail">
 				<div class="meta">
-					<span class="category">NEWS</span> | 
+					<span class="category">TIN TỨC</span> | 
 					<span class="date"><?php echo get_the_date('Y-m-d'); ?></span>
 				</div>
 				<h2><?php the_title(); ?></h2>

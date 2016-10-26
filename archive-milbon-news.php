@@ -9,8 +9,8 @@ get_header(); ?>
     //////////////////////////////////////////////////////////////////////////////-->
     <nav id="breadcrumb">
       <ul>
-        <li><a href="../" class="pageLink">TOP<span></span></a></li>
-        <li><a href="../news/" class="pageLink">NEWS<span></span></a></li>
+        <li><a href="<?php echo esc_url(home_url('/')) ?>" class="pageLink">TRANG CHỦ<span></span></a></li>
+        <li><a href="../news/" class="pageLink">TIN TỨC<span></span></a></li>
       </ul>
     </nav>
           <?php 
@@ -21,10 +21,10 @@ get_header(); ?>
           ?>
     <section id="news">
       <header class="header">
-        <h1>NEWS</h1>
+        <h1>TIN TỨC</h1>
         <form method="post" action="<?php echo get_post_type_archive_link('milbon-news'); ?>" class="form-filter-category" >
         <div class="category">
-          <div class="btn"><a href="#">CATEGORY SELECT<span></span></a></div>
+          <div class="btn"><a href="#">CHỌN CATEGORY<span></span></a></div>
           <div class="pullDown">
           <ul>
 	            <li><a class="pageLink" href="<?php echo esc_url( get_post_type_archive_link( 'milbon-news' ) ); ?>">All</a></li>
@@ -102,7 +102,7 @@ get_header(); ?>
 							</div>
 							<div class="brandName"><?php echo esc_html( get_the_title( $post->ID ) ); ?></div>
 							<p><?php echo wp_kses_post( nl2br( wp_trim_words(get_the_excerpt( $post->ID ), 15, ' [...]') ) ); ?></p>
-							<div class="more"><span class="t">VIEW DETAIL →</span><span class="line"></span></div>
+							<div class="more"><span class="t">CHI TIẾT →</span><span class="line"></span></div>
 						</a>
 					</div>
 <?php

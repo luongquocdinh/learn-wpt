@@ -1,0 +1,617 @@
+
+
+/*----------------------------------------------------
+  #message
+--------------------------------------------------- */
+#message{
+	position: relative;
+	width: 100%;
+	overflow: hidden;
+    padding-top: 50px;
+}
+
+/*一覧ヘッダー*/
+#message .header{
+	padding-top: 65px;
+	text-align: center;
+	position: relative;
+	padding-bottom: 37px;
+}
+#message .header h1{
+	font-size: 25px;
+	line-height: 1;
+}
+#message .contents{
+	width: 100%;
+	margin: 0 auto;
+	overflow: hidden;
+	padding-bottom: 40px;
+}
+#message .contents figure{
+
+}
+#message .contents figure img{
+	padding-bottom: 37px;
+}
+#message .contents figure figcaption{
+	margin-bottom: 14px;
+	text-align: center;
+}
+#message .contents p img{
+	padding-bottom: 0px;
+}
+#message .contents .text{
+	margin: 0 20px;
+}
+#message .contents .text p{
+	font-size: 14px;
+	line-height: 185%;
+	margin-bottom: 15px;
+}
+
+/*----------------------------------------------------
+  #outline
+--------------------------------------------------- */
+#outline{
+	position: relative;
+	width: 100%;
+	overflow: hidden;
+    padding-top: 50px;
+}
+
+/*一覧ヘッダー*/
+#outline .header{
+	padding-top: 65px;
+	text-align: center;
+	position: relative;
+	padding-bottom: 37px;
+}
+#outline .header h1{
+	font-size: 25px;
+	line-height: 1;
+}
+#outline .contents{
+	margin: 0 20px;
+	overflow: hidden;
+	padding-bottom:50px;
+	border-top: 1px #e5e5e5 solid;
+}
+#outline .contents .column{
+	overflow: hidden;
+	border-bottom: 1px #e5e5e5 solid;
+	padding: 10px 0;
+	font-size: 12px;
+	line-height: 185%;
+}
+#outline .contents .column .sum{
+	float: left;
+	width: 25%;
+	padding-left:10px;
+}
+#outline .contents .column .detail{
+	float: right;
+	width: 70%;
+}
+#outline .contents .column .detail .s{
+	font-size: 11px;
+}
+#outline .contents .column .detail p{
+	font-weight: bold;
+}
+#outline .contents .column .detail dl{
+	overflow: hidden;
+	margin-bottom: 5px;
+}
+#outline .contents .column .detail dl dt{
+	float: left;
+	width: 50%;
+	background: url(../img/outline/dot.png) repeat-x center center;
+	background-size: 2px;
+}
+#outline .contents .column .detail dl dt span{
+	background: #FFF;
+}
+#outline .contents .column .detail dl dd{
+	float: left;
+	padding-left: 5px;
+}
+
+/*----------------------------------------------------
+  #policy
+--------------------------------------------------- */
+#policy{
+	position: relative;
+	width: 100%;
+	overflow: hidden;
+    padding-top: 50px;
+}
+
+/*一覧ヘッダー*/
+#policy .header{
+	padding-top: 65px;
+	text-align: center;
+	position: relative;
+}
+#policy .header h1{
+	font-size: 36px;
+	margin-bottom:40px;
+	line-height: 111%;
+  	font-family: 'function_probook';
+}
+
+#policy .header .category{
+}
+#policy .header .category .btn{
+}
+#policy .header .category .btn a{
+	font-size: 12px;
+	background: #f3f2f8;
+	display: block;
+	line-height: 1;
+	position: relative;
+	padding: 18px 0;
+  	font-family: 'function_probook';
+}
+#policy .header .category .btn a span{
+	background: url(../../img/arrow_down.png) no-repeat right 5px;
+	background-size: 13px;
+	padding-right: 24px;
+}
+#policy .header .category.active .btn a span{
+	color: #3a1e87;
+	background: url(../../img/arrow_up.png) no-repeat right 5px;
+	background-size: 13px;
+	padding-right: 24px;
+
+}
+#policy .header .category .pullDown{
+	width: 100%;
+	padding: 20px 0;
+	background: #FFF;
+	overflow: hidden;
+	display: none;
+	opacity: 0;
+}
+#policy .header .category .pullDown.view{
+}
+#policy .header .category .pullDown ul{
+	text-align: center;
+}
+#policy .header .category .pullDown ul li{
+	margin-bottom: 12px;
+}
+#policy .header .category .pullDown ul li a{
+	margin-bottom: 12px;
+	font-size: 12px;
+	text-align: left;
+}
+#policy .header .category .pullDown ul li a:hover{
+	color: #3a1e87;
+}
+
+
+/*----------------------------------------------------
+  #policy01
+--------------------------------------------------- */
+#policy .policy01{
+	margin: 0 20px;
+	overflow: hidden;
+	padding-bottom: 40px;
+	padding-top: 40px;
+	border-bottom:1px #e5e5e5 solid;
+}
+
+#policy .policy01 .caption01{
+	text-align: center;
+	font-size: 15px;
+	line-height: 1;
+	margin-bottom: 17px;
+}
+#policy .policy01 h2{
+	text-align: center;
+	font-size: 18px;
+	line-height: 144%;
+	margin-bottom: 28px;
+}
+#policy .policy01 .block{
+	overflow: hidden;
+	margin-bottom: 45px;
+}
+#policy .policy01 .block .left{
+	margin-bottom: 20px;
+}
+#policy .policy01 .block .right{
+}
+#policy .policy01 .block h3{
+	text-align: center;
+	font-size: 14px;
+	margin-bottom: 20px;
+	line-height: 150%;
+	font-weight: bold;
+
+}
+#policy .policy01 .block h4{
+	font-size: 14px;
+	margin-bottom: 10px;
+	line-height: 150%;
+	font-weight: bold;
+	text-align: center;
+}
+#policy .policy01 .block p{
+	font-size: 14px;
+	line-height:185%;
+	margin-bottom: 30px;
+}
+#policy .policy01 .block h5{
+	margin-bottom: 10px;
+	font-size: 12px;
+	font-weight: bold;
+}
+#policy .policy01 .block ul.point{
+
+}
+#policy .policy01 .block ul.point li{
+    padding-left: 1em; /*1em（1文字）分、右に動かす*/
+    text-indent: -1em; /*最初の行だけ1em（1文字）分、左に動かす*/
+	font-size: 12px;
+	line-height: 216%;
+}
+#policy .policy01 .block .mainImage{
+	margin-bottom: 20px;
+}
+#policy .policy01 .block ul.image{
+	overflow: hidden;
+}
+#policy .policy01 .block ul.image li{
+	float: left;
+	margin-right: 20px;
+	text-align: center;
+	font-size: 12px;
+}
+#policy .policy01 .block ul.image li.nm{
+	margin-right: 0px;
+	
+}
+#policy .policy01 .block ul.image li img{
+	margin-bottom: 10px;
+}
+
+
+/*----------------------------------------------------
+  #policy02
+--------------------------------------------------- */
+#policy .policy02{
+	margin:0 20px;
+	overflow: hidden;
+	padding-bottom: 40px;
+	padding-top: 40px;
+}
+
+#policy .policy02 .caption01{
+	text-align: center;
+	font-size: 15px;
+	line-height: 1;
+	margin-bottom: 17px;
+}
+#policy .policy02 h2{
+	text-align: center;
+	font-size: 18px;
+	line-height: 144%;
+	margin-bottom: 28px;
+}
+#policy .policy02 .block{
+	overflow: hidden;
+}
+#policy .policy02 .block .left{
+}
+#policy .policy02 .block .right{
+}
+#policy .policy02 .block h3{
+	font-size: 14px;
+	margin-bottom: 5px;
+	line-height: 150%;
+	font-weight: bold;
+	text-align: center;
+
+}
+#policy .policy02 .block p{
+	font-size: 14px;
+	line-height:185%;
+	margin-bottom: 20px;
+}
+#policy .policy02 .block p.mb{
+	margin-bottom: 40px;
+}
+#policy .policy02 .block .sum{
+	border: 1px #e5e5e5 solid;
+	padding: 10px 18px 0 18px;
+	margin-bottom: 40px;
+}
+#policy .policy02 .block ul.point{
+
+}
+#policy .policy02 .block ul.point li{
+    padding-left: 1em; /*1em（1文字）分、右に動かす*/
+    text-indent: -1em; /*最初の行だけ1em（1文字）分、左に動かす*/
+	font-size: 12px;
+	line-height: 216%;
+	margin-bottom: 20px;
+}
+#policy .policy02 .block ul.image{
+	overflow: hidden;
+	letter-spacing: -0.4em;
+	text-align: center;
+}
+#policy .policy02 .block ul.image li{
+	display: inline-block;
+	letter-spacing: normal;
+	width: 46%;
+	margin-right: 4%;
+	text-align: center;
+	font-size: 11px;
+	line-height: 150%;
+}
+#policy .policy02 .block ul.image li.nm{
+	margin-right: 0px;
+	
+}
+#policy .policy02 .block ul.image li img{
+	margin-bottom: 10px;
+}
+
+#policy .policy02 .block ul.image li.isc{
+	margin-right: 0px;
+	width: 100%;
+	padding-top: 30px;
+	
+}
+#policy .policy02 .block ul.image li.isc img{
+	display: inline-block;
+	width: 29%;
+	margin-right: 10px;
+	vertical-align: middle;
+}
+#policy .policy02 .block ul.image li.isc figcaption{
+	display: inline-block;
+	width: 65%;
+	text-align: left;
+	vertical-align: middle;
+
+}
+
+/*----------------------------------------------------
+  #policy03
+--------------------------------------------------- */
+#policy .policy03{
+	margin: 0 20px;
+	overflow: hidden;
+	padding-bottom: 40px;
+	padding-top: 40px;
+	border-bottom:1px #e5e5e5 solid;
+}
+
+#policy .policy03 .caption01{
+	text-align: center;
+	font-size: 15px;
+	line-height: 1;
+	margin-bottom: 17px;
+}
+#policy .policy03 h2{
+	text-align: center;
+	font-size: 18px;
+	line-height: 144%;
+	margin-bottom: 28px;
+}
+#policy .policy03 .block{
+	overflow: hidden;
+}
+#policy .policy03 .block .left{
+}
+#policy .policy03 .block .right{
+}
+#policy .policy03 .block h3{
+	font-size: 14px;
+	margin-bottom: 5px;
+	line-height: 150%;
+	font-weight: bold;
+	text-align: center;
+
+}
+#policy .policy03 .block p{
+	font-size: 14px;
+	line-height:185%;
+	margin-bottom: 20px;
+}
+#policy .policy03 .block p.mb{
+	margin-bottom: 40px;
+}
+#policy .policy03 .block .sum{
+	border: 1px #e5e5e5 solid;
+	padding: 10px 18px 0 18px;
+	margin-bottom: 40px;
+}
+#policy .policy03 .block ul.point{
+
+}
+#policy .policy03 .block ul.point li{
+    padding-left: 1em; /*1em（1文字）分、右に動かす*/
+    text-indent: -1em; /*最初の行だけ1em（1文字）分、左に動かす*/
+	font-size: 12px;
+	line-height: 216%;
+	margin-bottom: 20px;
+}
+#policy .policy03 .block ul.image{
+	overflow: hidden;
+	letter-spacing: -0.4em;
+	text-align: center;
+}
+#policy .policy03 .block ul.image li{
+	display: inline-block;
+	letter-spacing: normal;
+	width: 46%;
+	text-align: center;
+	font-size: 12px;
+	line-height: 150%;
+}
+#policy .policy03 .block ul.image li.nm{
+	text-align: left;
+}
+#policy .policy03 .block ul.image li img{
+	margin-bottom: 10px;
+}
+
+
+
+/*----------------------------------------------------
+  #history
+--------------------------------------------------- */
+#history{
+	position: relative;
+	width: 100%;
+	overflow: hidden;
+    padding-top: 50px;
+}
+
+/*ナビゲーション*/
+#history .navigation{
+	position: fixed;
+	top: 70px;
+	right: 0px;
+	z-index: 1;
+	text-align: right;
+}
+#history .navigation h2{
+	margin-right: 12px;
+	font-size: 12px;
+	font-family: 'function_probook';
+	margin-bottom: 20px;
+}
+#history .navigation ul{
+}
+#history .navigation ul li{
+	margin-bottom: 10px;
+	overflow: hidden;
+}
+
+#history .navigation ul li a{
+	display: block;
+}
+#history .navigation ul li a span.y{
+	font-size: 11px;
+	font-family: 'function_probook';
+	display: inline-block;
+	vertical-align: middle;
+	margin-right: 10px;
+    -webkit-transition: all 0.3s ease;
+       -moz-transition: all 0.3s ease;
+        -ms-transition: all 0.3s ease;
+         -o-transition: all 0.3s ease;
+            transition: all 0.3s ease;
+}
+#history .navigation ul li a:hover span.y,
+#history .navigation ul li a.active span.y{
+	font-size: 20px;
+}
+#history .navigation ul li a span.line{
+	display: inline-block;
+	height: 1px;
+	width: 15px;
+	background: #555555;
+	vertical-align: middle;
+    -webkit-transition: all 0.3s ease;
+       -moz-transition: all 0.3s ease;
+        -ms-transition: all 0.3s ease;
+         -o-transition: all 0.3s ease;
+            transition: all 0.3s ease;
+
+}
+#history .navigation ul li a:hover span.line,
+#history .navigation ul li a.active span.line{
+	display: inline-block;
+	height: 1px;
+	width: 40px;
+	background: #555555;
+	vertical-align: middle;
+
+}
+#history .navigation ul li span.sline{
+	float: right;
+	display: block;
+	height: 1px;
+	width: 10px;
+	background: #bababa;
+	vertical-align: middle;
+    -webkit-transition: all 0.3s ease;
+       -moz-transition: all 0.3s ease;
+        -ms-transition: all 0.3s ease;
+         -o-transition: all 0.3s ease;
+            transition: all 0.3s ease;
+
+}
+
+
+/*一覧ヘッダー*/
+#history .header{
+	text-align: center;
+	position: relative;
+	height: 100%;
+	background: url(../img/history/header_bg.jpg) no-repeat center top;
+	background-size: contain;
+}
+#history .header h1{
+	font-family: 'function_probook';
+	padding-top: 65px;
+	font-size: 36px;
+	margin-bottom:36px;
+	line-height: 1;
+}
+#history .header h2{
+	font-size: 18px;
+	line-height: 144%;
+	text-align: left;
+	margin: 0 20px;
+	margin-bottom:25px;
+}
+#history .header .text{
+	text-align: left;
+	margin: 0 20px;
+	font-size: 13px;
+	margin-bottom:25px;
+	line-height: 185%;
+}
+
+#history .yearContents{
+	position: relative;
+
+}
+#history .yearContents .image{
+	padding-bottom: 25px;
+}
+#history .yearContents .textArea{
+	padding-bottom: 60px;
+}
+
+#history .yearContents .textArea h2{
+	font-family: 'function_probook';
+	font-size: 40px;
+	line-height: 1;
+	margin-bottom: 10px;
+	text-align: center;
+}
+#history .yearContents .textArea .month{
+	font-size: 14px;
+	line-height: 1;
+	margin-bottom: 20px;
+	text-align: center;
+}
+#history .yearContents .textArea h3{
+	font-size: 22px;
+	line-height: 122%;
+	margin-bottom: 15px;
+	text-align: center;
+}
+#history .yearContents .textArea p{
+	font-size: 13px;
+	text-align: center;
+	line-height: 185%;
+}

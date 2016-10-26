@@ -1,0 +1,580 @@
+
+
+/*----------------------------------------------------
+  #products
+--------------------------------------------------- */
+#products{
+	position: relative;
+	width: 100%;
+	overflow: hidden;
+	padding-top: 50px;
+}
+
+#products a.btn_about_product{
+	
+	display: block;
+	height: 48px;
+	width: 88.8%;
+	margin: 0 auto;
+	border: 1px #eeeeee solid;
+	margin-bottom: 20px;
+	text-align: center;
+	line-height: 48px;
+	font-size: 13px;
+}
+/*一覧ヘッダー*/
+#products .header{
+	padding-top: 40px;
+	text-align: center;
+	position: relative;
+}
+#products .header h1{
+	font-size: 36px;
+	margin-bottom:10px;
+	line-height: 1;
+  	font-family: 'function_probook';
+}
+#products .header p{
+	font-size: 13px;
+	line-height: 170%;
+	margin-bottom: 30px;
+}
+#products .header .category{
+}
+#products .header .category .btn{
+}
+#products .header .category .btn a{
+	font-size: 12px;
+	background: #f3f2f8;
+	display: block;
+	line-height: 1;
+	position: relative;
+	padding: 18px 0;
+  	font-family: 'function_probook';
+}
+#products .header .category .btn a span{
+	background: url(../../img/arrow_down.png) no-repeat right 5px;
+	background-size: 13px;
+	padding-right: 24px;
+}
+#products .header .category.active .btn a span{
+	color: #3a1e87;
+	background: url(../../img/arrow_up.png) no-repeat right 5px;
+	background-size: 13px;
+	padding-right: 24px;
+
+}
+#products .header .category .pullDown{
+	width: 100%;
+	padding: 20px 0;
+	background: #FFF;
+	overflow: hidden;
+	display: none;
+	opacity: 0;
+}
+#products .header .category .pullDown.view{
+}
+#products .header .category .pullDown ul{
+	text-align: center;
+}
+#products .header .category .pullDown ul li{
+	margin-bottom: 12px;
+}
+#products .header .category .pullDown ul li a{
+	margin-bottom: 12px;
+	font-size: 12px;
+	text-align: left;
+  	font-family: 'function_probook';
+}
+#products .header .category .pullDown ul li a:hover{
+	color: #3a1e87;
+}
+
+/*list*/
+#products .list{
+	width: 100%;
+	margin: 0 auto;
+}
+
+#products .list .column{
+	width: 100%;
+	border-bottom: 1px #eeeeee solid;
+	position: relative;
+	margin-bottom: 40px;
+	padding-bottom: 30px;
+}
+
+#products .list .column .brandName{
+	text-align: center;
+	font-size: 27px;
+	margin-bottom: 12px;
+	line-height: 1;
+	padding-top: 32px;
+  	font-family: 'function_probook';
+}
+#products .list .column .ja{
+	text-align: center;
+	font-size: 15px;
+	margin-bottom: 22px;
+	line-height: 1;
+}
+#products .list .column .visual{
+	width: 100%;
+	margin-bottom: 10px;
+	position: relative;
+}
+#products .list .column .visual .site{
+	position: absolute;
+	bottom: -20px;
+	right: 20px;
+}
+#products .list .column .visual .site a{
+	display: block;
+	width: 125px;
+	height: 40px;
+	background: #3a1e87;
+	text-align: center;
+	line-height: 40px;
+	color: #FFF;
+  	font-family: 'function_probook';
+}
+#products .list .column .visual .site a span{
+	background:url(../../img/top/blank.png) no-repeat right center;
+	background-size: 11px 9px;
+	padding-right: 18px;
+}
+#products .list .column .date{
+	line-height: 1;
+	font-size: 11px;
+	color: #b3b3b3;
+	padding-left: 20px;
+	margin-bottom: 25px;
+  	font-family: 'function_probook';
+}
+#products .list .column .date .category{
+	color: #313131;
+}
+#products .list .column .date .day{
+	color: #898989;
+}
+
+#products .list .column p{
+	padding: 0 20px;
+	font-size: 12px;
+	line-height: 150%;
+}
+#products .list .column .more{
+	color: #3a1e87;
+	text-align: right;
+	font-size: 13px;
+	padding-right: 20px;
+  	font-family: 'function_probook';
+}
+
+
+
+#products .list .readmore{
+	letter-spacing: normal;
+	text-align: center;
+	display: block;
+	height: 21px;
+	margin-bottom: 60px;
+}
+#products .list .readmore a{
+	position: relative;
+	height: 21px;
+	font-size: 12px;
+	line-height: 1px;
+}
+#products .list .readmore a:hover{
+	color: #3a1e87;
+}
+#products .list .readmore a span{
+  position: absolute;
+  bottom: -4px;
+  left: 0px;
+  width: 100%;
+  height: 1px;
+  background: #3a1e87;
+-webkit-transform: scale3d(0,1,1);
+   -moz-transform: scale3d(0,1,1);
+    -o-transform:  scale3d(0,1,1);
+        transform: scale3d(0,1,1);
+    -webkit-transition: all 0.3s ease;
+       -moz-transition: all 0.3s ease;
+        -ms-transition: all 0.3s ease;
+         -o-transition: all 0.3s ease;
+            transition: all 0.3s ease;
+            opacity: 0;
+}
+#products .list .readmore a:hover span{
+-webkit-transform: scale3d(1,1,1);
+   -moz-transform: scale3d(1,1,1);
+    -o-transform:  scale3d(1,1,1);
+        transform: scale3d(1,1,1);
+        opacity: 1;
+}
+
+
+/*----------------------------------------------------
+  詳細
+--------------------------------------------------- */
+
+
+/*詳細メインビジュアル*/
+#products.product_detail .mainvisual{
+	
+}
+
+/*詳細*/
+#products.product_detail .detail{
+	position: relative;
+	background: #FFF;
+	background: #FFF;
+}
+/*メイン*/
+#products.product_detail .detail .detail_main{
+	position: relative;
+	background: #FFF;
+}
+#products.product_detail .detail {
+	position: relative;
+}
+#products.product_detail .detail  h1{
+	text-align: center;
+	font-size: 33px;
+	line-height: 1;
+	padding-top: 36px;
+	margin-bottom: 7px;
+  	font-family: 'function_probook';
+}
+
+#products .detail_prev{
+	position: absolute;
+	top: 60px;
+	left: 0px;
+}
+#products .detail_prev a{
+	display: block;
+	width: 60px;
+	height: 40px;
+	position: relative;
+	overflow: hidden;
+	background: url(../../img/products/arrow_prev.png) no-repeat center center;
+	background-size: 22px;
+}
+#products .detail_next{
+	position: absolute;
+	top: 60px;
+	right: 0px;
+
+}
+#products .detail_next a{
+	display: block;
+	width: 60px;
+	height: 40px;
+	position: relative;
+	overflow: hidden;
+	background: url(../../img/products/arrow_next.png) no-repeat center center;
+	background-size: 22px;
+}
+#products.product_detail .detail .detail_main.view{
+	opacity: 1;
+
+}
+#products.product_detail .detail .detail_main .category{
+	text-align: center;
+	font-size: 13px;
+	line-height: 1;
+	margin-bottom: 17px;
+  	font-family: 'function_probook';
+}
+#products.product_detail .detail .detail_main .ja{
+	text-align: center;
+	font-size: 15px;
+	line-height: 1;
+	margin-bottom: 35px;
+}
+#products.product_detail .detail .detail_main h2{
+	text-align: left;
+	font-size: 20px;
+	line-height: 144%;
+	padding: 0 20px;
+	margin-bottom: 20px;
+}
+#products.product_detail .detail .detail_main .entry{
+	margin: 0 20px;
+	margin-bottom: 40px;
+	border-bottom: 1px #eee solid;
+	padding-bottom: 80px;
+	line-height: 185%;
+}
+#products.product_detail .detail .detail_main .entry p{
+	text-align: left;
+	font-size: 14px;
+	line-height: 185%;
+	margin-bottom: 20px;
+}
+/*商品一覧*/
+#products.product_detail .detail .detail_main {
+
+}
+#products.product_detail .detail .detail_main  h3{
+	text-align: center;
+	font-size: 20px;
+	margin-bottom: 26px;
+  	font-family: 'function_probook';
+}
+#products.product_detail .detail .detail_main .product_list{
+	letter-spacing: -0.4em;
+	overflow: hidden;
+	margin-bottom: 30px;
+}
+#products.product_detail .detail .detail_main .product_list .column{
+	display: inline-block;
+	letter-spacing: normal;
+	width: 42.6%;
+	margin-left: 5.3%;
+	vertical-align: top;
+	margin-bottom: 20px;
+}
+#products.product_detail .detail .detail_main .product_list .column:nth-child(2n){
+	margin-left: 4%;
+}
+#products.product_detail .detail .detail_main .product_list .column a{
+	display: block;
+}
+#products.product_detail .detail .detail_main .product_list .column a .image{
+	margin-bottom: 10px;
+	position: relative;
+	background:#FFF;
+}
+
+#products.product_detail .detail .detail_main .product_list .column a .productName{
+	font-size: 14px;
+	line-height: 150%;
+	margin-bottom: 10px;
+}
+#products.product_detail .detail .detail_main .product_list .column a .exp{
+	font-size: 12px;
+	line-height: 150%;
+}
+#products.product_detail  a.btn_about_product{
+	display: block;
+	height: 48px;
+	width: 88.8%;
+	margin: 0 auto;
+	border: 1px #eeeeee solid;
+	margin-bottom: 40px;
+	text-align: center;
+	line-height: 48px;
+	font-size: 13px;
+
+}
+#products.product_detail .navigation{
+	overflow: hidden;
+}
+#products.product_detail .navigation ul{
+	overflow: hidden;
+	text-align: center;
+	letter-spacing: -0.4em;
+	border-top: 1px #eee solid;
+}
+#products.product_detail .navigation ul li{
+	letter-spacing: normal;
+	display: inline-block;
+	vertical-align: top;
+}
+#products.product_detail .navigation ul li.prev{
+	width: 23.33%;
+	border-right: 1px #eee solid;
+}
+#products.product_detail .navigation ul li.prev a{
+	display: block;
+	width: 100%;
+	height: 50px;
+	background: url(../../img/products/arrow_prev.png) no-repeat center center;
+	background-size: 22px;
+}
+#products.product_detail .navigation ul li.all{
+	width: 52.8%;
+}
+#products.product_detail .navigation ul li.all a{
+	display: block;
+	height: 50px;
+	line-height: 50px;
+	text-align: center;
+  	font-family: 'function_probook';
+}
+#products.product_detail .navigation ul li.next{
+	width: 23.33%;
+	border-left: 1px #eee solid;
+}
+#products.product_detail .navigation ul li.next a{
+	display: block;
+	width: 100%;
+	height: 50px;
+	background: url(../../img/products/arrow_next.png) no-repeat center center;
+	background-size: 22px;
+}
+
+/*----------------------------------------------------
+  商品
+--------------------------------------------------- */
+#product{
+	width: 100%;
+	position: relative;
+	padding-bottom: 30px;
+}
+#product .image{
+}
+#product .image img{
+}
+#product .detail{
+	margin:0 20px;
+}
+#product .detail .brandName{
+	font-size: 14px;
+	margin-bottom: 20px;
+  	font-family: 'function_probook';
+}
+#product .detail h2{
+	font-size: 17px;
+	margin-bottom: 15px;
+}
+#product .detail .exp{
+	font-size: 12px;
+	margin-bottom: 15px;
+	line-height: 150%;
+}
+#product .detail .ext{
+	font-size: 12px;
+	margin-bottom: 24px;
+	line-height: 150%;
+}
+
+#product .detail .site{
+	position: relative;
+	margin-bottom: 25px;
+}
+#product .detail .site a{
+	display: block;
+	height: 48px;
+	width: 100%;
+	margin: 0 auto;
+	background: #3a1e87;
+	text-align: center;
+	line-height: 48px;
+	font-size: 13px;
+
+}
+#product .detail .site a span{
+  	font-family: 'function_probook';
+	background: url(../../img/blank.png) no-repeat right center;
+	background-size: 11px;
+	padding-right: 20px;
+	color: #FFF;
+
+}
+#product .detail .link{
+	position: relative;
+	overflow: hidden;
+}
+#product .detail .link ul{
+	text-align: center;
+	letter-spacing: -0.4em;
+}
+#product .detail .link li{
+	display: inline-block;
+	letter-spacing: normal;
+	height: 20px;
+	margin: 0 3%;
+}
+#product .detail .link li a{
+  color: #3a1e87;
+  font-size: 13px;
+  position: relative;
+  	font-family: 'function_probook';
+}
+#product .detail .link li a span.file{
+	background: url(../../img/products/icon_file.png) no-repeat right center;
+	padding-right: 18px;
+}
+#product .detail .link li a:hover span.file{
+	background: url(../../img/products/icon_file_on.png) no-repeat right center;
+	padding-right: 18px;
+}
+#product .detail .link li a span.download{
+	background: url(../../img/products/icon_download.png) no-repeat right center;
+	padding-right: 18px;
+}
+#product .detail .link li a:hover span.download{
+	background: url(../../img/products/icon_download_on.png) no-repeat right center;
+	padding-right: 18px;
+}
+
+
+
+/*----------------------------------------------------
+  #our
+--------------------------------------------------- */
+#our{
+	position: relative;
+	width: 100%;
+	overflow: hidden;
+	padding-bottom: 20px;
+}
+#our .block{
+	text-align: center;
+	position: relative;
+}
+
+
+#our .block .textArea{
+}
+
+#our .header{
+	padding-top: 85px;
+	text-align: center;
+	position: relative;
+	padding-bottom: 15px;
+}
+#our .header h1{
+	font-family: 'function_probook';
+	font-size: 35px;
+	margin-bottom:42px;
+	line-height: 1;
+}
+#our .header p.h{
+	font-size: 16px;
+	line-height: 200%;
+	margin-bottom: 30px;
+}
+#our .header h2{
+	font-weight: bold;
+	font-size: 25px;
+	margin-bottom: 30px;
+}
+#moniter04 h2,
+#moniter05 h2{
+	text-align: center;
+
+}
+#our .block .visual{
+	margin-bottom: 35px;
+}
+#our .block .textArea{
+	margin: 0 10px;
+	text-align: left;
+	margin-bottom: 35px;
+}
+#our .block h2{
+	font-size: 21px;
+	margin-bottom: 32px;
+}
+
+#our .block p{
+	font-size: 13px;
+	line-height: 185%;
+	margin-bottom: 15px;
+}

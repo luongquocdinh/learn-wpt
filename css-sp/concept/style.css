@@ -1,0 +1,135 @@
+
+
+/*----------------------------------------------------
+  #concept
+--------------------------------------------------- */
+#concept{
+	position: relative;
+	width: 100%;
+	overflow: hidden;
+	padding-top: 50px;
+}
+
+/*一覧ヘッダー*/
+#concept .header{
+	padding-top: 40px;
+	text-align: center;
+	position: relative;
+}
+#concept .header h1{
+	font-size: 36px;
+	margin-bottom:43px;
+	line-height: 1;
+  	font-family: 'function_probook';
+}
+#concept .movie{
+	position: relative;
+	height: 610px;
+
+}
+#concept .movie #player{
+	position: absolute;
+	width: 100%;
+	height: 610px;
+}
+#concept .movie .btn_play{
+	position: relative;
+	z-index: 1;
+	width: 100%;
+	height: 610px;
+	background: url(../../images-sp/concept/movie.jpg) no-repeat center center;
+	background-size: cover;
+	display: block;
+	text-indent: -9999px;
+}
+
+#concept .about{
+}
+#concept .about p{
+	text-align: center;
+	font-size: 12px;
+	line-height: 200%;
+	margin-bottom: 60px;
+}
+#concept .product{
+	padding-bottom: 50px;
+	background: #f5f4f9;
+}
+#concept .product a{
+	height: 210px;
+	display: block;
+	width: 100%;
+	background: url(../../images/concept/product_bg.jpg) no-repeat center center;
+	background-size: cover;
+	text-align: center;
+	color: #FFF;
+}
+#concept .product a h3{
+	padding-top: 67px;
+	font-size: 25px;
+	margin-bottom: 15px;
+  	font-family: 'function_probook';
+}
+#concept .product a .ja{
+	font-size: 15px;
+	margin-bottom: 22px;
+}
+#concept .product a .view{
+	font-size: 13px;
+  	font-family: 'function_probook';
+}
+
+
+#concept .list{
+	overflow: hidden;
+	text-align: left;
+	letter-spacing: -0.4em;
+	padding-bottom: 25px;
+	    background: #f5f4f9;
+}
+#concept .list .column{
+	display: inline-block;
+	letter-spacing: normal;
+	width: 42.6%;
+	background: #FFF;
+	margin-left: 5.3%;
+	vertical-align: top;
+	margin-bottom: 15px;
+}
+#concept .list .column:nth-child(2n){
+	margin-left: 4%;
+
+}
+#concept .list .column a{
+	width: 100%;
+	display: block;
+	position: relative;
+}
+#concept .list .column a .defalt{
+	height: 90px;
+	background: url(../../images-sp/blank.png) no-repeat right 8px bottom 8px;
+	background-size: 11px 9px;
+}
+
+#concept .list .column a .title{
+	padding-top: 20px;
+	text-align: center;
+	font-size: 14px;
+	line-height: 130%;
+	margin-bottom: 10px;
+  	font-family: 'function_probook';
+}
+#concept .list .column a .title_ja{
+	text-align: center;
+	font-size: 11px;
+}
+#concept .list .column a .defalt span{
+  display: table-cell;
+  height: 126px;
+  width: 224px;
+  vertical-align: middle;
+  text-align: center;
+  font-size: 15px;
+  line-height: 1.3;
+  color: #313131;
+}

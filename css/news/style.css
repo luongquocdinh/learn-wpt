@@ -16,7 +16,7 @@
 	position: relative;
 }
 #news .header h1{
-	font-family: 'function_probook';
+	font-family: 'MyriadPro', sans-serif;
 	font-size: 40px;
 	margin-bottom:44px;
 	line-height: 1;
@@ -33,7 +33,7 @@
 	padding-left: 27px;
 }
 #news .header .category .btn a{
-	font-family: 'function_probook';
+	font-family: 'MyriadPro', sans-serif;
 	font-size: 14px;
 	height: 20px;
 	width: 141px;
@@ -97,7 +97,7 @@
             transition: all 0.3s ease;
 }
 #news .header .category .pullDown ul li a{
-	font-family: 'function_probook';
+	font-family: 'MyriadPro', sans-serif;
 	font-size: 14px;
 	text-align: left;
 	display: block;
@@ -222,7 +222,7 @@
 }
 
 #news .list .column a .meta{
-	font-family: 'function_probook';
+	font-family: 'MyriadPro', sans-serif;
 	text-align: left;
 	font-size: 10px;
 	color: #959595;
@@ -254,7 +254,7 @@
 }
 
 #news .list .column a .more span.t{
-	font-family: 'function_probook';
+	font-family: 'MyriadPro', sans-serif;
 	text-align: right;
 	font-size: 12px;
 	display: block;
@@ -311,7 +311,7 @@
 	height: 21px;
 	font-size: 14px;
 	line-height: 1px;
-	font-family: 'function_probook';
+	font-family: 'MyriadPro', sans-serif;
 }
 #news .list .readmore a:hover{
 	color: #3a1e87;
@@ -356,7 +356,7 @@
 	top: 105px;
 	left: 40px;
 	z-index: 2;
-	font-family: 'function_probook';
+	font-family: 'MyriadPro', sans-serif;
 }
 #news .btn_return a span.line{
   position: absolute;
@@ -418,7 +418,7 @@
 	color: #959595;
 	line-height: 1;
 	margin-bottom: 15px;
-	font-family: 'function_probook';
+	font-family: 'MyriadPro', sans-serif;
 }
 #news .detail h2{
 	text-align: left;
@@ -486,7 +486,7 @@
 	display: block;
 	text-align: center;
 	font-size: 12px;
-	font-family: 'function_probook';
+	font-family: 'MyriadPro', sans-serif;
 }
 #news .detail .footer .sns li.sns01 a{
 	background: url(../../images/news/sns01.png) no-repeat center top;
@@ -583,7 +583,7 @@
 #news .detail_prev a .over p{
 	text-align: center;
 	font-size: 10px;
-	font-family: 'function_probook';
+	font-family: 'MyriadPro', sans-serif;
 }
 #news .detail_next{
 	position: fixed;
@@ -634,5 +634,5 @@
 #news .detail_next a .over p{
 	text-align: center;
 	font-size: 10px;
-	font-family: 'function_probook';
+	font-family: 'MyriadPro', sans-serif;
 }

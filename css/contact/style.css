@@ -45,7 +45,7 @@
 	font-size: 35px;
 	margin-bottom:20px;
 	line-height: 1;
-	font-family: 'function_probook';
+	font-family: 'MyriadPro', sans-serif;
 }
 #contact .header p{
 	font-size: 17px;
@@ -94,7 +94,7 @@
 	text-align: center;
 }
 #contact .contents .attention .close a span{
-	font-family: 'function_probook';
+	font-family: 'MyriadPro', sans-serif;
 	background: url(../../images/contact/close.png) no-repeat right center;
 	padding-right: 20px;
 }

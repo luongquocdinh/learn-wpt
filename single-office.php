@@ -7,18 +7,18 @@
     //////////////////////////////////////////////////////////////////////////////-->
     <nav id="breadcrumb">
         <ul>
-            <li><a href="../../" class="pageLink">TOP<span></span></a></li>
-            <li><a href="../../company/gaiyou.html" class="pageLink">COMPANY<span></span></a></li>
-            <li><a href="../../company/office/" class="pageLink">OUR OFFICE<span></span></a></li>
+            <li><a href="<?php echo esc_url(home_url('/')) ?>" class="pageLink">TRANG CHỦ<span></span></a></li>
+            <li><a href="../../company/gaiyou.html" class="pageLink">CÔNG TY<span></span></a></li>
+            <li><a href="../../company/office/" class="pageLink">CÁC CHI NHÁNH<span></span></a></li>
             <li><a href="../../company/office/office01" class="pageLink">本社・中央研究所<span></span></a></li>
         </ul>
     </nav>
     <?php while(have_posts()): the_post(); ?>
     <section id="office">
-        <div class="btn_return"><a href="./" class="pageLink"><span class="arrow"><span class="arrow_img">←</span></span><span class="text">VIEW ALL OFFICE</span><span class="line"></span></a></div>
+        <div class="btn_return"><a href="./" class="pageLink"><span class="arrow"><span class="arrow_img">←</span></span><span class="text">XEM TOÀN BỘ CÁC CHI NHÁNH</span><span class="line"></span></a></div>
         <header class="header">
             <h1><?php echo get_the_title(); ?></h1>
-            <p>［ 拠点一覧 ］</p>
+            <!-- <p>［ 拠点一覧 ］</p> -->
         </header>
         <section class="contents">
             <div class="imageArea">

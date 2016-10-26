@@ -17,7 +17,7 @@
 	padding-bottom: 15px;
 }
 #message .header h1{
-	font-family: 'function_probook';
+	font-family: 'MyriadPro', sans-serif;
 	font-size: 35px;
 	margin-bottom:20px;
 	line-height: 1;
@@ -81,7 +81,7 @@
 	padding-bottom: 50px;
 }
 #outline .header h1{
-	font-family: 'function_probook';
+	font-family: 'MyriadPro', sans-serif;
 	font-size: 35px;
 	margin-bottom:20px;
 	line-height: 1;
@@ -169,7 +169,7 @@
 	position: relative;
 }
 #policy .header h1{
-	font-family: 'function_probook';
+	font-family: 'MyriadPro', sans-serif;
 	font-size: 35px;
 	margin-bottom:60px;
 	line-height: 1;
@@ -550,7 +550,7 @@
 #history .navigation h2{
 	margin-right: 12px;
 	font-size: 12px;
-	font-family: 'function_probook';
+	font-family: 'MyriadPro', sans-serif;
 	margin-bottom: 20px;
 }
 #history .navigation ul{
@@ -565,7 +565,7 @@
 }
 #history .navigation ul li a span.y{
 	font-size: 11px;
-	font-family: 'function_probook';
+	font-family: 'MyriadPro', sans-serif;
 	display: inline-block;
 	vertical-align: middle;
 	margin-right: 10px;
@@ -632,7 +632,7 @@
 	background-size: cover;
 }
 #history .header h1{
-	font-family: 'function_probook';
+	font-family: 'MyriadPro', sans-serif;
 	padding-top: 85px;
 	font-size: 35px;
 	margin-bottom:20px;
@@ -670,7 +670,7 @@
 	width: 110px;
 	overflow: hidden;
 	color: #959595;
-	font-family: 'function_probook';
+	font-family: 'MyriadPro', sans-serif;
 	font-size: 12px;
     -webkit-transition: all 0.3s ease;
        -moz-transition: all 0.3s ease;
@@ -709,7 +709,7 @@
 }
 
 #history .yearContents .textArea h2{
-	font-family: 'function_probook';
+	font-family: 'MyriadPro', sans-serif;
 	font-size: 70px;
 	line-height: 1;
 	margin-bottom: 30px;
@@ -836,7 +836,7 @@
 }
 
 #history .yearContents .textArea2 h2{
-	font-family: 'function_probook';
+	font-family: 'MyriadPro', sans-serif;
 	font-size: 70px;
 	line-height: 1;
 	margin-bottom: 30px;
