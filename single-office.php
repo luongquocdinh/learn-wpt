@@ -15,7 +15,7 @@
     </nav>
     <?php while(have_posts()): the_post(); ?>
     <section id="office">
-        <div class="btn_return"><a href="./" class="pageLink"><span class="arrow"><span class="arrow_img">←</span></span><span class="text">XEM TOÀN BỘ CÁC CHI NHÁNH</span><span class="line"></span></a></div>
+        <div class="btn_return"><a href="./" class="pageLink"><span class="arrow"><span class="arrow_img">←</span></span><span class="text">XEM TẤT CẢ</span><span class="line"></span></a></div>
         <header class="header">
             <h1><?php echo get_the_title(); ?></h1>
             <!-- <p>［ 拠点一覧 ］</p> -->

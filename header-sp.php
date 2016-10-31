@@ -3,7 +3,21 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <title>株式会社 MILBON</title>
+    <title>
+        <?php
+        global $page, $paged;
+        wp_title( '|', true, 'right' );
+        // Add the blog name.
+        bloginfo( 'name' );
+        // Add the blog description for the home/front page.
+        $site_description = get_bloginfo( 'description', 'display' );
+        if ( $site_description && ( is_home() || is_front_page() ) )
+            echo " | $site_description";
+        // Add a page number if necessary:
+        if ( ( $paged >= 2 || $page >= 2 ) && ! is_404() )
+            echo esc_html( ' | ' . sprintf( __( 'Page %s', 'milbon' ), max( $paged, $page ) ) );
+        ?>
+    </title>
     <meta name="description" content="株式会社MILBONのオフィシャルウェブサイトです">
     <meta name="keywords" content="MILBON,ミルボン,みるぼん,大阪,都島区,ヘア化粧品,パーマ剤,ヘアケア剤,ヘアカラー剤,スタイリング剤,ディーセス,オルディーブ,オルディーブボーテ,オージュア,リシオ,ニゼル,プラーミア,美容師,ヘアデザイナー,TAC開発システム,製品情報,IR情報,投資家情報,リクルート情報,会社情報">
     <meta property="og:locale" content="ja_JP">
@@ -15,6 +29,7 @@
     <meta property="og:description" content="株式会社MILBONのオフィシャルウェブサイトです">
     <base href="<?php echo esc_url(home_url('/')) ?>">
     <link rel="canonical" href="http://www.milbon.co.jp/">
+    <link href="https://fonts.googleapis.com/css?family=Cormorant+Upright:300,400,500,700&amp;subset=latin-ext,vietnamese" rel="stylesheet" />
     <link rel="shortcut icon" type="image/x-icon" href="<?php echo get_template_directory_uri(); ?>/images/favicon.ico" />
     <link rel="icon" type="image/x-icon" href="<?php echo get_template_directory_uri(); ?>/images/favicon.ico" />
     <link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/css-sp/hamburgers.min.css">
@@ -52,7 +67,7 @@
         <li><a href="<?php echo esc_url(home_url('/')) ?> ">TRANG CHỦ</a></li>
         <li><a href="<?php echo esc_url( home_url( '/' ) ) . 'concept';?>">TRIẾT LÝ</a></li>
         <li><a href="<?php echo esc_url( get_post_type_archive_link( 'milbon-brands' ) ); ?>">SẢN PHẨM</a></li>
-        <li class="menuCompany"><a href="#">COMPANY</a>
+        <li class="menuCompany"><a href="#">CÔNG TY</a>
             <ul class="menuCompanyList">
                 <li><a href="<?php echo esc_url( home_url( '/' ) ) . 'company_gaiyou';?>">THÔNG TIN CÔNG TY</a></li>
                 <li><a href="<?php echo esc_url( home_url( '/' ) ) . 'company_history';?>">LỊCH SỬ CÔNG TY</a></li>

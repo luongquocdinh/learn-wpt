@@ -7,7 +7,7 @@
         <header class="header">
             <h1>TIN TỨC</h1>
             <div class="category">
-                <div class="btn"><a href="#"><span>CHỌN CATEGORY</span></a></div>
+                <div class="btn"><a href="#"><span>CHỌN DANH MỤC</span></a></div>
                 <?php
                 $terms = get_terms( array(
                     'taxonomy' => 'news_category',
@@ -16,7 +16,7 @@
                 ?>
                 <div class="pullDown">
                     <ul>
-                        <li><a href="<?php echo esc_url( get_post_type_archive_link( 'milbon-news' ) ); ?>">ALL</a></li>
+                        <li><a href="<?php echo esc_url( get_post_type_archive_link( 'milbon-news' ) ); ?>">TẤT CẢ</a></li>
                     <?php
                     if( !empty( $terms ) ) :
                         foreach ( $terms as $term ) :
@@ -86,7 +86,7 @@
                             <span class="category"><?php echo esc_html( $milbon_brands_term ); ?></span> ｜ <span class="date"><?php echo get_the_date('Y-m-d', $post->ID); ?></span>
                         </div>
                         <p><?php the_title(); ?></p>
-                        <div class="more">Read More →</div>
+                        <div class="more">Xem thêm →</div>
                     </div>
                 </a>
             </div>

@@ -25,7 +25,7 @@ news
             </div>
 
             <footer class="footer">
-                <div class="contact"><a href="<?php echo esc_url( home_url( '/' ) ) . 'contact'; ?>">この記事に関するお問い合わせ</a></div>
+                <div class="contact"><a href="<?php echo esc_url( home_url( '/' ) ) . 'contact'; ?>">LIÊN HỆ</a></div>
                 <ul class="sns">
                     <li class="sns01"><a href="http://www.facebook.com/share.php?u=http://www.milbon.co.jp/news/detail/91" onclick="window.open(this.href,'facebookwindow','width=550,height=450,personalbar=0,toolbar=0,scrollbars=1,resizable=1');return false;"><span>Share</span></a></li>
                     <li class="sns02"><a href="https://twitter.com/intent/tweet?original_referer=http://www.milbon.co.jp/news/detail/91&amp;text=ミルボンWEBサイトのリニューアルについて&amp;tw_p=tweetbutton&amp;url=http://www.milbon.co.jp/news/detail/91" onclick="window.open(this.href,'tweetwindow','width=550,height=450,personalbar=0,toolbar=0,scrollbars=1,resizable=1');return false;"><span>Tweet</span></a></li>

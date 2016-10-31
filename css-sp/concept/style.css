@@ -20,7 +20,7 @@
 	font-size: 36px;
 	margin-bottom:43px;
 	line-height: 1;
-  	font-family: 'function_probook';
+  	font-family: 'MyriadPro', sans-serif;
 }
 #concept .movie{
 	position: relative;
@@ -44,6 +44,8 @@
 }
 
 #concept .about{
+	padding: 20px 10px;
+	line-height: 1.4;
 }
 #concept .about p{
 	text-align: center;
@@ -68,7 +70,7 @@
 	padding-top: 67px;
 	font-size: 25px;
 	margin-bottom: 15px;
-  	font-family: 'function_probook';
+  	font-family: 'MyriadPro', sans-serif;
 }
 #concept .product a .ja{
 	font-size: 15px;
@@ -76,7 +78,7 @@
 }
 #concept .product a .view{
 	font-size: 13px;
-  	font-family: 'function_probook';
+  	font-family: 'MyriadPro', sans-serif;
 }
 
 
@@ -117,7 +119,7 @@
 	font-size: 14px;
 	line-height: 130%;
 	margin-bottom: 10px;
-  	font-family: 'function_probook';
+  	font-family: 'MyriadPro', sans-serif;
 }
 #concept .list .column a .title_ja{
 	text-align: center;

@@ -15,7 +15,7 @@
         </header>
 
         <section class="contents">
-            <h2>［ 国内拠点一覧 ］　<a href="http://www.milbon.com/ja/about/#network" target="_blank">海外拠点</a></h2>
+            <h2> CÁC CHI NHÁNH | <a href="http://www.milbon.com/ja/about/#network" target="_blank">NƯỚC NGOÀI</a></h2>
             <div class="list">
                 <?php
                 $args = array(

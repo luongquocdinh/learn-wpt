@@ -20,7 +20,7 @@
 	font-size: 36px;
 	margin-bottom:20px;
 	line-height: 1;
-  	font-family: 'function_probook';
+  	font-family: 'MyriadPro', sans-serif;
 }
 #news .header p{
 	font-size: 13px;
@@ -38,7 +38,7 @@
 	line-height: 1;
 	position: relative;
 	padding: 18px 0;
-  	font-family: 'function_probook';
+  	font-family: 'MyriadPro', sans-serif;
 }
 #news .header .category .btn a span{
 	background: url(../../images-sp/arrow_down.png) no-repeat right 5px;
@@ -72,7 +72,7 @@
 	margin-bottom: 12px;
 	font-size: 12px;
 	text-align: left;
-  	font-family: 'function_probook';
+  	font-family: 'MyriadPro', sans-serif;
 }
 #news .header .category .pullDown ul li a:hover{
 	color: #3a1e87;
@@ -112,7 +112,7 @@
 	color: #959595;
 	line-height: 1;
 	margin-bottom: 5px;
-  	font-family: 'function_probook';
+  	font-family: 'MyriadPro', sans-serif;
 }
 #news .list .column .meta .category{
 	color: #313131;
@@ -120,8 +120,8 @@
 
 #news .list .column p{
 	color: #313131;
-	font-size: 13px;
-	line-height: 1.5;
+	font-size: 14px;
+	line-height: 1.4;
 	text-align: left;
 	margin-bottom: 5px;
 }
@@ -131,7 +131,7 @@
 	color: #3a1e87;
 	font-size: 13px;
 	text-align: right;
-  	font-family: 'function_probook';
+  	font-family: 'MyriadPro', sans-serif;
 }
 
 
@@ -147,7 +147,7 @@
 	height: 21px;
 	font-size: 12px;
 	line-height: 1px;
-  	font-family: 'function_probook';
+  	font-family: 'MyriadPro', sans-serif;
 }
 #news .list .readmore a:hover{
 	color: #3a1e87;
@@ -197,7 +197,7 @@
 	color: #959595;
 	line-height: 1;
 	margin-bottom: 37px;
-  	font-family: 'function_probook';
+  	font-family: 'MyriadPro', sans-serif;
 }
 #news .detail .meta .category{
 	color: #313131;
@@ -215,7 +215,7 @@
 }
 #news .detail .entry p{
 	text-align: left;
-	font-size: 13px;
+	font-size: 14px;
 	line-height: 185%;
 	margin-bottom: 20px;
 }
@@ -265,7 +265,7 @@
 	display: block;
 	text-align: center;
 	font-size: 12px;
-  	font-family: 'function_probook';
+  	font-family: 'MyriadPro', sans-serif;
 }
 #news .detail .footer .sns li.sns01 a{
 	background: url(../../images-sp/news/sns01.png) no-repeat center top;
@@ -320,7 +320,7 @@
 	height: 50px;
 	line-height: 50px;
 	text-align: center;
-  	font-family: 'function_probook';
+  	font-family: 'MyriadPro', sans-serif;
 }
 #news .navigation ul li.next{
 	width: 23.33%;

@@ -9,14 +9,31 @@ products
         <!-- メインビジュアル -->
         <div class="mainvisual">
             <!-- CMS:ブランド画像 -->
-            <img src="<?php echo get_template_directory_uri(); ?>/files/img/brand/2016/04/20160415160646_1.png">
+            <img src="<?php
+            $image_id =  get_post_meta($post->ID, '_attachment_file_id', true);
+            if($image_id === '')
+                echo get_template_directory_uri().'/images/no_image_brand.jpg';
+            else
+                echo wp_get_attachment_url($image_id);
+            ?>">
         </div>
 
         <!-- 詳細 -->
         <article class="detail">
             <section class="detail_main">
                 <!-- CMS:ブランド名 -->
-                <h1><img src="<?php echo get_template_directory_uri(); ?>/files/img/brand/2016/05/20160521133208_1.jpg" alt="<?php echo get_the_title(); ?>"></h1>
+                <h1>
+                    <?php
+                    $logo_id = get_post_meta($post->ID, '_attachment_logo_id', true);
+                    if ($logo_id === '') :
+                        echo '';
+                    else :
+                        ?>
+                        <img src="<?php echo wp_get_attachment_url($logo_id); ?>" alt="<?php the_title(); ?>" style="width: 400px; display: block; margin: 0 auto;">
+                        <?php
+                    endif;
+                    ?>
+                </h1>
                 <!-- ナビゲーション -->
                 <nav class="detail_prev">
                     <!-- CMS:前のブランドURL -->
@@ -43,6 +60,7 @@ products
                     if ( have_posts() ) : while ( have_posts() ) : the_post();
                         the_content();
                     endwhile;
+                    wp_reset_query();
                     else:
                         ?>
                         <p><?php _e('Sorry, no posts matched your criteria.'); ?></p>
@@ -52,20 +70,41 @@ products
                 <h3>COLLECTION</h3>
                 <!-- CMS:商品一覧 -->
                 <div class="product_list">
+                    <?php
+                    $brand_id = $post->ID;
+                    $category_collection = get_post_meta($post->ID, 'custom_element_grid_class_meta_box',true);
+                    $shortcode_collection_query = new WP_Query(array(
+                        'post_type' => 'brands-collection',
+                        'order'	=> 'ASC',
+                        'tax_query' => array(
+                            array(
+                                'taxonomy' => 'collection_category',
+                                'field' => 'slug',
+                                'terms' => $category_collection
+                            )
+                        )
+                    ));
+                    if ($shortcode_collection_query->have_posts()) :
+                        while($shortcode_collection_query->have_posts()) : $shortcode_collection_query->the_post();
+                    ?>
 
                     <!-- ▼商品項目 -->
                     <div class="column">
                         <!-- CMS:商品URL -->
-                        <a href="../../../brand/product/65">
+                        <a href="<?php echo esc_url(add_query_arg( 'brandID', $brand_id, get_permalink($post->ID))); ?>">
                             <!-- CMS:商品画像 -->
                             <div class="image">
-                                <img src="<?php echo get_template_directory_uri(); ?>/files/img/product/2016/05/20160521142931_1.png" alt="プラーミア　リファイニング"/>                                        <span></span>
+                                <img src="<?php echo get_featured_url($post->ID); ?>" alt="<?php the_title() ?>"/><span></span>
                             </div>
                             <!-- CMS:商品目名 -->
-                            <p class="productName">プラーミア　リファイニング</p>
+                            <p class="productName"><?php the_title(); ?></p>
                         </a>
                     </div>
-
+                    <?php
+                        endwhile;
+                    wp_reset_query();
+                    endif;
+                    ?>
                 </div>
             </section>
 
@@ -76,7 +115,7 @@ products
                     <li class="prev">
                         <a href="<?php echo esc_url(get_permalink(get_previous_post()->ID)); ?>"></a>
                     </li>
-                    <li class="all"><a href="<?php echo esc_url(get_post_type_archive_link( 'milbon-brands' )); ?>">View ALL Brands</a></li>
+                    <li class="all"><a href="<?php echo esc_url(get_post_type_archive_link( 'milbon-brands' )); ?>">Xem tất cả</a></li>
                     <li class="next">
                         <a href="<?php echo esc_url(get_permalink(get_next_post()->ID)); ?>"></a>
                     </li>

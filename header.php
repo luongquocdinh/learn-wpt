@@ -3,7 +3,21 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=1200">
-  <title>株式会社 MILBON</title>
+  <title>
+    <?php
+      global $page, $paged;
+      wp_title( '|', true, 'right' );
+      // Add the blog name.
+      bloginfo( 'name' );
+      // Add the blog description for the home/front page.
+      $site_description = get_bloginfo( 'description', 'display' );
+      if ( $site_description && ( is_home() || is_front_page() ) )
+        echo " | $site_description";
+      // Add a page number if necessary:
+      if ( ( $paged >= 2 || $page >= 2 ) && ! is_404() )
+        echo esc_html( ' | ' . sprintf( __( 'Page %s', 'milbon' ), max( $paged, $page ) ) );
+    ?>
+  </title>
   <meta name="description" content="株式会社MILBONのオフィシャルウェブサイトです">
   <meta name="keywords" content="MILBON,ミルボン,みるぼん,大阪,都島区,ヘア化粧品,パーマ剤,ヘアケア剤,ヘアカラー剤,スタイリング剤,ディーセス,オルディーブ,オルディーブボーテ,オージュア,リシオ,ニゼル,プラーミア,美容師,ヘアデザイナー,TAC開発システム,製品情報,IR情報,投資家情報,リクルート情報,会社情報">
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
@@ -51,72 +65,42 @@
     </ul>
     <ul class="subMenu">
       <li class="submenu01"><a href="<?php echo esc_url( home_url( '/' ) ) . 'beauty'; ?>">DÀNH CHO NHÀ TẠO MẪU TÓC</a></li>
-<!--       <li class="line"></li>
-      <li class="submenu02"><a href="http://www.milbon.co.jp/ir/index.html" target="_blank">IR SITE</a></li>
-      <li class="line"></li>
-      <li class="submenu03"><a href="http://www.milbon.co.jp/recruit/" target="_blank">RECRUIT SITE</a></li> -->
+      <?php
+      if(function_exists('pll_the_languages'))
+          pll_the_languages(array('show_flags' => 1, 'show_names' => 0));
+      ?>
     </ul>
   </div>
   <!-- pulldown:FOR HAIR DESIGNER -->
  <div class="pulldown pulldown01">
   <ul>
+    <?php
+    $loop = new WP_Query( array(
+        'post_type' => 'milbon-links',
+        'posts_per_page' => 8,
+        'tax_query' => array(
+            array(
+                'taxonomy' => 'link_category',
+                'field' => 'slug',
+                'terms' => 'hairdesign-slug'
+            )
+        ),
+    )  );
+    if($loop->have_posts()):
+      while ( $loop->have_posts() ) : $loop->the_post();
+    ?>
     <li>
-      <a href="http://www.biyoshi-oen.jp/" target="_blank">
-        <img src="<?php echo get_template_directory_uri(); ?>/images/header_hair_image01.jpg" height="126" width="224" alt="Education Guidance">
-        <div class="defalt"><span>Education Guidance</span></div>
-        <div class="over"><span>Education Guidance</span><p class="icon">VISIT SITE</p></div>
+      <a href="<?php echo get_post_meta($post->ID, "_location", true); ?>" target="_blank">
+        <img src="<?php the_post_thumbnail_url( 'full' );  ?>" height="126" width="224" alt="<?php the_title(); ?>">
+        <div class="defalt"><span><?php the_title(); ?></span></div>
+        <div class="over"><span><?php the_title(); ?></span><p class="icon">VÀO TRANG WEB</p></div>
       </a>
     </li>
-    <li>
-      <a href="http://www.milbon-biyoshidoga.jp/" target="_blank">
-        <img src="<?php echo get_template_directory_uri(); ?>/images/header_hair_image02.jpg" height="126" width="224" alt="びよーしどーが">
-        <div class="defalt"><span>びよーしどーが</span></div>
-        <div class="over"><span>びよーしどーが</span><p class="icon">VISIT SITE</p></div>
-      </a>
-    </li>
-    <li>
-      <a href="http://www.milbon.co.jp/photorevo_2016/" target="_blank">
-        <img src="<?php echo get_template_directory_uri(); ?>/images/header_hair_image03.jpg" height="126" width="224" alt="MILBON PHOTO REVOLUTION">
-        <div class="defalt"><span>MILBON PHOTO REVOLUTION</span></div>
-        <div class="over"><span>MILBON PHOTO REVOLUTION</span><p class="icon">VISIT SITE</p></div>
-      </a>
-    </li>
-    <li>
-      <a href="http://www.milbon.co.jp/da_inspire/" target="_blank">
-        <img src="<?php echo get_template_directory_uri(); ?>/images/header_hair_image04.jpg" height="126" width="224" alt="MILBON DA-INSPIRE-2016">
-        <div class="defalt"><span>MILBON DA-INSPIRE-2016</span></div>
-        <div class="over"><span>MILBON DA-INSPIRE-2016</span><p class="icon">VISIT SITE</p></div>
-      </a>
-    </li>
-    <li>
-      <a href="http://www.milbon.co.jp/designersnote/" target="_blank">
-        <img src="<?php echo get_template_directory_uri(); ?>/images/header_hair_image05.jpg" height="126" width="224" alt="MILBON Designer’s NOTE">
-        <div class="defalt"><span>MILBON Designer’s NOTE</span></div>
-        <div class="over"><span>MILBON Designer’s NOTE</span><p class="icon">VISIT SITE</p></div>
-      </a>
-    </li>
-    <li>
-      <a href="http://www.milbon.co.jp/nextbeauty/" target="_blank">
-        <img src="<?php echo get_template_directory_uri(); ?>/images/header_hair_image06.jpg" height="126" width="224" alt="MILBON “next beauty” ～美容のチカラ～">
-        <div class="defalt"><span>MILBON “next beauty”<br>～美容のチカラ～</span></div>
-        <div class="over"><span>MILBON “next beauty”<br>～美容のチカラ～</span><p class="icon">VISIT SITE</p></div>
-      </a>
-    </li>
-    <li>
-      <a href="https://www.youtube.com/channel/UCeur4Cp6yh4HjShtW3MjU2A" target="_blank">
-        <img src="<?php echo get_template_directory_uri(); ?>/images/header_hair_image07.jpg" height="126" width="224" alt="MILBON CHANNEL">
-        <div class="defalt"><span>MILBON CHANNEL</span></div>
-        <div class="over"><span>MILBON CHANNEL</span><p class="icon">VISIT SITE</p></div>
-      </a>
-    </li>
-
-    <li>
-      <a href="http://www.milbon.co.jp/promotiontool/" target="_blank">
-        <img src="<?php echo get_template_directory_uri(); ?>/images/header_hair_image08.jpg" height="126" width="224" alt="PROMOTION TOOL DOWNLOAD">
-        <div class="defalt"><span>PROMOTION TOOL DOWNLOAD</span></div>
-        <div class="over"><span>PROMOTION TOOL DOWNLOAD</span><p class="icon">VISIT SITE</p></div>
-      </a>
-    </li>
+    <?php
+      endwhile;
+    wp_reset_query();
+    endif;
+    ?>
   </ul>
   </div>
   <!-- pulldown:COMAPNY -->

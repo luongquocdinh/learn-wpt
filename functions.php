@@ -196,7 +196,7 @@ function create_milbon_brands () {
 	register_post_type('milbon-brands',
 			array(
 				'labels' => array(
-						'name' => esc_html__('Brands','milbon'),
+						'name' => esc_html__('Sản Phẩm','milbon'),
 						'singular_name' => esc_html__('Brand','milbon'),
 						'add_new'   => esc_html__( 'Add New', 'milbon' ),
 						'add_new_item'  => esc_html__( 'Add New Brand', 'milbon' ),
@@ -269,12 +269,12 @@ function wpt_events_checkbox_brands () {
 	global $post;
 
 	$custom = get_post_custom($post->ID);
-  $field_id = $custom["field_id"][0];
+  	$field_id = $custom["field_id"][0];
   ?>
-  <label>Check for yes</label>
+  <label>Show in Slider</label>
   <?php $field_id_value = get_post_meta($post->ID, 'field_id', true);
   if($field_id_value == "yes") $field_id_checked = 'checked="checked"'; ?>
-    <input type="checkbox" name="field_id" value="yes" <?php echo $field_id_checked; ?> />
+  <input type="checkbox" name="field_id" value="yes" <?php echo $field_id_checked; ?> />
   <?php
 }
 
@@ -285,63 +285,11 @@ function save_details(){
  	global $post;
 
 	if (defined('DOING_AUTOSAVE') && DOING_AUTOSAVE) {
-	  return $post->ID;
+		return $post->ID;
 	}
-	if(isset($_POST["field_id"]))
-  		update_post_meta($post->ID, "field_id", $_POST["field_id"]);
+
+  	update_post_meta($post->ID, "field_id", $_POST["field_id"]);
 }
-
-//// ADD DROPDOWN CATEGORY COLLECTION
-add_action( 'add_meta_boxes', 'so_custom_meta_box' );
-
-function so_custom_meta_box($post){
-    add_meta_box('so_meta_box', 'Collection', 'custom_element_grid_class_meta_box', 'milbon-brands', 'normal' , 'high');
-}
-
-add_action('save_post', 'so_save_metabox');
-
-function so_save_metabox(){ 
-    global $post;
-    if(isset($_POST['custom_element_grid_class'])){
-         //UPDATE: 
-        $meta_element_class = $_POST['custom_element_grid_class'];
-
-        //END OF UPDATE
-
-        update_post_meta($post->ID, 'custom_element_grid_class_meta_box', $meta_element_class);
-        //print_r($_POST);
-    }
-}
-
-function custom_element_grid_class_meta_box($post){
-	$terms = get_terms( array(
-		'taxonomy' => 'collection_category',
-		'hide_empty' => false,
-	) );
-     //true ensures you get just one value instead of an array
-    ?>   
-    <label>Category:  </label>
-
-    <select name="custom_element_grid_class" id="custom_element_grid_class">
-	<?php
-		$meta_element_class = get_post_meta($post->ID, 'custom_element_grid_class_meta_box', true);
-
-		if( !empty( $terms ) ) {
-			foreach ( $terms as $term ) {
-			$value = esc_attr( $term->slug );
-			
-	?>
-      <option value="<?php echo $value ?>" <?php if ($meta_element_class == $value) echo 'selected'?> >
-	  	<?php echo esc_html( $term->name ) ?>
-	  </option>
-	<?php
-		}
-	}
-	?>
-    </select>
-    <?php
-}
-
 
 /**
  * CREATE COLLECTION POST TYPE
@@ -383,7 +331,8 @@ function create_brands_collection () {
 					'title', /* Text input field to create a post title. */
 					'editor',
 					'thumbnail', /* Displays a box for featured image. */
-				)
+				),
+				'register_meta_box_cb' => 'add_events_metaboxes_collection'
 	));
 }
 
@@ -406,6 +355,24 @@ function create_brands_collection_taxonomies(){
 	);
 }
 
+// Add metabox link in collection custom post type
+function add_events_metaboxes_collection() {
+	add_meta_box('wpt_events_location_collection', 'Links', 'wpt_events_location_collection', 'brands-collection', 'side', 'default');
+}
+
+// The Event Location Metabox
+function wpt_events_location_collection() {
+	global $post;
+
+	echo '<input type="hidden" name="eventmeta_noncename" id="eventmeta_noncename" value="' .
+	wp_create_nonce( plugin_basename(__FILE__) ) . '" />';
+
+	$location = get_post_meta($post->ID, '_location', true);
+
+	echo '<input type="text" name="_location" value="' . $location  . '" class="widefat" />';
+
+}
+
 /**
  * CREATE NEWS POST TYPE
  */
@@ -416,7 +383,7 @@ function create_milbon_news () {
 			'milbon-news',
 			array(
 				'labels' => array(
-						'name' => esc_html__('News','milbon'),
+						'name' => esc_html__('Tin Tức','milbon'),
 						'singular_name' => esc_html__('News','milbon'),
 						'add_new'   => esc_html__( 'Add New', 'milbon' ),
 						'add_new_item'  => esc_html__( 'Add New Item', 'milbon' ),
@@ -703,8 +670,7 @@ function editor_sp_version($post) {
 }
 
 function content_sp_page() {
-    if(is_admin())
-        add_meta_box('slz_content_sp_page', __('Content for SP version', 'slz'), 'editor_sp_version', 'page', 'normal', 'high');
+	add_meta_box('slz_content_sp_page', __('Content for SP version', 'slz'), 'editor_sp_version', 'page', 'normal', 'high');
 }
 
 function save_content_sp_page($post_id) {
@@ -716,3 +682,198 @@ function save_content_sp_page($post_id) {
 //add metabox (editor) for sp content.
 add_action('add_meta_boxes', 'content_sp_page');
 add_action('save_post', 'save_content_sp_page');
+
+//add metabox for collection - custom post type
+function attachment_file_form($post) {
+	if(current_user_can('edit_post', $post->ID)) :
+		$attachment_file_id = get_post_meta($post->ID,'_attachment_file_id', true);
+	?>
+		<table class="form-table">
+			<br>
+			<tr class="form-field">
+				<input id="slz-attachment" type="hidden" name="_attachment_file_id" readonly="readonly" value="<?php echo $attachment_file_id ?>" />
+				<input id="slz-change-attachment" class="button"  type="button" value="Change attachment" />
+				<input id="slz-remove-attachment" class="button" style="margin-left: 10px;" type="button" value="Remove attachment" />
+				<?php if(!empty($attachment_file_id)): ?>
+					<p id="attachment-title"><?php echo get_the_title($attachment_file_id); ?></p>
+				<?php endif; ?>
+			</tr>
+			<tr>
+				<div style="margin: auto" id="slz-thumbnail">
+					<?php if(!empty($attachment_file_id)): ?>
+					<iframe src='<?php echo wp_get_attachment_url($attachment_file_id); ?>' style='width:100%; height:500px' frameborder='0'></iframe>
+					<?php endif; ?>
+				</div>
+			</tr>
+		</table>
+	<?php
+	else:
+		return;
+	endif;
+}
+
+function add_script_media() {
+	wp_enqueue_script( 'my_custom_script', get_template_directory_uri() . '/js/media-ajax.js' );
+}
+
+function add_attachment_file() {
+	add_action('admin_enqueue_scripts', 'add_script_media');
+	add_meta_box('slz_attachment_collection', __('PDF Catalog', 'slz'), 'attachment_file_form', 'brands-collection', 'normal', 'high');
+}
+
+function save_attachment_file($post_id) {
+	if(!current_user_can('edit_post', $post_id))
+		return;
+	if(isset($_POST['_attachment_file_id']))
+		update_post_meta($post_id, '_attachment_file_id', $_POST['_attachment_file_id']);
+}
+
+add_action('add_meta_boxes', 'add_attachment_file');
+add_action('save_post', 'save_attachment_file');
+
+// adding metabox to insert logo in singular view for brands - custom post type
+function add_script_media_logo() {
+	wp_enqueue_script( 'my_custom_script_logo', get_template_directory_uri() . '/js/attachement-logo-brand.js' );
+}
+function attachment_logo_brand($post) {
+	if (current_user_can('edit_post', $post->ID)) :
+		$attachment_logo_id = get_post_meta($post->ID,'_attachment_logo_id', true);
+		?>
+		<table class="form-table">
+			<br />
+			<tr class="form-field">
+				<input id="attachment" type="hidden" name="_attachment_logo_id" readonly="readonly" value="<?php echo $attachment_logo_id ?>" />
+				<input id="change-attachment" class="button"  type="button" value="Change attachment" />
+				<input id="remove-attachment" class="button" style="margin-left: 10px;" type="button" value="Remove attachment" />
+				<?php if(!empty($attachment_logo_id)): ?>
+					<p id="attachment-title-logo"><?php echo get_the_title($attachment_logo_id); ?></p>
+				<?php endif; ?>
+			</tr>
+			<tr>
+				<div style="margin: auto" id="thumbnail-image">
+					<?php if(!empty($attachment_logo_id)): ?>
+						<img src='<?php echo wp_get_attachment_url($attachment_logo_id); ?>' style='width:100%; height:auto'>
+					<?php endif; ?>
+				</div>
+			</tr>
+		</table>
+		<?php
+	else:
+		return;
+	endif;
+}
+function add_logo_brands() {
+	add_action('admin_enqueue_scripts', 'add_script_media_logo');
+	add_meta_box('slz_logo_brand', __('Logo Brands', 'slz'), 'attachment_logo_brand', 'milbon-brands', 'normal', 'high');
+}
+add_action('add_meta_boxes', 'add_logo_brands');
+
+function save_attachment_logo($post_id) {
+	if(!current_user_can('edit_post', $post_id))
+		return;
+	if(isset($_POST['_attachment_logo_id']))
+		update_post_meta($post_id, '_attachment_logo_id', $_POST['_attachment_logo_id']);
+}
+
+add_action('save_post', 'save_attachment_logo');
+
+
+//adding metabox to insert big image in singular view for brands - custom post type
+
+function attachment_image_form($post) {
+	if(current_user_can('edit_post', $post->ID)) :
+		$attachment_file_id = get_post_meta($post->ID,'_attachment_file_id', true);
+		?>
+		<table class="form-table">
+			<br>
+			<tr class="form-field">
+				<input id="slz-attachment" type="hidden" name="_attachment_file_id" readonly="readonly" value="<?php echo $attachment_file_id ?>" />
+				<input id="slz-change-attachment" class="button"  type="button" value="Change attachment" />
+				<input id="slz-remove-attachment" class="button" style="margin-left: 10px;" type="button" value="Remove attachment" />
+				<?php if(!empty($attachment_file_id)): ?>
+					<p id="attachment-title"><?php echo get_the_title($attachment_file_id); ?></p>
+				<?php endif; ?>
+			</tr>
+			<tr>
+				<div style="margin: auto" id="slz-thumbnail-image">
+					<?php if(!empty($attachment_file_id)): ?>
+						<img src='<?php echo wp_get_attachment_url($attachment_file_id); ?>' style='width:100%; height:auto'>
+					<?php endif; ?>
+				</div>
+			</tr>
+		</table>
+		<?php
+	else:
+		return;
+	endif;
+}
+
+function add_image_brands() {
+	add_action('admin_enqueue_scripts', 'add_script_media');
+	add_meta_box('slz_image_brand', __('Images Brands', 'slz'), 'attachment_image_form', 'milbon-brands', 'normal', 'high');
+}
+add_action('add_meta_boxes', 'add_image_brands');
+
+
+//// ADD DROPDOWN CATEGORY COLLECTION
+add_action( 'add_meta_boxes', 'so_custom_meta_box' );
+
+function so_custom_meta_box($post){
+    add_meta_box('so_meta_box', 'Collection', 'custom_element_grid_class_meta_box', 'milbon-brands', 'normal' , 'high');
+}
+
+add_action('save_post', 'so_save_metabox');
+
+function so_save_metabox(){ 
+    global $post;
+    if(isset($_POST['custom_element_grid_class'])){
+         //UPDATE: 
+        $meta_element_class = $_POST['custom_element_grid_class'];
+
+        //END OF UPDATE
+
+        update_post_meta($post->ID, 'custom_element_grid_class_meta_box', $meta_element_class);
+        //print_r($_POST);
+    }
+}
+
+function custom_element_grid_class_meta_box($post){
+	$terms = get_terms( array(
+		'taxonomy' => 'collection_category',
+		'hide_empty' => false,
+	) );
+     //true ensures you get just one value instead of an array
+    ?>   
+    <label>Category:  </label>
+
+    <select name="custom_element_grid_class" id="custom_element_grid_class">
+	<?php
+		$meta_element_class = get_post_meta($post->ID, 'custom_element_grid_class_meta_box', true);
+
+		if( !empty( $terms ) ) {
+			foreach ( $terms as $term ) {
+			$value = esc_attr( $term->slug );
+			
+	?>
+      <option value="<?php echo $value ?>" <?php if ($meta_element_class == $value) echo 'selected'?> >
+	  	<?php echo esc_html( $term->name ) ?>
+	  </option>
+	<?php
+		}
+	}
+	?>
+    </select>
+    <?php
+}
+
+
+//sidebar 
+register_sidebar( array(
+	'name' => __( 'Showcase Sidebar', 'twentyeleven' ),
+	'id' => 'sidebar-1',
+	'description' => __( 'The sidebar for the optional Showcase Template', 'twentyeleven' ),
+	'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+	'after_widget' => '</aside>',
+	'before_title' => '<h3 class="widget-title">',
+	'after_title' => '</h3>',
+) );

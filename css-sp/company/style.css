@@ -13,13 +13,15 @@
 /*一覧ヘッダー*/
 #message .header{
 	padding-top: 65px;
+	padding-left: 10px;
+	padding-right: 10px;
 	text-align: center;
 	position: relative;
 	padding-bottom: 37px;
 }
 #message .header h1{
 	font-size: 25px;
-	line-height: 1;
+	line-height: 1.4;
 }
 #message .contents{
 	width: 100%;
@@ -36,12 +38,15 @@
 #message .contents figure figcaption{
 	margin-bottom: 14px;
 	text-align: center;
+	font-weight: bold;
+	font-size: 18px;
 }
 #message .contents p img{
 	padding-bottom: 0px;
 }
 #message .contents .text{
 	margin: 0 20px;
+	line-height: 1.4;
 }
 #message .contents .text p{
 	font-size: 14px;
@@ -97,6 +102,8 @@
 }
 #outline .contents .column .detail p{
 	font-weight: bold;
+	font-size: 16px;
+	line-height: 185%;
 }
 #outline .contents .column .detail dl{
 	overflow: hidden;
@@ -136,7 +143,7 @@
 	font-size: 36px;
 	margin-bottom:40px;
 	line-height: 111%;
-  	font-family: 'function_probook';
+  	font-family: 'MyriadPro', sans-serif;
 }
 
 #policy .header .category{
@@ -150,7 +157,7 @@
 	line-height: 1;
 	position: relative;
 	padding: 18px 0;
-  	font-family: 'function_probook';
+  	font-family: 'MyriadPro', sans-serif;
 }
 #policy .header .category .btn a span{
 	background: url(../../img/arrow_down.png) no-repeat right 5px;
@@ -270,7 +277,7 @@
 }
 #policy .policy01 .block ul.image li.nm{
 	margin-right: 0px;
-	
+
 }
 #policy .policy01 .block ul.image li img{
 	margin-bottom: 10px;
@@ -353,7 +360,7 @@
 }
 #policy .policy02 .block ul.image li.nm{
 	margin-right: 0px;
-	
+
 }
 #policy .policy02 .block ul.image li img{
 	margin-bottom: 10px;
@@ -363,7 +370,7 @@
 	margin-right: 0px;
 	width: 100%;
 	padding-top: 30px;
-	
+
 }
 #policy .policy02 .block ul.image li.isc img{
 	display: inline-block;
@@ -483,7 +490,7 @@
 #history .navigation h2{
 	margin-right: 12px;
 	font-size: 12px;
-	font-family: 'function_probook';
+	font-family: 'MyriadPro', sans-serif;
 	margin-bottom: 20px;
 }
 #history .navigation ul{
@@ -498,7 +505,7 @@
 }
 #history .navigation ul li a span.y{
 	font-size: 11px;
-	font-family: 'function_probook';
+	font-family: 'MyriadPro', sans-serif;
 	display: inline-block;
 	vertical-align: middle;
 	margin-right: 10px;
@@ -559,7 +566,7 @@
 	background-size: contain;
 }
 #history .header h1{
-	font-family: 'function_probook';
+	font-family: 'MyriadPro', sans-serif;
 	padding-top: 65px;
 	font-size: 36px;
 	margin-bottom:36px;
@@ -575,7 +582,7 @@
 #history .header .text{
 	text-align: left;
 	margin: 0 20px;
-	font-size: 13px;
+	font-size: 14px;
 	margin-bottom:25px;
 	line-height: 185%;
 }
@@ -592,7 +599,7 @@
 }
 
 #history .yearContents .textArea h2{
-	font-family: 'function_probook';
+	font-family: 'MyriadPro', sans-serif;
 	font-size: 40px;
 	line-height: 1;
 	margin-bottom: 10px;
@@ -611,7 +618,7 @@
 	text-align: center;
 }
 #history .yearContents .textArea p{
-	font-size: 13px;
+	font-size: 14px;
 	text-align: center;
 	line-height: 185%;
 }

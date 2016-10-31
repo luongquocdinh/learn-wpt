@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Page Profile & Message
+ * Template Name: Page Profile
  *
  * @package WordPress
  * @subpackage Milbon

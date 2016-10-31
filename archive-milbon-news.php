@@ -24,7 +24,7 @@ get_header(); ?>
         <h1>TIN TỨC</h1>
         <form method="post" action="<?php echo get_post_type_archive_link('milbon-news'); ?>" class="form-filter-category" >
         <div class="category">
-          <div class="btn"><a href="#">CHỌN CATEGORY<span></span></a></div>
+          <div class="btn"><a href="#">CHỌN DANH MỤC<span></span></a></div>
           <div class="pullDown">
           <ul>
 	            <li><a class="pageLink" href="<?php echo esc_url( get_post_type_archive_link( 'milbon-news' ) ); ?>">All</a></li>

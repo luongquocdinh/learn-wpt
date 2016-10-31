@@ -11,7 +11,7 @@
 }
 
 #products a.btn_about_product{
-	
+
 	display: block;
 	height: 48px;
 	width: 88.8%;
@@ -32,7 +32,7 @@
 	font-size: 36px;
 	margin-bottom:10px;
 	line-height: 1;
-  	font-family: 'function_probook';
+  	font-family: 'MyriadPro', sans-serif;
 }
 #products .header p{
 	font-size: 13px;
@@ -50,7 +50,7 @@
 	line-height: 1;
 	position: relative;
 	padding: 18px 0;
-  	font-family: 'function_probook';
+  	font-family: 'MyriadPro', sans-serif;
 }
 #products .header .category .btn a span{
 	background: url(../../img/arrow_down.png) no-repeat right 5px;
@@ -84,7 +84,7 @@
 	margin-bottom: 12px;
 	font-size: 12px;
 	text-align: left;
-  	font-family: 'function_probook';
+  	font-family: 'MyriadPro', sans-serif;
 }
 #products .header .category .pullDown ul li a:hover{
 	color: #3a1e87;
@@ -110,7 +110,7 @@
 	margin-bottom: 12px;
 	line-height: 1;
 	padding-top: 32px;
-  	font-family: 'function_probook';
+  	font-family: 'MyriadPro', sans-serif;
 }
 #products .list .column .ja{
 	text-align: center;
@@ -136,7 +136,7 @@
 	text-align: center;
 	line-height: 40px;
 	color: #FFF;
-  	font-family: 'function_probook';
+  	font-family: 'MyriadPro', sans-serif;
 }
 #products .list .column .visual .site a span{
 	background:url(../../img/top/blank.png) no-repeat right center;
@@ -149,7 +149,7 @@
 	color: #b3b3b3;
 	padding-left: 20px;
 	margin-bottom: 25px;
-  	font-family: 'function_probook';
+  	font-family: 'MyriadPro', sans-serif;
 }
 #products .list .column .date .category{
 	color: #313131;
@@ -168,7 +168,7 @@
 	text-align: right;
 	font-size: 13px;
 	padding-right: 20px;
-  	font-family: 'function_probook';
+  	font-family: 'MyriadPro', sans-serif;
 }
 
 
@@ -223,7 +223,7 @@
 
 /*詳細メインビジュアル*/
 #products.product_detail .mainvisual{
-	
+
 }
 
 /*詳細*/
@@ -246,7 +246,7 @@
 	line-height: 1;
 	padding-top: 36px;
 	margin-bottom: 7px;
-  	font-family: 'function_probook';
+  	font-family: 'MyriadPro', sans-serif;
 }
 
 #products .detail_prev{
@@ -287,7 +287,7 @@
 	font-size: 13px;
 	line-height: 1;
 	margin-bottom: 17px;
-  	font-family: 'function_probook';
+  	font-family: 'MyriadPro', sans-serif;
 }
 #products.product_detail .detail .detail_main .ja{
 	text-align: center;
@@ -323,7 +323,7 @@
 	text-align: center;
 	font-size: 20px;
 	margin-bottom: 26px;
-  	font-family: 'function_probook';
+  	font-family: 'MyriadPro', sans-serif;
 }
 #products.product_detail .detail .detail_main .product_list{
 	letter-spacing: -0.4em;
@@ -404,7 +404,7 @@
 	height: 50px;
 	line-height: 50px;
 	text-align: center;
-  	font-family: 'function_probook';
+  	font-family: 'MyriadPro', sans-serif;
 }
 #products.product_detail .navigation ul li.next{
 	width: 23.33%;
@@ -436,7 +436,7 @@
 #product .detail .brandName{
 	font-size: 14px;
 	margin-bottom: 20px;
-  	font-family: 'function_probook';
+  	font-family: 'MyriadPro', sans-serif;
 }
 #product .detail h2{
 	font-size: 17px;
@@ -469,7 +469,7 @@
 
 }
 #product .detail .site a span{
-  	font-family: 'function_probook';
+  	font-family: 'MyriadPro', sans-serif;
 	background: url(../../img/blank.png) no-repeat right center;
 	background-size: 11px;
 	padding-right: 20px;
@@ -494,7 +494,7 @@
   color: #3a1e87;
   font-size: 13px;
   position: relative;
-  	font-family: 'function_probook';
+  	font-family: 'MyriadPro', sans-serif;
 }
 #product .detail .link li a span.file{
 	background: url(../../img/products/icon_file.png) no-repeat right center;
@@ -540,7 +540,7 @@
 	padding-bottom: 15px;
 }
 #our .header h1{
-	font-family: 'function_probook';
+	font-family: 'MyriadPro', sans-serif;
 	font-size: 35px;
 	margin-bottom:42px;
 	line-height: 1;

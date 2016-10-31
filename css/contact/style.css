@@ -194,7 +194,7 @@
 	position: absolute;
 	top: 10px;
 	left: -44px;
-	background: url(../../images/contact/icon_must.png) no-repeat;
+	background: url(../../images/contact/icon_must_eng.png) no-repeat;
 	background-size: 34px;
 	width: 34px;
 	height: 15px;
@@ -304,6 +304,11 @@ select {
     color: #3a1e87;
     padding:0 0 12px 0;
 }
+
+#contact .contents .form .column .input01::-webkit-input-placeholder {
+	font-family: 'Cormorant Upright', serif!important;
+}
+
 #contact .contents .form .column .input01:focus{
 	outline:none;
     border-bottom: 1px solid #3a1e87;
@@ -322,6 +327,11 @@ select {
     color: #3a1e87;
     padding:15px
 }
+
+#contact .contents .form .column .input02::-webkit-input-placeholder {
+	font-family: 'Cormorant Upright', serif!important;
+}
+
 #contact .contents .form .column .input02:focus{
 	outline:none;
     border: 1px solid #3a1e87;
@@ -431,7 +441,7 @@ select {
             transition: all 0.3s ease;
 }
 #contact .contents .btn_set li .btn{
-	font-family:"æ¸¸æ˜Žæœä½“", "Yu Mincho", YuMincho, 'ãƒ’ãƒ©ã‚®ãƒŽè§’ã‚´ Pro W3', 'Hiragino Kaku Gothic Pro', 'ãƒ’ãƒ©ã‚®ãƒŽè§’ã‚´ Pro W3', 'ãƒ¡ã‚¤ãƒªã‚ª', Meiryo, sans-serif;
+	font-family: 'MyriadPro', sans-serif;
 	width: 220px;
 	height: 60px;
 	display: block;

@@ -18,12 +18,13 @@ concept
           <?php
           while ( have_posts() ) :
               the_post();
-              the_content();
+              echo get_post_meta(get_the_ID(), '_sp_page_content',true);
           endwhile;
+          wp_reset_query();
           ?>
       </section>
       <section class="product">
-          <a href=".<?php echo esc_url( home_url( '/' ) ) . 'brand_tenpan/';?>">
+          <a href="<?php echo esc_url( home_url( '/' ) ) . 'brand_tenpan/';?>">
         <h3>VỀ SẢN PHẨM CỦA MILBON</h3>
         <div class="ja"></div>
         <div class="view">CHI TIẾT →</div>

@@ -7,10 +7,9 @@ products
     <section id="products">
         <header class="header">
             <h1>SẢN PHẨM</h1>
-            <p>ミルボン製品はヘアデザイナーのアドバイスにより<br>ご使用いただく美容室専売品です。</p>
-            <a href="<?php echo esc_url( get_post_type_archive_link( 'milbon-brands' ) ); ?>" class="btn_about_product">Về sản phẩm của Milbon</a>
+            <a href="<?php echo esc_url( home_url( '/' ) ) . 'brand_tenpan/';?>" class="btn_about_product">Về sản phẩm của Milbon</a>
             <div class="category">
-                <div class="btn"><a href="#"><span>CHỌN CATEGORY</span></a></div>
+                <div class="btn"><a href="#"><span>CHỌN DANH MỤC</span></a></div>
                 <div class="pullDown">
                     <?php
                     $terms = get_terms( array(
@@ -19,7 +18,7 @@ products
                     ) );
                     ?>
                     <ul>
-                        <li><a href="<?php echo esc_url( get_post_type_archive_link( 'milbon-brands' ) ); ?>">All</a></li>
+                        <li><a href="<?php echo esc_url( get_post_type_archive_link( 'milbon-brands' ) ); ?>">Tất cả</a></li>
                         <?php
                         if( !empty( $terms ) ) :
                             foreach ( $terms as $term ) :

@@ -7,23 +7,23 @@
       <h2><img src="<?php echo get_template_directory_uri(); ?>/images/top_new.png" width="349" alt="Find your beauty MILBON"></h2>
       <div class="menu-block">
         <ul class="menu footer-column01">
-          <li><a class="pageLink" href="./">Trang chủ<span></span></a></li>
-          <li><a class="pageLink" href="./concept/">Triết lý<span></span></a></li>
-          <li><a class="pageLink" href="./brand/">Dòng sản phẩm<span></span></a></li>
-          <li class="withSub"><a class="pageLink" href="./company/gaiyou.html">Công ty<span></span></a>
+          <li><a class="pageLink" href="<?php echo esc_url( home_url( '/' ) );?>">Trang chủ<span></span></a></li>
+          <li><a class="pageLink" href="<?php echo esc_url( home_url( '/' ) ) . 'concept';?>">Triết lý<span></span></a></li>
+          <li><a class="pageLink" href="<?php echo esc_url(get_post_type_archive_link( 'milbon-brands' )); ?>">Dòng sản phẩm<span></span></a></li>
+          <li class="withSub"><a class="pageLink" href="<?php echo esc_url( home_url( '/' ) ) . 'company_gaiyou';?>">Công ty<span></span></a>
             <ul>
-              <li><a class="pageLink" href="./company/gaiyou.html">Thông tin công ty</a></li>
-              <li><a class="pageLink" href="./company/history.html">Lịch sử công ty</a></li>
-              <li><a class="pageLink" href="./company/president.html">Thông điệp</a></li>
-              <li><a class="pageLink" href="./company/office/">Các chi nhánh</a></li>
+              <li><a class="pageLink" href="<?php echo esc_url( home_url( '/' ) ) . 'company_gaiyou';?>">Thông tin công ty</a></li>
+              <li><a class="pageLink" href="<?php echo esc_url( home_url( '/' ) ) . 'company_history';?>">Lịch sử công ty</a></li>
+              <li><a class="pageLink" href="<?php echo esc_url( home_url( '/' ) ) . 'company_message';?>">Thông điệp</a></li>
+              <li><a class="pageLink" href="<?php echo esc_url( home_url( '/' ) ) . 'company_office';?>">Các chi nhánh</a></li>
             </ul>
           </li>
-          <li><a class="pageLink" href="./news/">Tin tức<span></span></a></li>
-          <li><a class="pageLink" href="./contact/">Liên hệ<span></span></a></li>
+          <li><a class="pageLink" href="<?php echo esc_url(get_post_type_archive_link( 'milbon-news' )); ?>">Tin tức<span></span></a></li>
+          <li><a class="pageLink" href="<?php echo esc_url( home_url( '/' ) ) . 'contact'; ?>">Liên hệ<span></span></a></li>
           <li><a class="pageLink" href="<?php echo esc_url( home_url( '/' ) ) . 'brand_tenpan/';?>">Về sản phẩm<span></span></a></li>
         </ul>
         <ul class="menu footer-column02">
-          <li class="withSub"><a href="./beauty/">Dành cho nhà tạo mẫu tóc<span></span></a>
+          <li class="withSub"><a href="<?php echo esc_url( home_url( '/' ) ) . 'beauty'; ?>">Dành cho nhà tạo mẫu tóc<span></span></a>
           </li>
         </ul>
         <ul class="menu footer-column03">

@@ -20,8 +20,8 @@ get_header();
         <nav id="breadcrumb">
             <ul>
                 <li><a href="<?php echo esc_url(home_url('/')) ?>" class="pageLink">TRANG CHỦ<span></span></a></li>
-                <li><a href="../../company/gaiyou.html" class="pageLink">CÔNG TY<span></span></a></li>
-                <li><a href="../../company/office/" class="pageLink">CÁC CHI NHÁNH<span></span></a></li>
+                <li><a href="<?php echo esc_url( home_url( '/' ) ) . 'company_gaiyou';?>" class="pageLink">CÔNG TY<span></span></a></li>
+                <li><a href="<?php echo esc_url( home_url( '/' ) ) . 'company_office';?>" class="pageLink">CÁC CHI NHÁNH<span></span></a></li>
             </ul>
         </nav>
 
@@ -54,14 +54,14 @@ get_header();
                 </ul>
             </div>
         </section>
-
+        <br />
         <section id="office">
             <header class="header">
-                <h1>OUR OFFICE</h1>
+                <h1>CÁC CHI NHÁNH</h1>
                 <!-- <p>［ 拠点一覧 ］</p> -->
             </header>
             <section class="contents list">
-                <h2>［ 国内拠点一覧 ］　<a href="http://www.milbon.com/ja/about/#network" target="_blank">海外拠点</a></h2>
+                <h2>［ CÁC CHI NHÁNH ] &nbsp; <a href="http://www.milbon.com/ja/about/#network" target="_blank"> &nbsp; NƯỚC NGOÀI</a></h2>
                 <div class="list">
                     <?php
                     if(!empty($posts)):

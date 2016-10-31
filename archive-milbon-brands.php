@@ -30,10 +30,10 @@ get_header(); ?>
         <p>Những sản phẩm của Milbon được bán tại các salon chuyên nghiệp dưới sự tư vấn của các hair design.</p>
         <form method="post" action="<?php echo get_post_type_archive_link('milbon-brands'); ?>" class="form-filter-category" >
 	        <div class="category">
-	          <div class="btn"><a href="#">CHỌN DANH MỤC SẢN PHẨM<span></span></a></div>
+	          <div class="btn"><a href="#">CHỌN DANH MỤC<span></span></a></div>
 	          <div class="pullDown">
 	          <ul>
-	            <li><a class="pageLink" href="<?php echo esc_url( get_post_type_archive_link( 'milbon-brands' ) ); ?>">All</a></li>
+	            <li><a class="pageLink" href="<?php echo esc_url( get_post_type_archive_link( 'milbon-brands' ) ); ?>">Tất cả</a></li>
 	            <?php
 	            	if( !empty( $terms ) ) {
 	            		foreach ( $terms as $term ) {
@@ -50,41 +50,40 @@ get_header(); ?>
       <section class="list">
       	<?php 
       		if( !isset( $_POST['cat-slug'] ) ) {
-				$args = array(
-					'post_type' => 'milbon-brands',
-				);
-				$query = new WP_Query( $args );
-      		}else{
+						$args = array(
+							'post_type' => 'milbon-brands',
+						);
+						$query = new WP_Query( $args );
+      		} else {
       			$term_slug = $_POST['cat-slug'];
-				$args = array(
-					'post_type' => 'milbon-brands',
-					'tax_query' => array(
-						array(
-							'taxonomy' => 'brand_category',
-							'field'    => 'slug',
-							'terms'    => $term_slug,
-						),
-					),
-				);
-				$query = new WP_Query( $args );
+						$args = array(
+							'post_type' => 'milbon-brands',
+							'tax_query' => array(
+								array(
+									'taxonomy' => 'brand_category',
+									'field'    => 'slug',
+									'terms'    => $term_slug,
+								),
+							),
+						);
+						$query = new WP_Query( $args );
       		}
       		$milbon_brands_term = '';
       		if( !empty( $query->posts ) ):
-      			foreach ( $query->posts as $post ) {
-      				
+      			foreach ( $query->posts as $post ) {	
 	      			$tax = get_post_taxonomies( $post->ID );
-					if( !empty( $tax ) ) {
-						$category_brand = get_the_terms($post->ID, $tax[0]);
-						if( !empty( $category_brand ) ) {
-							$milbon_brands_term = $category_brand[0]->name;
-						}else{
-							$milbon_brands_term = '';
-						}
-					}else{
-						$milbon_brands_term = '';
-					}
+							if( !empty( $tax ) ) {
+								$category_brand = get_the_terms($post->ID, $tax[0]);
+								if( !empty( $category_brand ) ) {
+									$milbon_brands_term = $category_brand[0]->name;
+								} else {
+									$milbon_brands_term = '';
+								}
+							} else {
+								$milbon_brands_term = '';
+							}
       		?>
-					<div class="column">
+					<div class="column show">
 						<a href="<?php echo esc_url( get_permalink( $post->ID ) ); ?>" class="pageLink">
 							<div class="visual view">
 								<img src="<?php echo esc_url( wp_get_attachment_url( get_post_thumbnail_id( $post->ID ) ) ); ?>" height="139" width="300" alt="<?php echo get_the_title( $post->ID ); ?>">
@@ -104,13 +103,12 @@ get_header(); ?>
 							<div class="more"><span class="t">CHI TIẾT →</span><span class="line"></span></div>
 						</a>
 					</div>
-<?php
+				<?php
       			}
       		endif;
       	?>
-
+				<div class="readmore"><a href="#" id="loadmore">LOAD MORE<span></span></a></div>
       </section>
     </section>
   </div><!-- end contents -->
-
 <?php get_footer(); ?>

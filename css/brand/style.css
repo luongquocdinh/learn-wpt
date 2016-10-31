@@ -570,7 +570,7 @@
             transition: all 0.3s ease;
   padding-right: 20px;
   padding-left: 10px;
-  background: url(../../images/top/scrolldown.png) no-repeat right center;
+	  background: url(../../images/top/scrolldown.png) no-repeat right center;
 }
 #products .detail .detail_header .scrolldown a:hover span{
   color: #3a1e87;
@@ -616,6 +616,7 @@
 }
 #products .detail .detail_main .entry{
 	margin-bottom: 40px;
+	font-size: 17px;
 }
 #products .detail .detail_main .entry p{
 	text-align: left;
@@ -746,6 +747,7 @@
 }
 #product .image img{
 	width: 410px;
+	margin-top: -30px;
 	height: auto;
 }
 #product .detail{
@@ -755,14 +757,16 @@
 }
 #product .detailInner{
 	height: 470px;
+	margin-left: 20px;
 	overflow-y:auto;
 }
 #product .detail .brandName{
-	padding-top: 55px;
+	margin-top: 10px;
 	font-family: 'MyriadPro', sans-serif;
 	font-size: 14px;
 	margin-bottom: 20px;
 	width: 355px;
+	text-transform: uppercase;
 }
 #product .detail h2{
 	font-size: 18px;
@@ -855,6 +859,7 @@
   color: #3a1e87;
 }
 #product .detail .link li a span.file{
+	font-size: 13px;
 	background: url(../../images/brand/icon_file.png) no-repeat right center;
 	padding-right: 18px;
 }
@@ -871,6 +876,7 @@
 	padding-right: 18px;
 }
 #product .detail .link li a span.youtube{
+	font-size: 13px;
 	background: url(../../images/icon_blank1.png) no-repeat right center;
 	padding-right: 18px;
 }
@@ -1193,4 +1199,8 @@
 	bottom: 0px;
 	background: none;
 
+}
+
+script {
+	display: none;
 }

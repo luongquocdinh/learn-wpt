@@ -11,7 +11,7 @@
 }
 
 #products a.btn_about_product{
-	
+
 	display: block;
 	height: 48px;
 	width: 88.8%;
@@ -33,7 +33,7 @@
 	font-size: 36px;
 	margin-bottom:10px;
 	line-height: 1;
-  	font-family: 'function_probook';
+  	font-family: 'MyriadPro', sans-serif;
 }
 #products .header p{
 	font-size: 13px;
@@ -51,7 +51,7 @@
 	line-height: 1;
 	position: relative;
 	padding: 18px 0;
-  	font-family: 'function_probook';
+  	font-family: 'MyriadPro', sans-serif;
 }
 #products .header .category .btn a span{
 	background: url(../../images-sp/arrow_down.png) no-repeat right 5px;
@@ -85,7 +85,7 @@
 	margin-bottom: 12px;
 	font-size: 12px;
 	text-align: left;
-  	font-family: 'function_probook';
+  	font-family: 'MyriadPro', sans-serif;
 }
 #products .header .category .pullDown ul li a:hover{
 	color: #3a1e87;
@@ -109,7 +109,7 @@
 	margin-bottom: 12px;
 	line-height: 1;
 	padding-top: 32px;
-  	font-family: 'function_probook';
+  	font-family: 'MyriadPro', sans-serif;
 }
 #products .list .column .ja{
 	text-align: center;
@@ -135,7 +135,7 @@
 	text-align: center;
 	line-height: 40px;
 	color: #FFF;
-  	font-family: 'function_probook';
+  	font-family: 'MyriadPro', sans-serif;
 }
 #products .list .column .visual .site a span{
 	background:url(../../images-sp/top/blank.png) no-repeat right center;
@@ -148,7 +148,7 @@
 	color: #b3b3b3;
 	padding-left: 20px;
 	margin-bottom: 25px;
-  	font-family: 'function_probook';
+  	font-family: 'MyriadPro', sans-serif;
 }
 #products .list .column .date .category{
 	color: #313131;
@@ -159,7 +159,7 @@
 
 #products .list .column p{
 	padding: 0 20px;
-	font-size: 12px;
+	font-size: 14px;
 	line-height: 150%;
 }
 #products .list .column .more{
@@ -167,7 +167,7 @@
 	text-align: right;
 	font-size: 13px;
 	padding-right: 20px;
-  	font-family: 'function_probook';
+  	font-family: 'MyriadPro', sans-serif;
 }
 
 
@@ -222,7 +222,7 @@
 
 /*詳細メインビジュアル*/
 #products.product_detail .mainvisual{
-	
+
 }
 
 /*詳細*/
@@ -243,7 +243,7 @@
 	text-align: center;
 	padding-top: 36px;
 	margin-bottom: 7px;
-  	font-family: 'function_probook';
+  	font-family: 'MyriadPro', sans-serif;
 }
 #products.product_detail .detail  h1 img{
 	width: 290px;
@@ -289,7 +289,7 @@
 	font-size: 13px;
 	line-height: 1;
 	margin-bottom: 17px;
-  	font-family: 'function_probook';
+  	font-family: 'MyriadPro', sans-serif;
 }
 #products.product_detail .detail .detail_main .ja{
 	text-align: center;
@@ -334,7 +334,7 @@
 	padding-right: 25px;
 	line-height: 48px;
 	font-size: 15px;
-	font-family: 'function_probook';
+	font-family: 'MyriadPro', sans-serif;
 }
 /*商品一覧*/
 #products.product_detail .detail .detail_main {
@@ -344,7 +344,7 @@
 	text-align: center;
 	font-size: 20px;
 	margin-bottom: 26px;
-  	font-family: 'function_probook';
+  	font-family: 'MyriadPro', sans-serif;
 	border-top: 1px #eee solid;
 	padding-top: 40px;
 }
@@ -440,7 +440,7 @@
 	height: 50px;
 	line-height: 50px;
 	text-align: center;
-  	font-family: 'function_probook';
+  	font-family: 'MyriadPro', sans-serif;
 }
 #products.product_detail .navigation ul li.next{
 	width: 23.33%;
@@ -472,7 +472,7 @@
 #product .detail .brandName{
 	font-size: 14px;
 	margin-bottom: 20px;
-  	font-family: 'function_probook';
+  	font-family: 'MyriadPro', sans-serif;
 }
 #product .detail h2{
 	font-size: 17px;
@@ -506,7 +506,7 @@
 
 }
 #product .detail .site a span{
-  	font-family: 'function_probook';
+  	font-family: 'MyriadPro', sans-serif;
 	background: url(../../images-sp/blank.png) no-repeat right center;
 	background-size: 11px;
 	padding-right: 20px;
@@ -531,7 +531,7 @@
   color: #3a1e87;
   font-size: 13px;
   position: relative;
-  	font-family: 'function_probook';
+  	font-family: 'MyriadPro', sans-serif;
 }
 #product .detail .link li a span.file{
 	background: url(../../images-sp/brand/icon_file.png) no-repeat right center;
@@ -571,9 +571,10 @@
 	text-align: center;
 	position: relative;
 	padding-bottom: 15px;
+	line-height: 1.4;
 }
 #our .header h1{
-	font-family: 'function_probook';
+	font-family: 'MyriadPro', sans-serif;
 	font-size: 35px;
 	margin-bottom:42px;
 	line-height: 1;
@@ -603,13 +604,13 @@
 }
 #our .block h2{
 	font-size: 21px;
-	margin-bottom: 32px;
+	margin-bottom: 10px;
 	line-height: 150%;
 	text-align: center;
 }
 
 #our .block p{
-	font-size: 13px;
+	font-size: 14px;
 	line-height: 185%;
 	margin-bottom: 15px;
 }

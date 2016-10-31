@@ -31,7 +31,7 @@ get_header(); ?>
 			<div class="btn_return" style="margin-top:20px;">
 				<a href="<?php echo esc_url(get_post_type_archive_link( 'milbon-news' )); ?>" class="pageLink">
 					<span class="arrow_img">←</span>
-					<span class="text">Xem toàn bộ tin tức</span>
+					<span class="text">Xem tất cả</span>
 					<span class="line"></span>
 				</a>
 			</div>
@@ -56,7 +56,7 @@ get_header(); ?>
 				</div>
 				<footer class="footer">
 					<div class="contact">
-						<a href="../../contact"><?php the_title(); ?></a>
+						<a href="<?php echo esc_url( home_url( '/' ) ) . 'contact'; ?>">LIÊN HỆ</a>
 					</div>
 					<ul class="sns">
 						<li class="sns01">
@@ -78,19 +78,19 @@ get_header(); ?>
 				</footer>
 			</article>
 			<nav class="detail_next">
-				<a href="<?php echo esc_url( get_permalink( get_next_post()->ID )); ?>" class="pageLink">
+				<a href="<?php echo esc_url(get_permalink(get_previous_post()->ID)); ?>" class="pageLink">
 					<div class="arrow" style="left: 0px;"></div>
 					<div class="over" style="opacity: 0;">
 						<div class="image">
 							<img src="
-									<?php
-		              if ( has_post_thumbnail($post->ID) ) :
-		                  get_featured_url($post->ID);
-		              else:
-		            ?>
-		            <?php echo get_template_directory_uri(); ?>/images/no_image.jpg"
-		            <?php endif; ?>
-								">
+								<?php
+								if ( has_post_thumbnail($post->ID) ) :
+									get_featured_url($post->ID);
+								else:
+								?>
+								<?php echo get_template_directory_uri(); ?>/images/no_image.jpg"
+								<?php endif; ?>
+												"">
 						</div>
 					</div>
 				</a>

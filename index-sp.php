@@ -53,7 +53,7 @@
                                 get_featured_url($post->ID);
                             endif;
                             ?>" height="450" width="800" alt="<?php the_title(); ?>">
-                            <div class="site"><a href="http://www.aujua.com/product/" target="_blank"><span>BRAND SITE</span></a></div>
+                            <div class="site"><a href="http://www.aujua.com/product/" target="_blank"><span>Xem trang web</span></a></div>
                         </div>
                         <div class="date">
                             <span class="category"><?php echo get_first_cateogry($post->ID, 'brand_category'); ?></span> ｜ <span class="day"><?php the_date('Y-m-d'); ?> UPDATE</span></div>
@@ -79,7 +79,7 @@
                 </ul>
             </div>
         </div>
-        <a href="<?php echo esc_url(get_post_type_archive_link( 'milbon-brands' )); ?>" class="view"><span>XEM TOÀN BỘ SẢN PHẨM →</span></a>
+        <a href="<?php echo esc_url(get_post_type_archive_link( 'milbon-brands' )); ?>" class="view"><span>XEM TẤT CẢ →</span></a>
     </section>
 
 
@@ -87,11 +87,12 @@
        topLinks
     //////////////////////////////////////////////////////////////////////////////-->
     <section id="topLinks">
-        <h2>LINKS</h2>
+        <h2>LIÊN KẾT</h2>
         <ul class="navi">
             <li><a href="list01" class="active">DÀNH CHO NHÀ TẠO MẪU TÓC<span></span></a></li>
             <li><a href="list02">SẢN PHẨM<span></span></a></li>
             <li><a href="list03">NHÓM<span></span></a></li>
+            <li><a href="list04">ĐẠI LÝ MILBON<span></span></a></li>
         </ul>
 
         <!-- BEAUTY LIST -->
@@ -229,6 +230,44 @@
             ?>
         </div>
 
+        <div class="list list04">
+            <?php
+            // GET BLOG POSTS
+            $shortcode_blog_query = new WP_Query(array(
+                'post_type' => 'milbon-links',
+                'tax_query' => array(
+                    array(
+                        'taxonomy' => 'link_category',
+                        'field' => 'slug',
+                        'terms' => 'distribute-slug'
+                    )
+                ),
+                'showposts' => 4,
+                'order' => 'ASC'
+            ));
+            if ( $shortcode_blog_query->have_posts() ) :
+                while($shortcode_blog_query->have_posts()) : $shortcode_blog_query->the_post();
+                    ?>
+            ?>
+            <div class="column">
+                <a href="<?php echo get_post_meta($post->ID, "_location", true); ?>" target="_blank">
+                    <div class="visual">
+                        <img src="<?php
+                        if ( has_post_thumbnail($post->ID) ) :
+                            get_featured_url($post->ID);
+                        endif;
+                        ?>" height="126" width="224" alt="<?php the_title(); ?>">
+                    </div>
+                    <div class="defalt">
+                        <p class="title"><?php the_title(); ?></p>
+                    </div>
+                </a>
+            </div>
+            <?php
+                endwhile;
+            endif;
+            ?>
+        </div>
 
     </section>
 
@@ -267,7 +306,7 @@
                                 the_date('Y-m-d');
                                 ?></span></div>
                         <p><?php the_title(); ?></p>
-                        <div class="more">READ MORE →</div>
+                        <div class="more">XEM THÊM →</div>
                     </div>
                 </a>
             </div>
@@ -277,7 +316,7 @@
             ?>
 
         </div>
-        <a href="./news" class="view"><span>Xem toàn bộ tin tức →</span></a>
+        <a href="./news" class="view"><span>Xem tất cả →</span></a>
     </section>
 
 <?php get_footer('sp'); ?>

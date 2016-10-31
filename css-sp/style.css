@@ -34,11 +34,10 @@
 	padding-right: 20px;
 	color: #FFF;
 	font-size: 12px;
-  font-family: 'function_probook';
+	font-family: 'MyriadPro', sans-serif;
 }
 
 #top .scrolldown a span{
-	height: 14px;
 	vertical-align: top;
 }
 #top .scrolldown a span.text{
@@ -51,6 +50,7 @@
 	overflow: hidden;
 	position: relative;
 	display: inline-block;
+	top: 0;
 }
 #top .scrolldown a span.arrow span.arrow_img{
 	position: absolute;
@@ -86,7 +86,7 @@
 	background: #FFF;
 }
 #topBrand h2{
-  	font-family: 'function_probook';
+  	font-family: 'MyriadPro', sans-serif;
 	font-size: 36px;
 	color: #000000;
 	text-align: center;
@@ -112,7 +112,7 @@
 	position: relative;
 }
 #topBrand .slide-area .slide-inner .slides .column .date{
-  	font-family: 'function_probook';
+  	font-family: 'MyriadPro', sans-serif;
 	line-height: 1;
 	font-size: 11px;
 	color: #b3b3b3;
@@ -135,7 +135,7 @@
 	font-size: 27px;
 	line-height: 1;
 	margin-bottom: 13px;
-  	font-family: 'function_probook';
+  	font-family: 'MyriadPro', sans-serif;
 }
 #topBrand .slide-area .slide-inner .slides .column .over .over-inner .category{
 	display: none;
@@ -148,12 +148,10 @@
 	color: #3a1e87;
 	position: relative;
 	font-size: 13px;
-  	font-family: 'function_probook';
+  	font-family: 'MyriadPro', sans-serif;
 }
 #topBrand .slide-area .slide-inner .slides .column .site{
-	position: absolute;
-	bottom: -20px;
-	right: 20px;
+	position: static;
 }
 #topBrand .slide-area .slide-inner .slides .column .site a{
 	display: block;
@@ -163,12 +161,14 @@
 	text-align: center;
 	line-height: 40px;
 	color: #FFF;
+	margin: 15px auto;
+    padding: 0 10px;
 }
 #topBrand .slide-area .slide-inner .slides .column .site a span{
-	background:url(../images/top/blank.png) no-repeat right center;
+	background:url(../images-sp/top/blank.png) no-repeat right center;
 	background-size: 11px 9px;
 	padding-right: 18px;
-  	font-family: 'function_probook';
+  	font-family: 'MyriadPro', sans-serif;
 }
 
 #topBrand .slide-area .flex-prev{
@@ -226,7 +226,7 @@
 	text-align: center;
 	line-height: 48px;
 	font-size: 13px;
-  	font-family: 'function_probook';
+	font-family: 'MyriadPro', sans-serif;
 }
 /*----------------------------------------------------
   #topLinks
@@ -244,19 +244,19 @@
 	text-align: center;
 	line-height: 1;
 	padding: 35px 0 23px 0;
-  	font-family: 'function_probook';
+	font-family: 'MyriadPro', sans-serif;
 }
 
 
 #topLinks ul.navi{
 	text-align: center;
 	letter-spacing: -0.4em;
-	margin-bottom: 25px;
+	margin-bottom: 0;
 }
 #topLinks ul.navi li{
 	display: inline-block;
 	letter-spacing: normal;
-	margin: 0 17px;
+	margin: 0 17px 25px;
 }
 #topLinks ul.navi li a{
 	position: relative;
@@ -265,7 +265,7 @@
 	line-height: 1;
 	color: #313131;
 	display: block;
-  	font-family: 'function_probook';
+  	font-family: 'MyriadPro', sans-serif;
 }
 #topLinks ul.navi li a span{
   position: absolute;
@@ -346,14 +346,16 @@
 	text-align: center;
 	font-size: 14px;
 	line-height: 130%;
-  	font-family: 'function_probook';
+  	font-family: 'MyriadPro', sans-serif;
 }
 #topLinks .list .column a .title .title_ja{
 	text-align: center;
 	display: block;
 	font-size: 11px;
-    font-family:"游明朝体", "Yu Mincho", YuMincho,"ヒラギノ明朝 ProN W6", "HiraMinProN-W6", "HG明朝E", "ＭＳ Ｐ明朝", "MS PMincho", "MS 明朝", serif;
+    /*font-family:"游明朝体", "Yu Mincho", YuMincho,"ヒラギノ明朝 ProN W6", "HiraMinProN-W6", "HG明朝E", "ＭＳ Ｐ明朝", "MS PMincho", "MS 明朝", serif;*/
+	font-family: 'MyriadPro', sans-serif;
 }
+
 /*----------------------------------------------------
   #topNews
 --------------------------------------------------- */
@@ -370,7 +372,7 @@
 	text-align: center;
 	line-height: 1;
 	padding: 35px 0 34px 0;
-  	font-family: 'function_probook';
+  	font-family: 'MyriadPro', sans-serif;
 }
 
 #topNews .list{
@@ -406,7 +408,7 @@
 	color: #959595;
 	line-height: 1;
 	margin-bottom: 5px;
-  	font-family: 'function_probook';
+  	#topNews .list .column .meta
 }
 #topNews .list .column .meta .category{
 	color: #313131;
@@ -414,7 +416,7 @@
 
 #topNews .list .column p{
 	color: #313131;
-	font-size: 13px;
+	font-size: 14px;
 	line-height: 1.5;
 	text-align: left;
 	margin-bottom: 5px;
@@ -425,7 +427,7 @@
 	color: #3a1e87;
 	font-size: 13px;
 	text-align: right;
-  	font-family: 'function_probook';
+  	font-family: 'MyriadPro', sans-serif;
 }
 
 #topNews .list .column a .more span.t{
@@ -473,5 +475,5 @@
 	text-align: center;
 	line-height: 48px;
 	font-size: 13px;
-  	font-family: 'function_probook';
+  	font-family: 'MyriadPro', sans-serif;
 }

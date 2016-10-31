@@ -88,7 +88,7 @@
                             echo esc_html( "[" . get_post_meta($post->ID,'_title_japanese', true) . "]" );
                           } 
                         ?>
-                      </p></span><p class="icon">VISIT SITE</p></div>
+                      </p></span><p class="icon">XEM TRANG WEB</p></div>
                     </a>
                   </div>
                   <?php

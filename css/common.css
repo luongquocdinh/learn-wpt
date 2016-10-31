@@ -9,7 +9,7 @@ strong, b{
   font-weight: 500;
 }
 html,body{
-    height:100%; margin:0; padding:0; 
+    height:100%; margin:0; padding:0;
     // font-family:"游明朝体", "Yu Mincho", YuMincho, 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'ヒラギノ角ゴ Pro W3', 'メイリオ', Meiryo, sans-serif;
     font-family: 'Cormorant Upright', serif!important;
     font-size: 19px;
@@ -88,7 +88,7 @@ h6 {
   font-family: inherit;
   line-height: 1.1;
   font-weight: 500;
-  margin: 0px 0px 
+  margin: 0px 0px
 }
 
 h1 {
@@ -664,7 +664,10 @@ a:hover{
   cursor: default;
 
 }
-#footer .footer-inner ul.menu > li  span{
+#footer .footer-inner ul.menu > li:hover > a {
+    text-decoration: underline;
+}
+/*#footer .footer-inner ul.menu > li  span{
   position: absolute;
   display: block;
   height: 1px;
@@ -681,7 +684,7 @@ a:hover{
 #footer .footer-inner ul.menu > li:hover  span{
   opacity: 1;
   width: 100%;
-}
+}*/
 #footer .footer-inner ul.menu ul{
   padding-top: 10px;
 }
@@ -800,6 +803,12 @@ a:hover{
          -o-transition: all 0.5s ease;
             transition: all 0.5s ease;
 }
-#modal a.close:hover{
-  opacity:0.5;
+#modal a.close:hover {
+    opacity: 0.5;
+}
+.lang-item > a {
+    padding: 0 10px !important;
+}
+.lang-item > a > img{
+    vertical-align: middle;
 }

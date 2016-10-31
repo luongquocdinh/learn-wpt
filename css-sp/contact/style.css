@@ -69,7 +69,7 @@ input[type="button"],input[type="submit"],input[type="text"] ,textarea{
 #contact .contents .attention .close a span{
 	background: url(../../images-sp/contact/close.png) no-repeat right center;
 	padding-right: 20px;
-  	font-family: 'function_probook';
+  	font-family: 'MyriadPro', sans-serif;
 }
 #contact .contents .form{
 	padding-bottom: 50px;
@@ -351,7 +351,8 @@ input[type="button"],input[type="submit"],input[type="text"] ,textarea{
 #contact .contents .btn_set li a,
 #contact .contents .btn_set li .btn{
   -webkit-appearance:none;
-	font-family:"游明朝体", "Yu Mincho", YuMincho, 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'ヒラギノ角ゴ Pro W3', 'メイリオ', Meiryo, sans-serif;
+	/*font-family:"游明朝体", "Yu Mincho", YuMincho, 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'ヒラギノ角ゴ Pro W3', 'メイリオ', Meiryo, sans-serif;*/
+	font-family: 'MyriadPro', sans-serif;
 	width:100%;
 	height: 58px;
 	display: block;

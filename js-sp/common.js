@@ -338,7 +338,7 @@ $(function() {
 function ProductLoad(File){
   //通信開始
   $.ajax({
-    url: File+".html?randam="+Math.random(100),type:'GET',dataType: 'html',timeout:10000,
+    url: File,type:'GET',dataType: 'html',timeout:10000,
     success: function(data) {
       $("body").append('<div id="modal"><div id="loadArea"></div><a href="#" class="close"></a></div>')
       $("#loadArea").append($(data).find(".entry"));

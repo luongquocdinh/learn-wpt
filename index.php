@@ -25,7 +25,7 @@
   //////////////////////////////////////////////////////////////////////////////-->
   <section id="topBrand">
     <h2>Dòng sản phẩm</h2>
-    <a href="<?php echo esc_url( get_post_type_archive_link( 'milbon-brands' ) ); ?>" class="pageLink view"><span class="text">Xem toàn bộ sản phầm</span><span class="arrow"><span class="arrow_img">→</span></span><span class="line"></span></a>
+    <a href="<?php echo esc_url( get_post_type_archive_link( 'milbon-brands' ) ); ?>" class="pageLink view"><span class="text">Xem tất cả</span><span class="arrow"><span class="arrow_img">→</span></span><span class="line"></span></a>
     <div class="slide-area">
       <div class="slide-inner">
         <div class="slide">
@@ -109,7 +109,7 @@
     <h2>Liên kết</h2>
     <ul class="view">
       <li class="list01"><a href="./beauty/" class="pageLink"><span class="text">Xem tất cả</span><span class="arrow"><span class="arrow_img">→</span></span><span class="line"></span></a></li>
-      <li class="list02"><a href="./brand/" class="pageLink"><span class="text">Xem tất cả các sản phẩm</span><span class="arrow"><span class="arrow_img">→</span></span><span class="line"></span></a></li>
+      <li class="list02"><a href="./brand/" class="pageLink"><span class="text">Xem tất cả</span><span class="arrow"><span class="arrow_img">→</span></span><span class="line"></span></a></li>
     </ul>
     <ul class="navi">
       <li><a href="list01" class="active">Dành cho nhà tạo mẫu tóc<span></span></a></li>
@@ -310,7 +310,7 @@
   <section id="topNews">
     <h2>Tin tức</h2>
     <ul class="view">
-      <li><a href="<?php echo esc_url( get_post_type_archive_link( 'milbon-news' ) ); ?>" class="pageLink"><span class="text">Xem tất cả tin tức</span><span class="arrow"><span class="arrow_img">→</span></span><span class="line"></span></a></li>
+      <li><a href="<?php echo esc_url( get_post_type_archive_link( 'milbon-news' ) ); ?>" class="pageLink"><span class="text">Xem tất cả</span><span class="arrow"><span class="arrow_img">→</span></span><span class="line"></span></a></li>
     </ul>
     <!-- NEWS LIST -->
     <?php
@@ -318,7 +318,7 @@
       $shortcode_blog_query = new WP_Query(array(
         'post_type' => 'milbon-news',
         'showposts' => 4,
-        'order' => 'ASC'
+        'order' => 'DESC'
       ));
     ?>
     <div class="list">
@@ -342,7 +342,7 @@
 
             </span> ｜ <span class="date">
               <?php
-                the_date('Y-m-d');
+                echo get_the_date('Y-m-d', $post->ID);
               ?>
 
             </span></div>
